@@ -1,0 +1,177 @@
+[
+    {
+        "label": "pygame",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pygame",
+        "description": "pygame",
+        "detail": "pygame",
+        "documentation": {}
+    },
+    {
+        "label": "Button",
+        "importPath": "buttons.button",
+        "description": "buttons.button",
+        "isExtraImport": true,
+        "detail": "buttons.button",
+        "documentation": {}
+    },
+    {
+        "label": "Button",
+        "importPath": "buttons.button",
+        "description": "buttons.button",
+        "isExtraImport": true,
+        "detail": "buttons.button",
+        "documentation": {}
+    },
+    {
+        "label": "TicTacToeBox",
+        "importPath": "buttons.square",
+        "description": "buttons.square",
+        "isExtraImport": true,
+        "detail": "buttons.square",
+        "documentation": {}
+    },
+    {
+        "label": "pygame,",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pygame.",
+        "description": "pygame.",
+        "detail": "pygame.",
+        "documentation": {}
+    },
+    {
+        "label": "ImageButton",
+        "importPath": "buttons.image_button",
+        "description": "buttons.image_button",
+        "isExtraImport": true,
+        "detail": "buttons.image_button",
+        "documentation": {}
+    },
+    {
+        "label": "TicTacToe",
+        "importPath": "game.tictactoe",
+        "description": "game.tictactoe",
+        "isExtraImport": true,
+        "detail": "game.tictactoe",
+        "documentation": {}
+    },
+    {
+        "label": "Button",
+        "kind": 6,
+        "importPath": "tictactoe.src.buttons.button",
+        "description": "tictactoe.src.buttons.button",
+        "peekOfCode": "class Button:\n    DARK_GREY = (29,29,29)\n    def __init__(self, screen, x, y, width, height, text=\"\", color=(DARK_GREY), hover=()):\n        self.screen = screen \n        self.clicked = False\n        self.height = height\n        self.width = width\n        self.text = text \n        self.color = color\n        self.hover = (color[0] + 10, color[1] + 10, color[2] + 10)",
+        "detail": "tictactoe.src.buttons.button",
+        "documentation": {}
+    },
+    {
+        "label": "ImageButton",
+        "kind": 6,
+        "importPath": "tictactoe.src.buttons.image_button",
+        "description": "tictactoe.src.buttons.image_button",
+        "peekOfCode": "class ImageButton(Button):\n    def __init__(self, screen, x, y, image, scale):\n        width = image.get_width()\n        height = image.get_height()\n        super().__init__(screen, x, y, width, height) \n        self.image = pygame.transform.scale(image, (int(width * scale), int(height * scale)))\n        self.rect = self.image.get_rect()\n        self.rect.topleft = (x, y)\n    def draw(self):\n        self.screen.blit(self.image, (self.rect.x, self.rect.y))",
+        "detail": "tictactoe.src.buttons.image_button",
+        "documentation": {}
+    },
+    {
+        "label": "TicTacToeBox",
+        "kind": 6,
+        "importPath": "tictactoe.src.buttons.square",
+        "description": "tictactoe.src.buttons.square",
+        "peekOfCode": "class TicTacToeBox(Button):\n    def __init__(self, screen, x, y, height, width, text, color=(29,29,29)):\n        super().__init__(screen, x, y, height, width, text, color)\n    def setValue(self, value):\n        self.text = value;\n    def getValue(self):\n        options = \"OX\"\n        return self.text if self.text in options else \"\"",
+        "detail": "tictactoe.src.buttons.square",
+        "documentation": {}
+    },
+    {
+        "label": "TicTacToe",
+        "kind": 6,
+        "importPath": "tictactoe.src.game.tictactoe",
+        "description": "tictactoe.src.game.tictactoe",
+        "peekOfCode": "class TicTacToe:\n    LINE_COLOR = (23, 145, 135)\n    def __init__(self, screen):\n        self.turn = 0\n        self.screen = screen\n        self.rows = 3\n        self.cols = 3\n        self.board = []\n        self.createBoard()\n    def createBoard(self):",
+        "detail": "tictactoe.src.game.tictactoe",
+        "documentation": {}
+    },
+    {
+        "label": "game",
+        "kind": 2,
+        "importPath": "tictactoe.src.main",
+        "description": "tictactoe.src.main",
+        "peekOfCode": "def game():\n    HEIGHT = 600\n    WIDTH = 600\n    screen = pygame.display.set_mode((WIDTH, HEIGHT))\n    game1 = TicTacToe(screen)\n    game1.createBoard()\n    click = False\n    running = True\n    while running: \n        pygame.display.set_caption(\"Tic Tac Toe\")",
+        "detail": "tictactoe.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "main_menu",
+        "kind": 2,
+        "importPath": "tictactoe.src.main",
+        "description": "tictactoe.src.main",
+        "peekOfCode": "def main_menu():\n    click = False\n    run = True\n    WIDTH = 800\n    HEIGHT = 500\n    while run: \n        pygame.display.set_caption(\"Duality Game\")\n        screen = pygame.display.set_mode((WIDTH, HEIGHT))\n        screen.fill(BG_COLOR)\n        pos = pygame.mouse.get_pos()",
+        "detail": "tictactoe.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "BG_COLOR",
+        "kind": 5,
+        "importPath": "tictactoe.src.main",
+        "description": "tictactoe.src.main",
+        "peekOfCode": "BG_COLOR = (28, 170, 156)\nscreen = pygame.display.set_mode((800, 500))\nclock = pygame.time.Clock()\nstart_img = pygame.image.load(\"assets/start_btn.png\").convert_alpha()\nexit_img = pygame.image.load(\"assets/exit_btn.png\").convert_alpha()\nstart_button = ImageButton(screen, 100, 200, start_img, 0.7)\nexit_button = ImageButton(screen, 450, 200, exit_img, 0.7)\n# screens below\ndef game():\n    HEIGHT = 600",
+        "detail": "tictactoe.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "screen",
+        "kind": 5,
+        "importPath": "tictactoe.src.main",
+        "description": "tictactoe.src.main",
+        "peekOfCode": "screen = pygame.display.set_mode((800, 500))\nclock = pygame.time.Clock()\nstart_img = pygame.image.load(\"assets/start_btn.png\").convert_alpha()\nexit_img = pygame.image.load(\"assets/exit_btn.png\").convert_alpha()\nstart_button = ImageButton(screen, 100, 200, start_img, 0.7)\nexit_button = ImageButton(screen, 450, 200, exit_img, 0.7)\n# screens below\ndef game():\n    HEIGHT = 600\n    WIDTH = 600",
+        "detail": "tictactoe.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "clock",
+        "kind": 5,
+        "importPath": "tictactoe.src.main",
+        "description": "tictactoe.src.main",
+        "peekOfCode": "clock = pygame.time.Clock()\nstart_img = pygame.image.load(\"assets/start_btn.png\").convert_alpha()\nexit_img = pygame.image.load(\"assets/exit_btn.png\").convert_alpha()\nstart_button = ImageButton(screen, 100, 200, start_img, 0.7)\nexit_button = ImageButton(screen, 450, 200, exit_img, 0.7)\n# screens below\ndef game():\n    HEIGHT = 600\n    WIDTH = 600\n    screen = pygame.display.set_mode((WIDTH, HEIGHT))",
+        "detail": "tictactoe.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "start_img",
+        "kind": 5,
+        "importPath": "tictactoe.src.main",
+        "description": "tictactoe.src.main",
+        "peekOfCode": "start_img = pygame.image.load(\"assets/start_btn.png\").convert_alpha()\nexit_img = pygame.image.load(\"assets/exit_btn.png\").convert_alpha()\nstart_button = ImageButton(screen, 100, 200, start_img, 0.7)\nexit_button = ImageButton(screen, 450, 200, exit_img, 0.7)\n# screens below\ndef game():\n    HEIGHT = 600\n    WIDTH = 600\n    screen = pygame.display.set_mode((WIDTH, HEIGHT))\n    game1 = TicTacToe(screen)",
+        "detail": "tictactoe.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "exit_img",
+        "kind": 5,
+        "importPath": "tictactoe.src.main",
+        "description": "tictactoe.src.main",
+        "peekOfCode": "exit_img = pygame.image.load(\"assets/exit_btn.png\").convert_alpha()\nstart_button = ImageButton(screen, 100, 200, start_img, 0.7)\nexit_button = ImageButton(screen, 450, 200, exit_img, 0.7)\n# screens below\ndef game():\n    HEIGHT = 600\n    WIDTH = 600\n    screen = pygame.display.set_mode((WIDTH, HEIGHT))\n    game1 = TicTacToe(screen)\n    game1.createBoard()",
+        "detail": "tictactoe.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "start_button",
+        "kind": 5,
+        "importPath": "tictactoe.src.main",
+        "description": "tictactoe.src.main",
+        "peekOfCode": "start_button = ImageButton(screen, 100, 200, start_img, 0.7)\nexit_button = ImageButton(screen, 450, 200, exit_img, 0.7)\n# screens below\ndef game():\n    HEIGHT = 600\n    WIDTH = 600\n    screen = pygame.display.set_mode((WIDTH, HEIGHT))\n    game1 = TicTacToe(screen)\n    game1.createBoard()\n    click = False",
+        "detail": "tictactoe.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "exit_button",
+        "kind": 5,
+        "importPath": "tictactoe.src.main",
+        "description": "tictactoe.src.main",
+        "peekOfCode": "exit_button = ImageButton(screen, 450, 200, exit_img, 0.7)\n# screens below\ndef game():\n    HEIGHT = 600\n    WIDTH = 600\n    screen = pygame.display.set_mode((WIDTH, HEIGHT))\n    game1 = TicTacToe(screen)\n    game1.createBoard()\n    click = False\n    running = True",
+        "detail": "tictactoe.src.main",
+        "documentation": {}
+    }
+]
