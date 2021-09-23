@@ -49,11 +49,27 @@
         "documentation": {}
     },
     {
-        "label": "TicTacToeBox",
-        "importPath": "buttons.square",
-        "description": "buttons.square",
+        "label": "Button",
+        "importPath": "buttons.button",
+        "description": "buttons.button",
         "isExtraImport": true,
-        "detail": "buttons.square",
+        "detail": "buttons.button",
+        "documentation": {}
+    },
+    {
+        "label": "Button",
+        "importPath": "buttons.button",
+        "description": "buttons.button",
+        "isExtraImport": true,
+        "detail": "buttons.button",
+        "documentation": {}
+    },
+    {
+        "label": "Button",
+        "importPath": "buttons.button",
+        "description": "buttons.button",
+        "isExtraImport": true,
+        "detail": "buttons.button",
         "documentation": {}
     },
     {
@@ -63,6 +79,14 @@
         "importPath": "pygame.",
         "description": "pygame.",
         "detail": "pygame.",
+        "documentation": {}
+    },
+    {
+        "label": "TicTacToeBox",
+        "importPath": "buttons.square",
+        "description": "buttons.square",
+        "isExtraImport": true,
+        "detail": "buttons.square",
         "documentation": {}
     },
     {
@@ -151,6 +175,168 @@
         "description": "example1.src.main",
         "peekOfCode": "button1 = Button(screen, 0, 0, 200, 100, \"Go\")\ndef main_menu():\n    click = False\n    run = True\n    WIDTH = 800\n    HEIGHT = 500\n    while run: \n        screen = pygame.display.set_mode((WIDTH, HEIGHT))\n        pygame.display.set_caption(\"Duality Game\")\n        screen.fill(BG_COLOR)",
         "detail": "example1.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "main_menu",
+        "kind": 2,
+        "importPath": "example2.src.main",
+        "description": "example2.src.main",
+        "peekOfCode": "def main_menu():\n    click = False\n    run = True\n    WIDTH = 800\n    HEIGHT = 500\n    circle_x = 0\n    circle_y = 250\n    color = DARK_GREY\n    while run: \n        screen = pygame.display.set_mode((WIDTH, HEIGHT))",
+        "detail": "example2.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "BG_COLOR",
+        "kind": 5,
+        "importPath": "example2.src.main",
+        "description": "example2.src.main",
+        "peekOfCode": "BG_COLOR = (28, 170, 156)\nWHITE = (255, 255, 255)\nBLUE = (0, 0, 255)\nDARK_GREY = (30,30,30)\nGREEN = (0, 255, 0)\nRED = (255, 0, 0)\nscreen = pygame.display.set_mode((800, 500))\nclock = pygame.time.Clock()\ndef main_menu():\n    click = False",
+        "detail": "example2.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "WHITE",
+        "kind": 5,
+        "importPath": "example2.src.main",
+        "description": "example2.src.main",
+        "peekOfCode": "WHITE = (255, 255, 255)\nBLUE = (0, 0, 255)\nDARK_GREY = (30,30,30)\nGREEN = (0, 255, 0)\nRED = (255, 0, 0)\nscreen = pygame.display.set_mode((800, 500))\nclock = pygame.time.Clock()\ndef main_menu():\n    click = False\n    run = True",
+        "detail": "example2.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "BLUE",
+        "kind": 5,
+        "importPath": "example2.src.main",
+        "description": "example2.src.main",
+        "peekOfCode": "BLUE = (0, 0, 255)\nDARK_GREY = (30,30,30)\nGREEN = (0, 255, 0)\nRED = (255, 0, 0)\nscreen = pygame.display.set_mode((800, 500))\nclock = pygame.time.Clock()\ndef main_menu():\n    click = False\n    run = True\n    WIDTH = 800",
+        "detail": "example2.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "DARK_GREY",
+        "kind": 5,
+        "importPath": "example2.src.main",
+        "description": "example2.src.main",
+        "peekOfCode": "DARK_GREY = (30,30,30)\nGREEN = (0, 255, 0)\nRED = (255, 0, 0)\nscreen = pygame.display.set_mode((800, 500))\nclock = pygame.time.Clock()\ndef main_menu():\n    click = False\n    run = True\n    WIDTH = 800\n    HEIGHT = 500",
+        "detail": "example2.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "GREEN",
+        "kind": 5,
+        "importPath": "example2.src.main",
+        "description": "example2.src.main",
+        "peekOfCode": "GREEN = (0, 255, 0)\nRED = (255, 0, 0)\nscreen = pygame.display.set_mode((800, 500))\nclock = pygame.time.Clock()\ndef main_menu():\n    click = False\n    run = True\n    WIDTH = 800\n    HEIGHT = 500\n    circle_x = 0",
+        "detail": "example2.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "RED",
+        "kind": 5,
+        "importPath": "example2.src.main",
+        "description": "example2.src.main",
+        "peekOfCode": "RED = (255, 0, 0)\nscreen = pygame.display.set_mode((800, 500))\nclock = pygame.time.Clock()\ndef main_menu():\n    click = False\n    run = True\n    WIDTH = 800\n    HEIGHT = 500\n    circle_x = 0\n    circle_y = 250",
+        "detail": "example2.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "screen",
+        "kind": 5,
+        "importPath": "example2.src.main",
+        "description": "example2.src.main",
+        "peekOfCode": "screen = pygame.display.set_mode((800, 500))\nclock = pygame.time.Clock()\ndef main_menu():\n    click = False\n    run = True\n    WIDTH = 800\n    HEIGHT = 500\n    circle_x = 0\n    circle_y = 250\n    color = DARK_GREY",
+        "detail": "example2.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "clock",
+        "kind": 5,
+        "importPath": "example2.src.main",
+        "description": "example2.src.main",
+        "peekOfCode": "clock = pygame.time.Clock()\ndef main_menu():\n    click = False\n    run = True\n    WIDTH = 800\n    HEIGHT = 500\n    circle_x = 0\n    circle_y = 250\n    color = DARK_GREY\n    while run: ",
+        "detail": "example2.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "Button",
+        "kind": 6,
+        "importPath": "example3.src.buttons.button",
+        "description": "example3.src.buttons.button",
+        "peekOfCode": "class Button:\n    DARK_GREY = (29,29,29)\n    def __init__(self, screen, x, y, width, height, text=\"\", color=(DARK_GREY), hover=()):\n        self.screen = screen \n        self.clicked = False\n        self.height = height\n        self.width = width\n        self.text = text \n        self.color = color\n        self.hover = (color[0] + 10, color[1] + 10, color[2] + 10)",
+        "detail": "example3.src.buttons.button",
+        "documentation": {}
+    },
+    {
+        "label": "ImageButton",
+        "kind": 6,
+        "importPath": "example3.src.buttons.image_button",
+        "description": "example3.src.buttons.image_button",
+        "peekOfCode": "class ImageButton(Button):\n    def __init__(self, screen, x, y, image, scale):\n        width = image.get_width()\n        height = image.get_height()\n        super().__init__(screen, x, y, width, height) \n        self.image = pygame.transform.scale(image, (int(width * scale), int(height * scale)))\n        self.rect = self.image.get_rect()\n        self.rect.topleft = (x, y)\n    def draw(self):\n        self.screen.blit(self.image, (self.rect.x, self.rect.y))",
+        "detail": "example3.src.buttons.image_button",
+        "documentation": {}
+    },
+    {
+        "label": "TicTacToeBox",
+        "kind": 6,
+        "importPath": "example3.src.buttons.square",
+        "description": "example3.src.buttons.square",
+        "peekOfCode": "class TicTacToeBox(Button):\n    def __init__(self, screen, x, y, height, width, text, color=(29,29,29)):\n        super().__init__(screen, x, y, height, width, text, color)\n    def setValue(self, value):\n        self.text = value;\n    def getValue(self):\n        options = \"OX\"\n        return self.text if self.text in options else \"\"",
+        "detail": "example3.src.buttons.square",
+        "documentation": {}
+    },
+    {
+        "label": "main_menu",
+        "kind": 2,
+        "importPath": "example3.src.main",
+        "description": "example3.src.main",
+        "peekOfCode": "def main_menu():\n    click = False\n    run = True\n    WIDTH = 800\n    HEIGHT = 500\n    while run: \n        screen = pygame.display.set_mode((WIDTH, HEIGHT))\n        pygame.display.set_caption(\"Sample Card\")\n        screen.fill(BG_COLOR)\n        pos = pygame.mouse.get_pos()",
+        "detail": "example3.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "BG_COLOR",
+        "kind": 5,
+        "importPath": "example3.src.main",
+        "description": "example3.src.main",
+        "peekOfCode": "BG_COLOR = (28, 170, 156)\nscreen = pygame.display.set_mode((800, 500))\nclock = pygame.time.Clock()\nbutton1 = Button(screen, 0, 0, 200, 100, \"Go\")\nstart_img = pygame.image.load(\"assets/start_btn.png\").convert_alpha()\ndef main_menu():\n    click = False\n    run = True\n    WIDTH = 800\n    HEIGHT = 500",
+        "detail": "example3.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "screen",
+        "kind": 5,
+        "importPath": "example3.src.main",
+        "description": "example3.src.main",
+        "peekOfCode": "screen = pygame.display.set_mode((800, 500))\nclock = pygame.time.Clock()\nbutton1 = Button(screen, 0, 0, 200, 100, \"Go\")\nstart_img = pygame.image.load(\"assets/start_btn.png\").convert_alpha()\ndef main_menu():\n    click = False\n    run = True\n    WIDTH = 800\n    HEIGHT = 500\n    while run: ",
+        "detail": "example3.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "clock",
+        "kind": 5,
+        "importPath": "example3.src.main",
+        "description": "example3.src.main",
+        "peekOfCode": "clock = pygame.time.Clock()\nbutton1 = Button(screen, 0, 0, 200, 100, \"Go\")\nstart_img = pygame.image.load(\"assets/start_btn.png\").convert_alpha()\ndef main_menu():\n    click = False\n    run = True\n    WIDTH = 800\n    HEIGHT = 500\n    while run: \n        screen = pygame.display.set_mode((WIDTH, HEIGHT))",
+        "detail": "example3.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "button1",
+        "kind": 5,
+        "importPath": "example3.src.main",
+        "description": "example3.src.main",
+        "peekOfCode": "button1 = Button(screen, 0, 0, 200, 100, \"Go\")\nstart_img = pygame.image.load(\"assets/start_btn.png\").convert_alpha()\ndef main_menu():\n    click = False\n    run = True\n    WIDTH = 800\n    HEIGHT = 500\n    while run: \n        screen = pygame.display.set_mode((WIDTH, HEIGHT))\n        pygame.display.set_caption(\"Sample Card\")",
+        "detail": "example3.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "start_img",
+        "kind": 5,
+        "importPath": "example3.src.main",
+        "description": "example3.src.main",
+        "peekOfCode": "start_img = pygame.image.load(\"assets/start_btn.png\").convert_alpha()\ndef main_menu():\n    click = False\n    run = True\n    WIDTH = 800\n    HEIGHT = 500\n    while run: \n        screen = pygame.display.set_mode((WIDTH, HEIGHT))\n        pygame.display.set_caption(\"Sample Card\")\n        screen.fill(BG_COLOR)",
+        "detail": "example3.src.main",
         "documentation": {}
     },
     {

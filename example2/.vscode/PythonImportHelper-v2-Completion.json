@@ -1,0 +1,249 @@
+[
+  {
+    "label": "pygame",
+    "kind": 6,
+    "isExtraImport": true,
+    "importPath": "pygame",
+    "description": "pygame",
+    "detail": "pygame",
+    "documentation": {}
+  },
+  {
+    "label": "Button",
+    "importPath": "button",
+    "description": "button",
+    "isExtraImport": true,
+    "detail": "button",
+    "documentation": {}
+  },
+  {
+    "label": "Button",
+    "importPath": "button",
+    "description": "button",
+    "isExtraImport": true,
+    "detail": "button",
+    "documentation": {}
+  },
+  {
+    "label": "pygame,",
+    "kind": 6,
+    "isExtraImport": true,
+    "importPath": "pygame.",
+    "description": "pygame.",
+    "detail": "pygame.",
+    "documentation": {}
+  },
+  {
+    "label": "ImageButton",
+    "importPath": "image_button",
+    "description": "image_button",
+    "isExtraImport": true,
+    "detail": "image_button",
+    "documentation": {}
+  },
+  {
+    "label": "TicTacToe",
+    "importPath": "tictactoe",
+    "description": "tictactoe",
+    "isExtraImport": true,
+    "detail": "tictactoe",
+    "documentation": {}
+  },
+  {
+    "label": "TicTacToeBox",
+    "importPath": "square",
+    "description": "square",
+    "isExtraImport": true,
+    "detail": "square",
+    "documentation": {}
+  },
+  {
+    "label": "Button",
+    "kind": 6,
+    "importPath": "src.button",
+    "description": "src.button",
+    "peekOfCode": "class Button:\n    DARK_GREY = (29,29,29)\n    def __init__(self, screen, x, y, width, height, text=\"\", color=(DARK_GREY), hover=()):\n        self.screen = screen \n        self.clicked = False\n        self.height = height\n        self.width = width\n        self.text = text \n        self.color = color\n        self.hover = (color[0] + 10, color[1] + 10, color[2] + 10)",
+    "detail": "src.button",
+    "documentation": {}
+  },
+  {
+    "label": "ImageButton",
+    "kind": 6,
+    "importPath": "src.image_button",
+    "description": "src.image_button",
+    "peekOfCode": "class ImageButton(Button):\n    def __init__(self, screen, x, y, image, scale):\n        width = image.get_width()\n        height = image.get_height()\n        super().__init__(screen, x, y, width, height) \n        self.image = pygame.transform.scale(image, (int(width * scale), int(height * scale)))\n        self.rect = self.image.get_rect()\n        self.rect.topleft = (x, y)\n    def draw(self):\n        self.screen.blit(self.image, (self.rect.x, self.rect.y))",
+    "detail": "src.image_button",
+    "documentation": {}
+  },
+  {
+    "label": "draw_text",
+    "kind": 2,
+    "importPath": "src.main",
+    "description": "src.main",
+    "peekOfCode": "def draw_text(text, font, color, surface, x, y):\n    textobj = font.render(text, 1, color)\n    textrect = textobj.get_rect()\n    textrect.topleft = (x, y)\n    surface.blit(textobj, textrect)\nstart_img = pygame.image.load(\"assets/start_btn.png\").convert_alpha()\nexit_img = pygame.image.load(\"assets/exit_btn.png\").convert_alpha()\nsettings_img = pygame.image.load(\"assets/start_btn.png\").convert_alpha()\nstart_button = ImageButton(screen, 100, 200, start_img, 0.7)\nexit_button = ImageButton(screen, 450, 200, exit_img, 0.7)",
+    "detail": "src.main",
+    "documentation": {}
+  },
+  {
+    "label": "game",
+    "kind": 2,
+    "importPath": "src.main",
+    "description": "src.main",
+    "peekOfCode": "def game():\n    HEIGHT = 600\n    WIDTH = 600\n    screen = pygame.display.set_mode((WIDTH, HEIGHT))\n    game1 = TicTacToe(screen)\n    game1.createBoard()\n    click = False\n    running = True\n    while running: \n        pygame.display.set_caption(\"Tic Tac Toe\")",
+    "detail": "src.main",
+    "documentation": {}
+  },
+  {
+    "label": "main_menu",
+    "kind": 2,
+    "importPath": "src.main",
+    "description": "src.main",
+    "peekOfCode": "def main_menu():\n    click = False\n    run = True\n    WIDTH = 1920\n    HEIGHT = 1080\n    while run: \n        pygame.display.set_caption(\"Duality Game\")\n        screen = pygame.display.set_mode((WIDTH, HEIGHT))\n        screen.fill(BG_COLOR)\n        pos = pygame.mouse.get_pos()",
+    "detail": "src.main",
+    "documentation": {}
+  },
+  {
+    "label": "clock",
+    "kind": 5,
+    "importPath": "src.main",
+    "description": "src.main",
+    "peekOfCode": "clock = pygame.time.Clock()\nBG_COLOR = (28, 170, 156)\nscreen = pygame.display.set_mode((800, 500))\ndef draw_text(text, font, color, surface, x, y):\n    textobj = font.render(text, 1, color)\n    textrect = textobj.get_rect()\n    textrect.topleft = (x, y)\n    surface.blit(textobj, textrect)\nstart_img = pygame.image.load(\"assets/start_btn.png\").convert_alpha()\nexit_img = pygame.image.load(\"assets/exit_btn.png\").convert_alpha()",
+    "detail": "src.main",
+    "documentation": {}
+  },
+  {
+    "label": "BG_COLOR",
+    "kind": 5,
+    "importPath": "src.main",
+    "description": "src.main",
+    "peekOfCode": "BG_COLOR = (28, 170, 156)\nscreen = pygame.display.set_mode((800, 500))\ndef draw_text(text, font, color, surface, x, y):\n    textobj = font.render(text, 1, color)\n    textrect = textobj.get_rect()\n    textrect.topleft = (x, y)\n    surface.blit(textobj, textrect)\nstart_img = pygame.image.load(\"assets/start_btn.png\").convert_alpha()\nexit_img = pygame.image.load(\"assets/exit_btn.png\").convert_alpha()\nsettings_img = pygame.image.load(\"assets/start_btn.png\").convert_alpha()",
+    "detail": "src.main",
+    "documentation": {}
+  },
+  {
+    "label": "screen",
+    "kind": 5,
+    "importPath": "src.main",
+    "description": "src.main",
+    "peekOfCode": "screen = pygame.display.set_mode((800, 500))\ndef draw_text(text, font, color, surface, x, y):\n    textobj = font.render(text, 1, color)\n    textrect = textobj.get_rect()\n    textrect.topleft = (x, y)\n    surface.blit(textobj, textrect)\nstart_img = pygame.image.load(\"assets/start_btn.png\").convert_alpha()\nexit_img = pygame.image.load(\"assets/exit_btn.png\").convert_alpha()\nsettings_img = pygame.image.load(\"assets/start_btn.png\").convert_alpha()\nstart_button = ImageButton(screen, 100, 200, start_img, 0.7)",
+    "detail": "src.main",
+    "documentation": {}
+  },
+  {
+    "label": "start_img",
+    "kind": 5,
+    "importPath": "src.main",
+    "description": "src.main",
+    "peekOfCode": "start_img = pygame.image.load(\"assets/start_btn.png\").convert_alpha()\nexit_img = pygame.image.load(\"assets/exit_btn.png\").convert_alpha()\nsettings_img = pygame.image.load(\"assets/start_btn.png\").convert_alpha()\nstart_button = ImageButton(screen, 100, 200, start_img, 0.7)\nexit_button = ImageButton(screen, 450, 200, exit_img, 0.7)\nsettings_button = ImageButton(screen, 450, 200, exit_img, 0.7)\nfont = pygame.font.SysFont(None, 20)\nmatrix = []\ncurrent_row = 0\ncurrent_col = 0",
+    "detail": "src.main",
+    "documentation": {}
+  },
+  {
+    "label": "exit_img",
+    "kind": 5,
+    "importPath": "src.main",
+    "description": "src.main",
+    "peekOfCode": "exit_img = pygame.image.load(\"assets/exit_btn.png\").convert_alpha()\nsettings_img = pygame.image.load(\"assets/start_btn.png\").convert_alpha()\nstart_button = ImageButton(screen, 100, 200, start_img, 0.7)\nexit_button = ImageButton(screen, 450, 200, exit_img, 0.7)\nsettings_button = ImageButton(screen, 450, 200, exit_img, 0.7)\nfont = pygame.font.SysFont(None, 20)\nmatrix = []\ncurrent_row = 0\ncurrent_col = 0\nturn = True",
+    "detail": "src.main",
+    "documentation": {}
+  },
+  {
+    "label": "settings_img",
+    "kind": 5,
+    "importPath": "src.main",
+    "description": "src.main",
+    "peekOfCode": "settings_img = pygame.image.load(\"assets/start_btn.png\").convert_alpha()\nstart_button = ImageButton(screen, 100, 200, start_img, 0.7)\nexit_button = ImageButton(screen, 450, 200, exit_img, 0.7)\nsettings_button = ImageButton(screen, 450, 200, exit_img, 0.7)\nfont = pygame.font.SysFont(None, 20)\nmatrix = []\ncurrent_row = 0\ncurrent_col = 0\nturn = True\ndef game():",
+    "detail": "src.main",
+    "documentation": {}
+  },
+  {
+    "label": "start_button",
+    "kind": 5,
+    "importPath": "src.main",
+    "description": "src.main",
+    "peekOfCode": "start_button = ImageButton(screen, 100, 200, start_img, 0.7)\nexit_button = ImageButton(screen, 450, 200, exit_img, 0.7)\nsettings_button = ImageButton(screen, 450, 200, exit_img, 0.7)\nfont = pygame.font.SysFont(None, 20)\nmatrix = []\ncurrent_row = 0\ncurrent_col = 0\nturn = True\ndef game():\n    HEIGHT = 600",
+    "detail": "src.main",
+    "documentation": {}
+  },
+  {
+    "label": "exit_button",
+    "kind": 5,
+    "importPath": "src.main",
+    "description": "src.main",
+    "peekOfCode": "exit_button = ImageButton(screen, 450, 200, exit_img, 0.7)\nsettings_button = ImageButton(screen, 450, 200, exit_img, 0.7)\nfont = pygame.font.SysFont(None, 20)\nmatrix = []\ncurrent_row = 0\ncurrent_col = 0\nturn = True\ndef game():\n    HEIGHT = 600\n    WIDTH = 600",
+    "detail": "src.main",
+    "documentation": {}
+  },
+  {
+    "label": "settings_button",
+    "kind": 5,
+    "importPath": "src.main",
+    "description": "src.main",
+    "peekOfCode": "settings_button = ImageButton(screen, 450, 200, exit_img, 0.7)\nfont = pygame.font.SysFont(None, 20)\nmatrix = []\ncurrent_row = 0\ncurrent_col = 0\nturn = True\ndef game():\n    HEIGHT = 600\n    WIDTH = 600\n    screen = pygame.display.set_mode((WIDTH, HEIGHT))",
+    "detail": "src.main",
+    "documentation": {}
+  },
+  {
+    "label": "font",
+    "kind": 5,
+    "importPath": "src.main",
+    "description": "src.main",
+    "peekOfCode": "font = pygame.font.SysFont(None, 20)\nmatrix = []\ncurrent_row = 0\ncurrent_col = 0\nturn = True\ndef game():\n    HEIGHT = 600\n    WIDTH = 600\n    screen = pygame.display.set_mode((WIDTH, HEIGHT))\n    game1 = TicTacToe(screen)",
+    "detail": "src.main",
+    "documentation": {}
+  },
+  {
+    "label": "matrix",
+    "kind": 5,
+    "importPath": "src.main",
+    "description": "src.main",
+    "peekOfCode": "matrix = []\ncurrent_row = 0\ncurrent_col = 0\nturn = True\ndef game():\n    HEIGHT = 600\n    WIDTH = 600\n    screen = pygame.display.set_mode((WIDTH, HEIGHT))\n    game1 = TicTacToe(screen)\n    game1.createBoard()",
+    "detail": "src.main",
+    "documentation": {}
+  },
+  {
+    "label": "current_row",
+    "kind": 5,
+    "importPath": "src.main",
+    "description": "src.main",
+    "peekOfCode": "current_row = 0\ncurrent_col = 0\nturn = True\ndef game():\n    HEIGHT = 600\n    WIDTH = 600\n    screen = pygame.display.set_mode((WIDTH, HEIGHT))\n    game1 = TicTacToe(screen)\n    game1.createBoard()\n    click = False",
+    "detail": "src.main",
+    "documentation": {}
+  },
+  {
+    "label": "current_col",
+    "kind": 5,
+    "importPath": "src.main",
+    "description": "src.main",
+    "peekOfCode": "current_col = 0\nturn = True\ndef game():\n    HEIGHT = 600\n    WIDTH = 600\n    screen = pygame.display.set_mode((WIDTH, HEIGHT))\n    game1 = TicTacToe(screen)\n    game1.createBoard()\n    click = False\n    running = True",
+    "detail": "src.main",
+    "documentation": {}
+  },
+  {
+    "label": "turn",
+    "kind": 5,
+    "importPath": "src.main",
+    "description": "src.main",
+    "peekOfCode": "turn = True\ndef game():\n    HEIGHT = 600\n    WIDTH = 600\n    screen = pygame.display.set_mode((WIDTH, HEIGHT))\n    game1 = TicTacToe(screen)\n    game1.createBoard()\n    click = False\n    running = True\n    while running: ",
+    "detail": "src.main",
+    "documentation": {}
+  },
+  {
+    "label": "TicTacToeBox",
+    "kind": 6,
+    "importPath": "src.square",
+    "description": "src.square",
+    "peekOfCode": "class TicTacToeBox(Button):\n    def __init__(self, screen, x, y, height, width, text, color=(29,29,29)):\n        super().__init__(screen, x, y, height, width, text, color)\n    def setValue(self, value):\n        self.text = value;\n    def getValue(self):\n        options = \"OX\"\n        return self.text if self.text in options else \"\"",
+    "detail": "src.square",
+    "documentation": {}
+  },
+  {
+    "label": "TicTacToe",
+    "kind": 6,
+    "importPath": "src.tictactoe",
+    "description": "src.tictactoe",
+    "peekOfCode": "class TicTacToe:\n    LINE_COLOR = (23, 145, 135)\n    def __init__(self, screen):\n        self.turn = 0\n        self.screen = screen\n        self.rows = 3\n        self.cols = 3\n        self.board = []\n        self.createBoard()\n    def createBoard(self):",
+    "detail": "src.tictactoe",
+    "documentation": {}
+  }
+]
