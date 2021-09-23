@@ -2,7 +2,6 @@ import pygame, sys
 from buttons.image_button import ImageButton
 from game.tictactoe import TicTacToe 
 
-
 pygame.init()
 
 BG_COLOR = (28, 170, 156)

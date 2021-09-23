@@ -25,6 +25,30 @@
         "documentation": {}
     },
     {
+        "label": "Button",
+        "importPath": "buttons.button",
+        "description": "buttons.button",
+        "isExtraImport": true,
+        "detail": "buttons.button",
+        "documentation": {}
+    },
+    {
+        "label": "Button",
+        "importPath": "buttons.button",
+        "description": "buttons.button",
+        "isExtraImport": true,
+        "detail": "buttons.button",
+        "documentation": {}
+    },
+    {
+        "label": "Button",
+        "importPath": "buttons.button",
+        "description": "buttons.button",
+        "isExtraImport": true,
+        "detail": "buttons.button",
+        "documentation": {}
+    },
+    {
         "label": "TicTacToeBox",
         "importPath": "buttons.square",
         "description": "buttons.square",
@@ -55,6 +79,78 @@
         "description": "game.tictactoe",
         "isExtraImport": true,
         "detail": "game.tictactoe",
+        "documentation": {}
+    },
+    {
+        "label": "Button",
+        "kind": 6,
+        "importPath": "example1.src.buttons.button",
+        "description": "example1.src.buttons.button",
+        "peekOfCode": "class Button:\n    DARK_GREY = (29,29,29)\n    def __init__(self, screen, x, y, width, height, text=\"\", color=(DARK_GREY), hover=()):\n        self.screen = screen \n        self.clicked = False\n        self.height = height\n        self.width = width\n        self.text = text \n        self.color = color\n        self.hover = (color[0] + 10, color[1] + 10, color[2] + 10)",
+        "detail": "example1.src.buttons.button",
+        "documentation": {}
+    },
+    {
+        "label": "ImageButton",
+        "kind": 6,
+        "importPath": "example1.src.buttons.image_button",
+        "description": "example1.src.buttons.image_button",
+        "peekOfCode": "class ImageButton(Button):\n    def __init__(self, screen, x, y, image, scale):\n        width = image.get_width()\n        height = image.get_height()\n        super().__init__(screen, x, y, width, height) \n        self.image = pygame.transform.scale(image, (int(width * scale), int(height * scale)))\n        self.rect = self.image.get_rect()\n        self.rect.topleft = (x, y)\n    def draw(self):\n        self.screen.blit(self.image, (self.rect.x, self.rect.y))",
+        "detail": "example1.src.buttons.image_button",
+        "documentation": {}
+    },
+    {
+        "label": "TicTacToeBox",
+        "kind": 6,
+        "importPath": "example1.src.buttons.square",
+        "description": "example1.src.buttons.square",
+        "peekOfCode": "class TicTacToeBox(Button):\n    def __init__(self, screen, x, y, height, width, text, color=(29,29,29)):\n        super().__init__(screen, x, y, height, width, text, color)\n    def setValue(self, value):\n        self.text = value;\n    def getValue(self):\n        options = \"OX\"\n        return self.text if self.text in options else \"\"",
+        "detail": "example1.src.buttons.square",
+        "documentation": {}
+    },
+    {
+        "label": "main_menu",
+        "kind": 2,
+        "importPath": "example1.src.main",
+        "description": "example1.src.main",
+        "peekOfCode": "def main_menu():\n    click = False\n    run = True\n    WIDTH = 800\n    HEIGHT = 500\n    while run: \n        screen = pygame.display.set_mode((WIDTH, HEIGHT))\n        pygame.display.set_caption(\"Duality Game\")\n        screen.fill(BG_COLOR)\n        pos = pygame.mouse.get_pos()",
+        "detail": "example1.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "BG_COLOR",
+        "kind": 5,
+        "importPath": "example1.src.main",
+        "description": "example1.src.main",
+        "peekOfCode": "BG_COLOR = (28, 170, 156)\nscreen = pygame.display.set_mode((800, 500))\nclock = pygame.time.Clock()\nbutton1 = Button(screen, 0, 0, 200, 100, \"Go\")\ndef main_menu():\n    click = False\n    run = True\n    WIDTH = 800\n    HEIGHT = 500\n    while run: ",
+        "detail": "example1.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "screen",
+        "kind": 5,
+        "importPath": "example1.src.main",
+        "description": "example1.src.main",
+        "peekOfCode": "screen = pygame.display.set_mode((800, 500))\nclock = pygame.time.Clock()\nbutton1 = Button(screen, 0, 0, 200, 100, \"Go\")\ndef main_menu():\n    click = False\n    run = True\n    WIDTH = 800\n    HEIGHT = 500\n    while run: \n        screen = pygame.display.set_mode((WIDTH, HEIGHT))",
+        "detail": "example1.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "clock",
+        "kind": 5,
+        "importPath": "example1.src.main",
+        "description": "example1.src.main",
+        "peekOfCode": "clock = pygame.time.Clock()\nbutton1 = Button(screen, 0, 0, 200, 100, \"Go\")\ndef main_menu():\n    click = False\n    run = True\n    WIDTH = 800\n    HEIGHT = 500\n    while run: \n        screen = pygame.display.set_mode((WIDTH, HEIGHT))\n        pygame.display.set_caption(\"Duality Game\")",
+        "detail": "example1.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "button1",
+        "kind": 5,
+        "importPath": "example1.src.main",
+        "description": "example1.src.main",
+        "peekOfCode": "button1 = Button(screen, 0, 0, 200, 100, \"Go\")\ndef main_menu():\n    click = False\n    run = True\n    WIDTH = 800\n    HEIGHT = 500\n    while run: \n        screen = pygame.display.set_mode((WIDTH, HEIGHT))\n        pygame.display.set_caption(\"Duality Game\")\n        screen.fill(BG_COLOR)",
+        "detail": "example1.src.main",
         "documentation": {}
     },
     {

@@ -16,9 +16,10 @@ class Button:
 
         self.x = x
         self.y = y
-        
-        self.font = pygame.font.SysFont("Ariel", 30)
+
+        self.font = pygame.font.SysFont("Arial", 30)
         self.rect = pygame.Rect(x, y, width, height)
+
         self.rect.topleft = (x, y)
     
     def collides(self, pos):
@@ -33,5 +34,4 @@ class Button:
         if len(self.text):
             text_img = self.font.render(self.text, True, (255,255,255))
             text_rect = text_img.get_rect(center=(self.rect.topleft[0] + (self.width // 2), self.rect.topleft[1] + (self.height // 2)))
-
             self.screen.blit(text_img, text_rect)
