@@ -15,7 +15,8 @@ class LoginForm:
         self.user_box = InputBox(screen, x, y, w, h)
         self.pass_box = InputBox(screen, x, y + h + padding, w, h)
         self.button = Button(screen, x, y + h * 2 + padding + 10, w, h, "Login")
-
+        self.status = {}
+        
     def handle_event(self, event):
         self.user_box.handle_event(event)
         self.pass_box.handle_event(event)
