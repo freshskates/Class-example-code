@@ -73,6 +73,46 @@
         "documentation": {}
     },
     {
+        "label": "Button",
+        "importPath": "buttons.button",
+        "description": "buttons.button",
+        "isExtraImport": true,
+        "detail": "buttons.button",
+        "documentation": {}
+    },
+    {
+        "label": "Button",
+        "importPath": "buttons.button",
+        "description": "buttons.button",
+        "isExtraImport": true,
+        "detail": "buttons.button",
+        "documentation": {}
+    },
+    {
+        "label": "Button",
+        "importPath": "buttons.button",
+        "description": "buttons.button",
+        "isExtraImport": true,
+        "detail": "buttons.button",
+        "documentation": {}
+    },
+    {
+        "label": "Button",
+        "importPath": "buttons.button",
+        "description": "buttons.button",
+        "isExtraImport": true,
+        "detail": "buttons.button",
+        "documentation": {}
+    },
+    {
+        "label": "InputBox",
+        "importPath": "buttons.input_box",
+        "description": "buttons.input_box",
+        "isExtraImport": true,
+        "detail": "buttons.input_box",
+        "documentation": {}
+    },
+    {
         "label": "InputBox",
         "importPath": "buttons.input_box",
         "description": "buttons.input_box",
@@ -89,19 +129,11 @@
         "documentation": {}
     },
     {
-        "label": "TicTacToeBox",
-        "importPath": "buttons.square",
-        "description": "buttons.square",
+        "label": "UserModel",
+        "importPath": "network.users.users",
+        "description": "network.users.users",
         "isExtraImport": true,
-        "detail": "buttons.square",
-        "documentation": {}
-    },
-    {
-        "label": "TicTacToeBox",
-        "importPath": "buttons.square",
-        "description": "buttons.square",
-        "isExtraImport": true,
-        "detail": "buttons.square",
+        "detail": "network.users.users",
         "documentation": {}
     },
     {
@@ -123,6 +155,30 @@
         "documentation": {}
     },
     {
+        "label": "Blank",
+        "importPath": "screens.blank",
+        "description": "screens.blank",
+        "isExtraImport": true,
+        "detail": "screens.blank",
+        "documentation": {}
+    },
+    {
+        "label": "Blank",
+        "importPath": "screens.blank",
+        "description": "screens.blank",
+        "isExtraImport": true,
+        "detail": "screens.blank",
+        "documentation": {}
+    },
+    {
+        "label": "ImageButton",
+        "importPath": "buttons.image_button",
+        "description": "buttons.image_button",
+        "isExtraImport": true,
+        "detail": "buttons.image_button",
+        "documentation": {}
+    },
+    {
         "label": "ImageButton",
         "importPath": "buttons.image_button",
         "description": "buttons.image_button",
@@ -136,14 +192,6 @@
         "description": "buttons.image_button",
         "isExtraImport": true,
         "detail": "buttons.image_button",
-        "documentation": {}
-    },
-    {
-        "label": "Text",
-        "importPath": "buttons.text",
-        "description": "buttons.text",
-        "isExtraImport": true,
-        "detail": "buttons.text",
         "documentation": {}
     },
     {
@@ -155,6 +203,62 @@
         "documentation": {}
     },
     {
+        "label": "LoginForm",
+        "importPath": "components.login_form",
+        "description": "components.login_form",
+        "isExtraImport": true,
+        "detail": "components.login_form",
+        "documentation": {}
+    },
+    {
+        "label": "Text",
+        "importPath": "buttons.text",
+        "description": "buttons.text",
+        "isExtraImport": true,
+        "detail": "buttons.text",
+        "documentation": {}
+    },
+    {
+        "label": "Text",
+        "importPath": "buttons.text",
+        "description": "buttons.text",
+        "isExtraImport": true,
+        "detail": "buttons.text",
+        "documentation": {}
+    },
+    {
+        "label": "MainScreen",
+        "importPath": "screens.main_screen",
+        "description": "screens.main_screen",
+        "isExtraImport": true,
+        "detail": "screens.main_screen",
+        "documentation": {}
+    },
+    {
+        "label": "MainScreen",
+        "importPath": "screens.main_screen",
+        "description": "screens.main_screen",
+        "isExtraImport": true,
+        "detail": "screens.main_screen",
+        "documentation": {}
+    },
+    {
+        "label": "TicTacToeBox",
+        "importPath": "buttons.square",
+        "description": "buttons.square",
+        "isExtraImport": true,
+        "detail": "buttons.square",
+        "documentation": {}
+    },
+    {
+        "label": "TicTacToeBox",
+        "importPath": "buttons.square",
+        "description": "buttons.square",
+        "isExtraImport": true,
+        "detail": "buttons.square",
+        "documentation": {}
+    },
+    {
         "label": "TicTacToe",
         "importPath": "game.tictactoe",
         "description": "game.tictactoe",
@@ -168,6 +272,14 @@
         "description": "game.tictactoe",
         "isExtraImport": true,
         "detail": "game.tictactoe",
+        "documentation": {}
+    },
+    {
+        "label": "Game",
+        "importPath": "screens.game_screen",
+        "description": "screens.game_screen",
+        "isExtraImport": true,
+        "detail": "screens.game_screen",
         "documentation": {}
     },
     {
@@ -266,6 +378,177 @@
         "description": "routes.auth",
         "isExtraImport": true,
         "detail": "routes.auth",
+        "documentation": {}
+    },
+    {
+        "label": "Button",
+        "kind": 6,
+        "importPath": "blank.src.buttons.button",
+        "description": "blank.src.buttons.button",
+        "peekOfCode": "class Button:\n    DARK_GREY = (29,29,29)\n    def __init__(self, screen, x, y, width, height, text=\"\", color=(DARK_GREY), hover=()):\n        self.screen = screen \n        self.clicked = False\n        self.height = height\n        self.width = width\n        self.text = text \n        self.color = color\n        self.hover = (color[0] + 10, color[1] + 10, color[2] + 10)",
+        "detail": "blank.src.buttons.button",
+        "documentation": {}
+    },
+    {
+        "label": "ImageButton",
+        "kind": 6,
+        "importPath": "blank.src.buttons.image_button",
+        "description": "blank.src.buttons.image_button",
+        "peekOfCode": "class ImageButton(Button):\n    def __init__(self, screen, x, y, image_path, scale):\n        image = pygame.image.load(image_path).convert_alpha()\n        width = image.get_width()\n        height = image.get_height()\n        super().__init__(screen, x, y, width, height) \n        self.image = pygame.transform.scale(image, (int(width * scale), int(height * scale)))\n        self.rect = self.image.get_rect()\n        self.rect.topleft = (x, y)\n    def draw(self):",
+        "detail": "blank.src.buttons.image_button",
+        "documentation": {}
+    },
+    {
+        "label": "InputBox",
+        "kind": 6,
+        "importPath": "blank.src.buttons.input_box",
+        "description": "blank.src.buttons.input_box",
+        "peekOfCode": "class InputBox:\n    def __init__(self, screen, x, y, w, h, text=''):\n        self.screen = screen\n        self.rect = pygame.Rect(x, y, w, h)\n        self.color = INACTIVE_BG\n        self.text = text\n        self.txt_surface = FONT.render(text, True, self.color)\n        self.active = False\n    def handle_event(self, event):\n        if event.type == pygame.MOUSEBUTTONDOWN:",
+        "detail": "blank.src.buttons.input_box",
+        "documentation": {}
+    },
+    {
+        "label": "ACTIVE_BG",
+        "kind": 5,
+        "importPath": "blank.src.buttons.input_box",
+        "description": "blank.src.buttons.input_box",
+        "peekOfCode": "ACTIVE_BG = (255, 255, 255)\nINACTIVE_BG = (20, 20, 20)\nFONT = pygame.font.SysFont(\"leelawadee\", 20)\nclass InputBox:\n    def __init__(self, screen, x, y, w, h, text=''):\n        self.screen = screen\n        self.rect = pygame.Rect(x, y, w, h)\n        self.color = INACTIVE_BG\n        self.text = text\n        self.txt_surface = FONT.render(text, True, self.color)",
+        "detail": "blank.src.buttons.input_box",
+        "documentation": {}
+    },
+    {
+        "label": "INACTIVE_BG",
+        "kind": 5,
+        "importPath": "blank.src.buttons.input_box",
+        "description": "blank.src.buttons.input_box",
+        "peekOfCode": "INACTIVE_BG = (20, 20, 20)\nFONT = pygame.font.SysFont(\"leelawadee\", 20)\nclass InputBox:\n    def __init__(self, screen, x, y, w, h, text=''):\n        self.screen = screen\n        self.rect = pygame.Rect(x, y, w, h)\n        self.color = INACTIVE_BG\n        self.text = text\n        self.txt_surface = FONT.render(text, True, self.color)\n        self.active = False",
+        "detail": "blank.src.buttons.input_box",
+        "documentation": {}
+    },
+    {
+        "label": "FONT",
+        "kind": 5,
+        "importPath": "blank.src.buttons.input_box",
+        "description": "blank.src.buttons.input_box",
+        "peekOfCode": "FONT = pygame.font.SysFont(\"leelawadee\", 20)\nclass InputBox:\n    def __init__(self, screen, x, y, w, h, text=''):\n        self.screen = screen\n        self.rect = pygame.Rect(x, y, w, h)\n        self.color = INACTIVE_BG\n        self.text = text\n        self.txt_surface = FONT.render(text, True, self.color)\n        self.active = False\n    def handle_event(self, event):",
+        "detail": "blank.src.buttons.input_box",
+        "documentation": {}
+    },
+    {
+        "label": "Text",
+        "kind": 6,
+        "importPath": "blank.src.buttons.text",
+        "description": "blank.src.buttons.text",
+        "peekOfCode": "class Text:\n    def __init__(self, screen, x, y, text=\"\", font_size=20):\n        self.font = pygame.font.SysFont('leelawadee', font_size)\n        self.screen = screen\n        self.text = text\n        self.pos = (x, y)\n    def setText(self, text):\n        self.text = text\n    def draw(self):\n        textsurface = self.font.render(self.text, True, (255, 255, 255))",
+        "detail": "blank.src.buttons.text",
+        "documentation": {}
+    },
+    {
+        "label": "LoginForm",
+        "kind": 6,
+        "importPath": "blank.src.components.login_form",
+        "description": "blank.src.components.login_form",
+        "peekOfCode": "class LoginForm:\n    def __init__(self, screen, x, y, w, h):\n        self.screen = screen\n        self.user_box = InputBox(screen, x, y, w, h)\n        self.pass_box = InputBox(screen, x, y + h + padding, w, h)\n        self.button = Button(screen, x, y + h * 2 + padding + 10, w, h, \"Login\")\n        self.status = {}\n    def handle_event(self, event):\n        self.user_box.handle_event(event)\n        self.pass_box.handle_event(event)",
+        "detail": "blank.src.components.login_form",
+        "documentation": {}
+    },
+    {
+        "label": "padding",
+        "kind": 5,
+        "importPath": "blank.src.components.login_form",
+        "description": "blank.src.components.login_form",
+        "peekOfCode": "padding = 10\n# Login Form component holds three elements, \n# 2 Input Boxes\n# 1 Button\nclass LoginForm:\n    def __init__(self, screen, x, y, w, h):\n        self.screen = screen\n        self.user_box = InputBox(screen, x, y, w, h)\n        self.pass_box = InputBox(screen, x, y + h + padding, w, h)\n        self.button = Button(screen, x, y + h * 2 + padding + 10, w, h, \"Login\")",
+        "detail": "blank.src.components.login_form",
+        "documentation": {}
+    },
+    {
+        "label": "RoomModel",
+        "kind": 6,
+        "importPath": "blank.src.network.rooms.rooms",
+        "description": "blank.src.network.rooms.rooms",
+        "peekOfCode": "class RoomModel:\n    @staticmethod\n    def create_room(username):\n        options = {\"user\": username}\n        response = requests.post(f\"{url}/auth/create_room\", data=options)\n        return response.json()\n    @staticmethod\n    def join_room(id, username):\n        options = {\"id\": id, \"user\": username}\n        response = requests.post(f\"{url}/auth/join_room\", data=options)",
+        "detail": "blank.src.network.rooms.rooms",
+        "documentation": {}
+    },
+    {
+        "label": "url",
+        "kind": 5,
+        "importPath": "blank.src.network.rooms.rooms",
+        "description": "blank.src.network.rooms.rooms",
+        "peekOfCode": "url = \"http://127.0.0.1:5000\"\nclass RoomModel:\n    @staticmethod\n    def create_room(username):\n        options = {\"user\": username}\n        response = requests.post(f\"{url}/auth/create_room\", data=options)\n        return response.json()\n    @staticmethod\n    def join_room(id, username):\n        options = {\"id\": id, \"user\": username}",
+        "detail": "blank.src.network.rooms.rooms",
+        "documentation": {}
+    },
+    {
+        "label": "UserModel",
+        "kind": 6,
+        "importPath": "blank.src.network.users.users",
+        "description": "blank.src.network.users.users",
+        "peekOfCode": "class UserModel:\n    @staticmethod\n    def create_user(username, password):\n        options = {\"user\": username, \"password\": password}\n        response = requests.post(f\"{url}/auth/register\", data=options)\n        return response.json()\n    @staticmethod\n    def authenticate(username, password):\n        options = {\"user\": username, \"password\": password}\n        response = requests.post(f\"{url}/auth/login\", data=options)",
+        "detail": "blank.src.network.users.users",
+        "documentation": {}
+    },
+    {
+        "label": "url",
+        "kind": 5,
+        "importPath": "blank.src.network.users.users",
+        "description": "blank.src.network.users.users",
+        "peekOfCode": "url = \"http://127.0.0.1:5000\"\nclass UserModel:\n    @staticmethod\n    def create_user(username, password):\n        options = {\"user\": username, \"password\": password}\n        response = requests.post(f\"{url}/auth/register\", data=options)\n        return response.json()\n    @staticmethod\n    def authenticate(username, password):\n        options = {\"user\": username, \"password\": password}",
+        "detail": "blank.src.network.users.users",
+        "documentation": {}
+    },
+    {
+        "label": "Blank",
+        "kind": 6,
+        "importPath": "blank.src.screens.blank",
+        "description": "blank.src.screens.blank",
+        "peekOfCode": "class Blank: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.click = False\n        self.running = True\n        self.button = Button(self.screen, self.width//2 - 100, self.height//2 - 25, 200, 50, \"ESC to go back\", BLACK_COLOR)\n        self.clock = pygame.time.Clock()\n    def draw(self):",
+        "detail": "blank.src.screens.blank",
+        "documentation": {}
+    },
+    {
+        "label": "BG_COLOR",
+        "kind": 5,
+        "importPath": "blank.src.screens.blank",
+        "description": "blank.src.screens.blank",
+        "peekOfCode": "BG_COLOR = (30, 30, 30)\nBLACK_COLOR = (0,0,0)\nclass Blank: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.click = False\n        self.running = True\n        self.button = Button(self.screen, self.width//2 - 100, self.height//2 - 25, 200, 50, \"ESC to go back\", BLACK_COLOR)",
+        "detail": "blank.src.screens.blank",
+        "documentation": {}
+    },
+    {
+        "label": "BLACK_COLOR",
+        "kind": 5,
+        "importPath": "blank.src.screens.blank",
+        "description": "blank.src.screens.blank",
+        "peekOfCode": "BLACK_COLOR = (0,0,0)\nclass Blank: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.click = False\n        self.running = True\n        self.button = Button(self.screen, self.width//2 - 100, self.height//2 - 25, 200, 50, \"ESC to go back\", BLACK_COLOR)\n        self.clock = pygame.time.Clock()",
+        "detail": "blank.src.screens.blank",
+        "documentation": {}
+    },
+    {
+        "label": "MainScreen",
+        "kind": 6,
+        "importPath": "blank.src.screens.main_screen",
+        "description": "blank.src.screens.main_screen",
+        "peekOfCode": "class MainScreen: \n    def __init__(self):\n        self.width = 800\n        self.height = 500\n        self.setup_screen()\n        # objects init\n        start_button = ImageButton(self.screen, 100, 200, \"assets/start_btn.png\", 0.7)\n        exit_button = ImageButton(self.screen, 450, 200, \"assets/exit_btn.png\", 0.7)\n        exit_button = ImageButton(self.screen, 450, 200, \"assets/exit_btn.png\", 0.7)\n        user_text = Text(self.screen, 15, 15, \"Not Logged in\")",
+        "detail": "blank.src.screens.main_screen",
+        "documentation": {}
+    },
+    {
+        "label": "BG_COLOR",
+        "kind": 5,
+        "importPath": "blank.src.screens.main_screen",
+        "description": "blank.src.screens.main_screen",
+        "peekOfCode": "BG_COLOR = (28, 170, 156)\nclass MainScreen: \n    def __init__(self):\n        self.width = 800\n        self.height = 500\n        self.setup_screen()\n        # objects init\n        start_button = ImageButton(self.screen, 100, 200, \"assets/start_btn.png\", 0.7)\n        exit_button = ImageButton(self.screen, 450, 200, \"assets/exit_btn.png\", 0.7)\n        exit_button = ImageButton(self.screen, 450, 200, \"assets/exit_btn.png\", 0.7)",
+        "detail": "blank.src.screens.main_screen",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "blank.src.main",
+        "description": "blank.src.main",
+        "peekOfCode": "def main():\n    main_screen = MainScreen()\n    main_screen.run()   \nif __name__ == \"__main__\":\n    main()",
+        "detail": "blank.src.main",
         "documentation": {}
     },
     {
@@ -498,7 +781,7 @@
         "kind": 6,
         "importPath": "online.client.src.components.login_form",
         "description": "online.client.src.components.login_form",
-        "peekOfCode": "class LoginForm:\n    def __init__(self, screen, x, y, w, h):\n        self.screen = screen\n        self.user_box = InputBox(screen, x, y, w, h)\n        self.pass_box = InputBox(screen, x, y + h + padding, w, h)\n        self.button = Button(screen, x, y + h * 2 + padding + 10, w, h, \"Login\")\n    def handle_event(self, event):\n        self.user_box.handle_event(event)\n        self.pass_box.handle_event(event)\n        pos = pygame.mouse.get_pos()",
+        "peekOfCode": "class LoginForm:\n    def __init__(self, screen, x, y, w, h):\n        self.screen = screen\n        self.user_box = InputBox(screen, x, y, w, h)\n        self.pass_box = InputBox(screen, x, y + h + padding, w, h)\n        self.button = Button(screen, x, y + h * 2 + padding + 10, w, h, \"Login\")\n        self.status = {}\n    def handle_event(self, event):\n        self.user_box.handle_event(event)\n        self.pass_box.handle_event(event)",
         "detail": "online.client.src.components.login_form",
         "documentation": {}
     },
@@ -557,92 +840,74 @@
         "documentation": {}
     },
     {
-        "label": "game",
-        "kind": 2,
-        "importPath": "online.client.src.main",
-        "description": "online.client.src.main",
-        "peekOfCode": "def game():\n    HEIGHT = 600\n    WIDTH = 600\n    screen = pygame.display.set_mode((WIDTH, HEIGHT))\n    game1 = TicTacToe(screen)\n    game1.createBoard()\n    click = False\n    running = True\n    while running: \n        screen.fill(BG_COLOR)",
-        "detail": "online.client.src.main",
-        "documentation": {}
-    },
-    {
-        "label": "main_menu",
-        "kind": 2,
-        "importPath": "online.client.src.main",
-        "description": "online.client.src.main",
-        "peekOfCode": "def main_menu():\n    click = False\n    run = True\n    WIDTH = 800\n    HEIGHT = 500\n    user_object = {}\n    while run: \n        screen = pygame.display.set_mode((WIDTH, HEIGHT))\n        screen.fill(BG_COLOR)\n        pos = pygame.mouse.get_pos()",
-        "detail": "online.client.src.main",
+        "label": "Blank",
+        "kind": 6,
+        "importPath": "online.client.src.screens.blank_screen",
+        "description": "online.client.src.screens.blank_screen",
+        "peekOfCode": "class Blank: \n    def __init__(self):\n        self.width = 1920\n        self.height = 1080\n        self.setup_screen()\n        self.click = False\n        self.running = True\n        self.button = Button(self.screen, self.width//2 - 100, self.height//2 - 25, 200, 50, \"BLANK SCREEN\", BLACK_COLOR)\n        self.clock = pygame.time.Clock()\n    def draw(self):",
+        "detail": "online.client.src.screens.blank_screen",
         "documentation": {}
     },
     {
         "label": "BG_COLOR",
         "kind": 5,
-        "importPath": "online.client.src.main",
-        "description": "online.client.src.main",
-        "peekOfCode": "BG_COLOR = (28, 170, 156)\nscreen = pygame.display.set_mode((800, 500))\npygame.display.set_caption(\"Game\")\nclock = pygame.time.Clock()\nstart_button = ImageButton(screen, 100, 200, \"assets/start_btn.png\", 0.7)\nexit_button = ImageButton(screen, 450, 200, \"assets/exit_btn.png\", 0.7)\nloginform = LoginForm(screen, 100, 300, 200, 45)\nuser_text = Text(screen, 15, 15, \"Not Logged in\")\nbalance_text = Text(screen, 15, 40, \"\")\n# screens below",
-        "detail": "online.client.src.main",
+        "importPath": "online.client.src.screens.blank_screen",
+        "description": "online.client.src.screens.blank_screen",
+        "peekOfCode": "BG_COLOR = (30, 30, 30)\nBLACK_COLOR = (0,0,0)\nclass Blank: \n    def __init__(self):\n        self.width = 1920\n        self.height = 1080\n        self.setup_screen()\n        self.click = False\n        self.running = True\n        self.button = Button(self.screen, self.width//2 - 100, self.height//2 - 25, 200, 50, \"BLANK SCREEN\", BLACK_COLOR)",
+        "detail": "online.client.src.screens.blank_screen",
         "documentation": {}
     },
     {
-        "label": "screen",
+        "label": "BLACK_COLOR",
         "kind": 5,
-        "importPath": "online.client.src.main",
-        "description": "online.client.src.main",
-        "peekOfCode": "screen = pygame.display.set_mode((800, 500))\npygame.display.set_caption(\"Game\")\nclock = pygame.time.Clock()\nstart_button = ImageButton(screen, 100, 200, \"assets/start_btn.png\", 0.7)\nexit_button = ImageButton(screen, 450, 200, \"assets/exit_btn.png\", 0.7)\nloginform = LoginForm(screen, 100, 300, 200, 45)\nuser_text = Text(screen, 15, 15, \"Not Logged in\")\nbalance_text = Text(screen, 15, 40, \"\")\n# screens below\ndef game():",
-        "detail": "online.client.src.main",
+        "importPath": "online.client.src.screens.blank_screen",
+        "description": "online.client.src.screens.blank_screen",
+        "peekOfCode": "BLACK_COLOR = (0,0,0)\nclass Blank: \n    def __init__(self):\n        self.width = 1920\n        self.height = 1080\n        self.setup_screen()\n        self.click = False\n        self.running = True\n        self.button = Button(self.screen, self.width//2 - 100, self.height//2 - 25, 200, 50, \"BLANK SCREEN\", BLACK_COLOR)\n        self.clock = pygame.time.Clock()",
+        "detail": "online.client.src.screens.blank_screen",
         "documentation": {}
     },
     {
-        "label": "clock",
-        "kind": 5,
-        "importPath": "online.client.src.main",
-        "description": "online.client.src.main",
-        "peekOfCode": "clock = pygame.time.Clock()\nstart_button = ImageButton(screen, 100, 200, \"assets/start_btn.png\", 0.7)\nexit_button = ImageButton(screen, 450, 200, \"assets/exit_btn.png\", 0.7)\nloginform = LoginForm(screen, 100, 300, 200, 45)\nuser_text = Text(screen, 15, 15, \"Not Logged in\")\nbalance_text = Text(screen, 15, 40, \"\")\n# screens below\ndef game():\n    HEIGHT = 600\n    WIDTH = 600",
-        "detail": "online.client.src.main",
+        "label": "Game",
+        "kind": 6,
+        "importPath": "online.client.src.screens.game_screen",
+        "description": "online.client.src.screens.game_screen",
+        "peekOfCode": "class Game: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.game = TicTacToe(self.screen)\n        self.click = False\n        self.running = False\n        self.clock = pygame.time.Clock()\n    def draw(self):",
+        "detail": "online.client.src.screens.game_screen",
         "documentation": {}
     },
     {
-        "label": "start_button",
+        "label": "BG_COLOR",
         "kind": 5,
-        "importPath": "online.client.src.main",
-        "description": "online.client.src.main",
-        "peekOfCode": "start_button = ImageButton(screen, 100, 200, \"assets/start_btn.png\", 0.7)\nexit_button = ImageButton(screen, 450, 200, \"assets/exit_btn.png\", 0.7)\nloginform = LoginForm(screen, 100, 300, 200, 45)\nuser_text = Text(screen, 15, 15, \"Not Logged in\")\nbalance_text = Text(screen, 15, 40, \"\")\n# screens below\ndef game():\n    HEIGHT = 600\n    WIDTH = 600\n    screen = pygame.display.set_mode((WIDTH, HEIGHT))",
-        "detail": "online.client.src.main",
+        "importPath": "online.client.src.screens.game_screen",
+        "description": "online.client.src.screens.game_screen",
+        "peekOfCode": "BG_COLOR = (28, 170, 156)\nclass Game: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.game = TicTacToe(self.screen)\n        self.click = False\n        self.running = False\n        self.clock = pygame.time.Clock()",
+        "detail": "online.client.src.screens.game_screen",
         "documentation": {}
     },
     {
-        "label": "exit_button",
-        "kind": 5,
-        "importPath": "online.client.src.main",
-        "description": "online.client.src.main",
-        "peekOfCode": "exit_button = ImageButton(screen, 450, 200, \"assets/exit_btn.png\", 0.7)\nloginform = LoginForm(screen, 100, 300, 200, 45)\nuser_text = Text(screen, 15, 15, \"Not Logged in\")\nbalance_text = Text(screen, 15, 40, \"\")\n# screens below\ndef game():\n    HEIGHT = 600\n    WIDTH = 600\n    screen = pygame.display.set_mode((WIDTH, HEIGHT))\n    game1 = TicTacToe(screen)",
-        "detail": "online.client.src.main",
+        "label": "MainScreen",
+        "kind": 6,
+        "importPath": "online.client.src.screens.main_screen",
+        "description": "online.client.src.screens.main_screen",
+        "peekOfCode": "class MainScreen: \n    def __init__(self):\n        self.width = 800\n        self.height = 500\n        self.setup_screen()\n        # objects init\n        start_button = ImageButton(self.screen, 100, 200, \"assets/start_btn.png\", 0.7)\n        exit_button = ImageButton(self.screen, 450, 200, \"assets/exit_btn.png\", 0.7)\n        exit_button = ImageButton(self.screen, 450, 200, \"assets/exit_btn.png\", 0.7)\n        user_text = Text(self.screen, 15, 15, \"Not Logged in\")",
+        "detail": "online.client.src.screens.main_screen",
         "documentation": {}
     },
     {
-        "label": "loginform",
+        "label": "BG_COLOR",
         "kind": 5,
-        "importPath": "online.client.src.main",
-        "description": "online.client.src.main",
-        "peekOfCode": "loginform = LoginForm(screen, 100, 300, 200, 45)\nuser_text = Text(screen, 15, 15, \"Not Logged in\")\nbalance_text = Text(screen, 15, 40, \"\")\n# screens below\ndef game():\n    HEIGHT = 600\n    WIDTH = 600\n    screen = pygame.display.set_mode((WIDTH, HEIGHT))\n    game1 = TicTacToe(screen)\n    game1.createBoard()",
-        "detail": "online.client.src.main",
+        "importPath": "online.client.src.screens.main_screen",
+        "description": "online.client.src.screens.main_screen",
+        "peekOfCode": "BG_COLOR = (28, 170, 156)\nclass MainScreen: \n    def __init__(self):\n        self.width = 800\n        self.height = 500\n        self.setup_screen()\n        # objects init\n        start_button = ImageButton(self.screen, 100, 200, \"assets/start_btn.png\", 0.7)\n        exit_button = ImageButton(self.screen, 450, 200, \"assets/exit_btn.png\", 0.7)\n        exit_button = ImageButton(self.screen, 450, 200, \"assets/exit_btn.png\", 0.7)",
+        "detail": "online.client.src.screens.main_screen",
         "documentation": {}
     },
     {
-        "label": "user_text",
-        "kind": 5,
+        "label": "main",
+        "kind": 2,
         "importPath": "online.client.src.main",
         "description": "online.client.src.main",
-        "peekOfCode": "user_text = Text(screen, 15, 15, \"Not Logged in\")\nbalance_text = Text(screen, 15, 40, \"\")\n# screens below\ndef game():\n    HEIGHT = 600\n    WIDTH = 600\n    screen = pygame.display.set_mode((WIDTH, HEIGHT))\n    game1 = TicTacToe(screen)\n    game1.createBoard()\n    click = False",
-        "detail": "online.client.src.main",
-        "documentation": {}
-    },
-    {
-        "label": "balance_text",
-        "kind": 5,
-        "importPath": "online.client.src.main",
-        "description": "online.client.src.main",
-        "peekOfCode": "balance_text = Text(screen, 15, 40, \"\")\n# screens below\ndef game():\n    HEIGHT = 600\n    WIDTH = 600\n    screen = pygame.display.set_mode((WIDTH, HEIGHT))\n    game1 = TicTacToe(screen)\n    game1.createBoard()\n    click = False\n    running = True",
+        "peekOfCode": "def main():\n    main_screen = MainScreen()\n    main_screen.run()   \nif __name__ == \"__main__\":\n    main()",
         "detail": "online.client.src.main",
         "documentation": {}
     },

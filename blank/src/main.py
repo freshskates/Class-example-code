@@ -1,4 +1,4 @@
-import pygame
+import pygame, os
 pygame.init()
 # init pygame before importing other dependencies
 

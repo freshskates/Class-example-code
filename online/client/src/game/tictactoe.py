@@ -20,7 +20,7 @@ class TicTacToe:
                 current_col = j * 200
                 self.board[i].append(TicTacToeBox(self.screen, current_col, current_row, 200, 200, "", color=(28, 170, 156)))
     
-    def drawBoard(self, click):
+    def draw(self, click):
         for i in range(3):
             for j in range(3):
                 if self.board[i][j].collides(pygame.mouse.get_pos()) and click:
