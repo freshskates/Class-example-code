@@ -156,18 +156,10 @@
     },
     {
         "label": "Blank",
-        "importPath": "screens.blank",
-        "description": "screens.blank",
+        "importPath": "screens.blank_screen",
+        "description": "screens.blank_screen",
         "isExtraImport": true,
-        "detail": "screens.blank",
-        "documentation": {}
-    },
-    {
-        "label": "Blank",
-        "importPath": "screens.blank",
-        "description": "screens.blank",
-        "isExtraImport": true,
-        "detail": "screens.blank",
+        "detail": "screens.blank_screen",
         "documentation": {}
     },
     {
@@ -500,28 +492,28 @@
     {
         "label": "Blank",
         "kind": 6,
-        "importPath": "blank.src.screens.blank",
-        "description": "blank.src.screens.blank",
+        "importPath": "blank.src.screens.blank_screen",
+        "description": "blank.src.screens.blank_screen",
         "peekOfCode": "class Blank: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.click = False\n        self.running = True\n        self.button = Button(self.screen, self.width//2 - 100, self.height//2 - 25, 200, 50, \"ESC to go back\", BLACK_COLOR)\n        self.clock = pygame.time.Clock()\n    def draw(self):",
-        "detail": "blank.src.screens.blank",
+        "detail": "blank.src.screens.blank_screen",
         "documentation": {}
     },
     {
         "label": "BG_COLOR",
         "kind": 5,
-        "importPath": "blank.src.screens.blank",
-        "description": "blank.src.screens.blank",
+        "importPath": "blank.src.screens.blank_screen",
+        "description": "blank.src.screens.blank_screen",
         "peekOfCode": "BG_COLOR = (30, 30, 30)\nBLACK_COLOR = (0,0,0)\nclass Blank: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.click = False\n        self.running = True\n        self.button = Button(self.screen, self.width//2 - 100, self.height//2 - 25, 200, 50, \"ESC to go back\", BLACK_COLOR)",
-        "detail": "blank.src.screens.blank",
+        "detail": "blank.src.screens.blank_screen",
         "documentation": {}
     },
     {
         "label": "BLACK_COLOR",
         "kind": 5,
-        "importPath": "blank.src.screens.blank",
-        "description": "blank.src.screens.blank",
+        "importPath": "blank.src.screens.blank_screen",
+        "description": "blank.src.screens.blank_screen",
         "peekOfCode": "BLACK_COLOR = (0,0,0)\nclass Blank: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.click = False\n        self.running = True\n        self.button = Button(self.screen, self.width//2 - 100, self.height//2 - 25, 200, 50, \"ESC to go back\", BLACK_COLOR)\n        self.clock = pygame.time.Clock()",
-        "detail": "blank.src.screens.blank",
+        "detail": "blank.src.screens.blank_screen",
         "documentation": {}
     },
     {

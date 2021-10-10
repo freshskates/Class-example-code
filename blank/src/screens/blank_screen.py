@@ -8,6 +8,7 @@ class Blank:
     def __init__(self):
         self.width = 600
         self.height = 600
+        
         self.setup_screen()
 
         self.click = False

@@ -1,6 +1,5 @@
 import pygame, sys
-from screens.blank import Blank
-from screens.blank import Blank
+from screens.blank_screen import Blank
 
 from buttons.image_button import ImageButton
 from components.login_form import LoginForm
