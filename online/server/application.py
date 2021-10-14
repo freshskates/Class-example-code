@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 from routes.auth import auth
 from flask_socketio import SocketIO, send, emit, join_room, leave_room
 
@@ -9,6 +9,11 @@ socketio = SocketIO(application)
 
 rooms = {}
 application.register_blueprint(auth, url_prefix="/auth")
+
+
+@application.route("/", methods=["GET"])
+def join_room():
+    return jsonify({"success": "HELLO CLASS"})
 
 @socketio.on("move")
 def handleMove(data):

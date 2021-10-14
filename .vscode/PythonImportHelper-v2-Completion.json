@@ -382,6 +382,14 @@
         "documentation": {}
     },
     {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
         "label": "Storage",
         "importPath": "storage.storage",
         "description": "storage.storage",
@@ -1127,6 +1135,15 @@
         "documentation": {}
     },
     {
+        "label": "join_room",
+        "kind": 2,
+        "importPath": "online.server.application",
+        "description": "online.server.application",
+        "peekOfCode": "def join_room():\n    return jsonify({\"success\": \"HELLO CLASS\"})\n@socketio.on(\"move\")\ndef handleMove(data):\n    print(\"Got message:\", data)\n    room = data[\"channel\"]\n    emit(\"move\", data, room=room)\n@socketio.on(\"join\")\ndef syncGame(data):\n    room = data[\"channel\"]",
+        "detail": "online.server.application",
+        "documentation": {}
+    },
+    {
         "label": "handleMove",
         "kind": 2,
         "importPath": "online.server.application",
@@ -1149,7 +1166,7 @@
         "kind": 5,
         "importPath": "online.server.application",
         "description": "online.server.application",
-        "peekOfCode": "application = Flask(__name__)\napplication.config[\"SECRET_KEY\"] = \"ASLJKDKALSD!\"\nsocketio = SocketIO(application)\nrooms = {}\napplication.register_blueprint(auth, url_prefix=\"/auth\")\n@socketio.on(\"move\")\ndef handleMove(data):\n    print(\"Got message:\", data)\n    room = data[\"channel\"]\n    emit(\"move\", data, room=room)",
+        "peekOfCode": "application = Flask(__name__)\napplication.config[\"SECRET_KEY\"] = \"ASLJKDKALSD!\"\nsocketio = SocketIO(application)\nrooms = {}\napplication.register_blueprint(auth, url_prefix=\"/auth\")\n@application.route(\"/\", methods=[\"GET\"])\ndef join_room():\n    return jsonify({\"success\": \"HELLO CLASS\"})\n@socketio.on(\"move\")\ndef handleMove(data):",
         "detail": "online.server.application",
         "documentation": {}
     },
@@ -1158,7 +1175,7 @@
         "kind": 5,
         "importPath": "online.server.application",
         "description": "online.server.application",
-        "peekOfCode": "application.config[\"SECRET_KEY\"] = \"ASLJKDKALSD!\"\nsocketio = SocketIO(application)\nrooms = {}\napplication.register_blueprint(auth, url_prefix=\"/auth\")\n@socketio.on(\"move\")\ndef handleMove(data):\n    print(\"Got message:\", data)\n    room = data[\"channel\"]\n    emit(\"move\", data, room=room)\n@socketio.on(\"join\")",
+        "peekOfCode": "application.config[\"SECRET_KEY\"] = \"ASLJKDKALSD!\"\nsocketio = SocketIO(application)\nrooms = {}\napplication.register_blueprint(auth, url_prefix=\"/auth\")\n@application.route(\"/\", methods=[\"GET\"])\ndef join_room():\n    return jsonify({\"success\": \"HELLO CLASS\"})\n@socketio.on(\"move\")\ndef handleMove(data):\n    print(\"Got message:\", data)",
         "detail": "online.server.application",
         "documentation": {}
     },
@@ -1167,7 +1184,7 @@
         "kind": 5,
         "importPath": "online.server.application",
         "description": "online.server.application",
-        "peekOfCode": "socketio = SocketIO(application)\nrooms = {}\napplication.register_blueprint(auth, url_prefix=\"/auth\")\n@socketio.on(\"move\")\ndef handleMove(data):\n    print(\"Got message:\", data)\n    room = data[\"channel\"]\n    emit(\"move\", data, room=room)\n@socketio.on(\"join\")\ndef syncGame(data):",
+        "peekOfCode": "socketio = SocketIO(application)\nrooms = {}\napplication.register_blueprint(auth, url_prefix=\"/auth\")\n@application.route(\"/\", methods=[\"GET\"])\ndef join_room():\n    return jsonify({\"success\": \"HELLO CLASS\"})\n@socketio.on(\"move\")\ndef handleMove(data):\n    print(\"Got message:\", data)\n    room = data[\"channel\"]",
         "detail": "online.server.application",
         "documentation": {}
     },
@@ -1176,7 +1193,7 @@
         "kind": 5,
         "importPath": "online.server.application",
         "description": "online.server.application",
-        "peekOfCode": "rooms = {}\napplication.register_blueprint(auth, url_prefix=\"/auth\")\n@socketio.on(\"move\")\ndef handleMove(data):\n    print(\"Got message:\", data)\n    room = data[\"channel\"]\n    emit(\"move\", data, room=room)\n@socketio.on(\"join\")\ndef syncGame(data):\n    room = data[\"channel\"]",
+        "peekOfCode": "rooms = {}\napplication.register_blueprint(auth, url_prefix=\"/auth\")\n@application.route(\"/\", methods=[\"GET\"])\ndef join_room():\n    return jsonify({\"success\": \"HELLO CLASS\"})\n@socketio.on(\"move\")\ndef handleMove(data):\n    print(\"Got message:\", data)\n    room = data[\"channel\"]\n    emit(\"move\", data, room=room)",
         "detail": "online.server.application",
         "documentation": {}
     },
