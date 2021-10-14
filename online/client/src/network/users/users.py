@@ -1,6 +1,5 @@
 import requests
-url = "http://127.0.0.1:5000"
-
+url = "http://18.116.158.31:5000"
 class UserModel:
 
     @staticmethod

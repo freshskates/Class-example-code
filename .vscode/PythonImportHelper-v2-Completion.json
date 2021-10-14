@@ -933,7 +933,7 @@
         "kind": 5,
         "importPath": "online.client.src.network.rooms.rooms",
         "description": "online.client.src.network.rooms.rooms",
-        "peekOfCode": "url = \"http://127.0.0.1:5000\"\nclass RoomModel:\n    @staticmethod\n    def create_room(username):\n        options = {\"user\": username}\n        response = requests.post(f\"{url}/auth/create_room\", data=options)\n        return response.json()\n    @staticmethod\n    def join_room(id, username):\n        options = {\"id\": id, \"user\": username}",
+        "peekOfCode": "url = \"http://18.116.158.31:5000\"\nclass RoomModel:\n    @staticmethod\n    def create_room(username):\n        options = {\"user\": username}\n        response = requests.post(f\"{url}/auth/create_room\", data=options)\n        return response.json()\n    @staticmethod\n    def join_room(id, username):\n        options = {\"id\": id, \"user\": username}",
         "detail": "online.client.src.network.rooms.rooms",
         "documentation": {}
     },
@@ -951,7 +951,7 @@
         "kind": 5,
         "importPath": "online.client.src.network.users.users",
         "description": "online.client.src.network.users.users",
-        "peekOfCode": "url = \"http://127.0.0.1:5000\"\nclass UserModel:\n    @staticmethod\n    def create_user(username, password):\n        options = {\"user\": username, \"password\": password}\n        response = requests.post(f\"{url}/auth/register\", data=options)\n        return response.json()\n    @staticmethod\n    def authenticate(username, password):\n        options = {\"user\": username, \"password\": password}",
+        "peekOfCode": "url = \"http://18.116.158.31:5000\"\nclass UserModel:\n    @staticmethod\n    def create_user(username, password):\n        options = {\"user\": username, \"password\": password}\n        response = requests.post(f\"{url}/auth/register\", data=options)\n        return response.json()\n    @staticmethod\n    def authenticate(username, password):\n        options = {\"user\": username, \"password\": password}",
         "detail": "online.client.src.network.users.users",
         "documentation": {}
     },
