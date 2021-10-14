@@ -105,6 +105,14 @@
         "documentation": {}
     },
     {
+        "label": "Button",
+        "importPath": "buttons.button",
+        "description": "buttons.button",
+        "isExtraImport": true,
+        "detail": "buttons.button",
+        "documentation": {}
+    },
+    {
         "label": "InputBox",
         "importPath": "buttons.input_box",
         "description": "buttons.input_box",
@@ -118,6 +126,30 @@
         "description": "buttons.input_box",
         "isExtraImport": true,
         "detail": "buttons.input_box",
+        "documentation": {}
+    },
+    {
+        "label": "InputBox",
+        "importPath": "buttons.input_box",
+        "description": "buttons.input_box",
+        "isExtraImport": true,
+        "detail": "buttons.input_box",
+        "documentation": {}
+    },
+    {
+        "label": "InputBox",
+        "importPath": "buttons.input_box",
+        "description": "buttons.input_box",
+        "isExtraImport": true,
+        "detail": "buttons.input_box",
+        "documentation": {}
+    },
+    {
+        "label": "UserModel",
+        "importPath": "network.users.users",
+        "description": "network.users.users",
+        "isExtraImport": true,
+        "detail": "network.users.users",
         "documentation": {}
     },
     {
@@ -219,6 +251,14 @@
         "documentation": {}
     },
     {
+        "label": "Text",
+        "importPath": "buttons.text",
+        "description": "buttons.text",
+        "isExtraImport": true,
+        "detail": "buttons.text",
+        "documentation": {}
+    },
+    {
         "label": "MainScreen",
         "importPath": "screens.main_screen",
         "description": "screens.main_screen",
@@ -248,6 +288,33 @@
         "description": "buttons.square",
         "isExtraImport": true,
         "detail": "buttons.square",
+        "documentation": {}
+    },
+    {
+        "label": "socketio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "socketio",
+        "description": "socketio",
+        "detail": "socketio",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "string",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "string",
+        "description": "string",
+        "detail": "string",
         "documentation": {}
     },
     {
@@ -272,6 +339,14 @@
         "description": "screens.game_screen",
         "isExtraImport": true,
         "detail": "screens.game_screen",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterForm",
+        "importPath": "components.register_form",
+        "description": "components.register_form",
+        "isExtraImport": true,
+        "detail": "components.register_form",
         "documentation": {}
     },
     {
@@ -347,29 +422,51 @@
         "documentation": {}
     },
     {
-        "label": "string",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "string",
-        "description": "string",
-        "detail": "string",
-        "documentation": {}
-    },
-    {
-        "label": "random",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "random",
-        "description": "random",
-        "detail": "random",
-        "documentation": {}
-    },
-    {
         "label": "auth",
         "importPath": "routes.auth",
         "description": "routes.auth",
         "isExtraImport": true,
         "detail": "routes.auth",
+        "documentation": {}
+    },
+    {
+        "label": "SocketIO",
+        "importPath": "flask_socketio",
+        "description": "flask_socketio",
+        "isExtraImport": true,
+        "detail": "flask_socketio",
+        "documentation": {}
+    },
+    {
+        "label": "send",
+        "importPath": "flask_socketio",
+        "description": "flask_socketio",
+        "isExtraImport": true,
+        "detail": "flask_socketio",
+        "documentation": {}
+    },
+    {
+        "label": "emit",
+        "importPath": "flask_socketio",
+        "description": "flask_socketio",
+        "isExtraImport": true,
+        "detail": "flask_socketio",
+        "documentation": {}
+    },
+    {
+        "label": "join_room",
+        "importPath": "flask_socketio",
+        "description": "flask_socketio",
+        "isExtraImport": true,
+        "detail": "flask_socketio",
+        "documentation": {}
+    },
+    {
+        "label": "leave_room",
+        "importPath": "flask_socketio",
+        "description": "flask_socketio",
+        "isExtraImport": true,
+        "detail": "flask_socketio",
         "documentation": {}
     },
     {
@@ -494,7 +591,7 @@
         "kind": 6,
         "importPath": "blank.src.screens.blank_screen",
         "description": "blank.src.screens.blank_screen",
-        "peekOfCode": "class Blank: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.click = False\n        self.running = True\n        self.button = Button(self.screen, self.width//2 - 100, self.height//2 - 25, 200, 50, \"ESC to go back\", BLACK_COLOR)\n        self.clock = pygame.time.Clock()\n    def draw(self):",
+        "peekOfCode": "class Blank: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.click = False\n        self.running = True\n        # self, screen, x, y, width, height, text=\"\", color=(DARK_GREY)\n        self.button = Button(self.screen, self.width//2 - 100, self.height//2 - 25, 200, 50, \"ESC to go back\", BLACK_COLOR)\n        self.clock = pygame.time.Clock()",
         "detail": "blank.src.screens.blank_screen",
         "documentation": {}
     },
@@ -503,7 +600,7 @@
         "kind": 5,
         "importPath": "blank.src.screens.blank_screen",
         "description": "blank.src.screens.blank_screen",
-        "peekOfCode": "BG_COLOR = (30, 30, 30)\nBLACK_COLOR = (0,0,0)\nclass Blank: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.click = False\n        self.running = True\n        self.button = Button(self.screen, self.width//2 - 100, self.height//2 - 25, 200, 50, \"ESC to go back\", BLACK_COLOR)",
+        "peekOfCode": "BG_COLOR = (30, 30, 30)\nBLACK_COLOR = (0, 0, 0)\nclass Blank: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.click = False\n        self.running = True\n        # self, screen, x, y, width, height, text=\"\", color=(DARK_GREY)",
         "detail": "blank.src.screens.blank_screen",
         "documentation": {}
     },
@@ -512,7 +609,7 @@
         "kind": 5,
         "importPath": "blank.src.screens.blank_screen",
         "description": "blank.src.screens.blank_screen",
-        "peekOfCode": "BLACK_COLOR = (0,0,0)\nclass Blank: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.click = False\n        self.running = True\n        self.button = Button(self.screen, self.width//2 - 100, self.height//2 - 25, 200, 50, \"ESC to go back\", BLACK_COLOR)\n        self.clock = pygame.time.Clock()",
+        "peekOfCode": "BLACK_COLOR = (0, 0, 0)\nclass Blank: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.click = False\n        self.running = True\n        # self, screen, x, y, width, height, text=\"\", color=(DARK_GREY)\n        self.button = Button(self.screen, self.width//2 - 100, self.height//2 - 25, 200, 50, \"ESC to go back\", BLACK_COLOR)",
         "detail": "blank.src.screens.blank_screen",
         "documentation": {}
     },
@@ -541,6 +638,78 @@
         "description": "blank.src.main",
         "peekOfCode": "def main():\n    main_screen = MainScreen()\n    main_screen.run()   \nif __name__ == \"__main__\":\n    main()",
         "detail": "blank.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "Button",
+        "kind": 6,
+        "importPath": "examples.example1.src.buttons.button",
+        "description": "examples.example1.src.buttons.button",
+        "peekOfCode": "class Button:\n    DARK_GREY = (29,29,29)\n    def __init__(self, screen, x, y, width, height, text=\"\", color=(DARK_GREY), hover=()):\n        self.screen = screen \n        self.clicked = False\n        self.height = height\n        self.width = width\n        self.text = text \n        self.color = color\n        self.hover = (color[0] + 10, color[1] + 10, color[2] + 10)",
+        "detail": "examples.example1.src.buttons.button",
+        "documentation": {}
+    },
+    {
+        "label": "ImageButton",
+        "kind": 6,
+        "importPath": "examples.example1.src.buttons.image_button",
+        "description": "examples.example1.src.buttons.image_button",
+        "peekOfCode": "class ImageButton(Button):\n    def __init__(self, screen, x, y, image, scale):\n        width = image.get_width()\n        height = image.get_height()\n        super().__init__(screen, x, y, width, height) \n        self.image = pygame.transform.scale(image, (int(width * scale), int(height * scale)))\n        self.rect = self.image.get_rect()\n        self.rect.topleft = (x, y)\n    def draw(self):\n        self.screen.blit(self.image, (self.rect.x, self.rect.y))",
+        "detail": "examples.example1.src.buttons.image_button",
+        "documentation": {}
+    },
+    {
+        "label": "TicTacToeBox",
+        "kind": 6,
+        "importPath": "examples.example1.src.buttons.square",
+        "description": "examples.example1.src.buttons.square",
+        "peekOfCode": "class TicTacToeBox(Button):\n    def __init__(self, screen, x, y, height, width, text, color=(29,29,29)):\n        super().__init__(screen, x, y, height, width, text, color)\n    def setValue(self, value):\n        self.text = value;\n    def getValue(self):\n        options = \"OX\"\n        return self.text if self.text in options else \"\"",
+        "detail": "examples.example1.src.buttons.square",
+        "documentation": {}
+    },
+    {
+        "label": "main_menu",
+        "kind": 2,
+        "importPath": "examples.example1.src.main",
+        "description": "examples.example1.src.main",
+        "peekOfCode": "def main_menu():\n    click = False\n    run = True\n    WIDTH = 800\n    HEIGHT = 500\n    while run: \n        screen = pygame.display.set_mode((WIDTH, HEIGHT))\n        pygame.display.set_caption(\"Duality Game\")\n        screen.fill(BG_COLOR)\n        pos = pygame.mouse.get_pos()",
+        "detail": "examples.example1.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "BG_COLOR",
+        "kind": 5,
+        "importPath": "examples.example1.src.main",
+        "description": "examples.example1.src.main",
+        "peekOfCode": "BG_COLOR = (28, 170, 156)\nscreen = pygame.display.set_mode((800, 500))\nclock = pygame.time.Clock()\nbutton1 = Button(screen, 0, 0, 200, 100, \"Go\")\ndef main_menu():\n    click = False\n    run = True\n    WIDTH = 800\n    HEIGHT = 500\n    while run: ",
+        "detail": "examples.example1.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "screen",
+        "kind": 5,
+        "importPath": "examples.example1.src.main",
+        "description": "examples.example1.src.main",
+        "peekOfCode": "screen = pygame.display.set_mode((800, 500))\nclock = pygame.time.Clock()\nbutton1 = Button(screen, 0, 0, 200, 100, \"Go\")\ndef main_menu():\n    click = False\n    run = True\n    WIDTH = 800\n    HEIGHT = 500\n    while run: \n        screen = pygame.display.set_mode((WIDTH, HEIGHT))",
+        "detail": "examples.example1.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "clock",
+        "kind": 5,
+        "importPath": "examples.example1.src.main",
+        "description": "examples.example1.src.main",
+        "peekOfCode": "clock = pygame.time.Clock()\nbutton1 = Button(screen, 0, 0, 200, 100, \"Go\")\ndef main_menu():\n    click = False\n    run = True\n    WIDTH = 800\n    HEIGHT = 500\n    while run: \n        screen = pygame.display.set_mode((WIDTH, HEIGHT))\n        pygame.display.set_caption(\"Duality Game\")",
+        "detail": "examples.example1.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "button1",
+        "kind": 5,
+        "importPath": "examples.example1.src.main",
+        "description": "examples.example1.src.main",
+        "peekOfCode": "button1 = Button(screen, 0, 0, 200, 100, \"Go\")\ndef main_menu():\n    click = False\n    run = True\n    WIDTH = 800\n    HEIGHT = 500\n    while run: \n        screen = pygame.display.set_mode((WIDTH, HEIGHT))\n        pygame.display.set_caption(\"Duality Game\")\n        screen.fill(BG_COLOR)",
+        "detail": "examples.example1.src.main",
         "documentation": {}
     },
     {
@@ -627,78 +796,6 @@
     {
         "label": "Button",
         "kind": 6,
-        "importPath": "examples.src.buttons.button",
-        "description": "examples.src.buttons.button",
-        "peekOfCode": "class Button:\n    DARK_GREY = (29,29,29)\n    def __init__(self, screen, x, y, width, height, text=\"\", color=(DARK_GREY), hover=()):\n        self.screen = screen \n        self.clicked = False\n        self.height = height\n        self.width = width\n        self.text = text \n        self.color = color\n        self.hover = (color[0] + 10, color[1] + 10, color[2] + 10)",
-        "detail": "examples.src.buttons.button",
-        "documentation": {}
-    },
-    {
-        "label": "ImageButton",
-        "kind": 6,
-        "importPath": "examples.src.buttons.image_button",
-        "description": "examples.src.buttons.image_button",
-        "peekOfCode": "class ImageButton(Button):\n    def __init__(self, screen, x, y, image, scale):\n        width = image.get_width()\n        height = image.get_height()\n        super().__init__(screen, x, y, width, height) \n        self.image = pygame.transform.scale(image, (int(width * scale), int(height * scale)))\n        self.rect = self.image.get_rect()\n        self.rect.topleft = (x, y)\n    def draw(self):\n        self.screen.blit(self.image, (self.rect.x, self.rect.y))",
-        "detail": "examples.src.buttons.image_button",
-        "documentation": {}
-    },
-    {
-        "label": "TicTacToeBox",
-        "kind": 6,
-        "importPath": "examples.src.buttons.square",
-        "description": "examples.src.buttons.square",
-        "peekOfCode": "class TicTacToeBox(Button):\n    def __init__(self, screen, x, y, height, width, text, color=(29,29,29)):\n        super().__init__(screen, x, y, height, width, text, color)\n    def setValue(self, value):\n        self.text = value;\n    def getValue(self):\n        options = \"OX\"\n        return self.text if self.text in options else \"\"",
-        "detail": "examples.src.buttons.square",
-        "documentation": {}
-    },
-    {
-        "label": "main_menu",
-        "kind": 2,
-        "importPath": "examples.src.main",
-        "description": "examples.src.main",
-        "peekOfCode": "def main_menu():\n    click = False\n    run = True\n    WIDTH = 800\n    HEIGHT = 500\n    while run: \n        screen = pygame.display.set_mode((WIDTH, HEIGHT))\n        pygame.display.set_caption(\"Duality Game\")\n        screen.fill(BG_COLOR)\n        pos = pygame.mouse.get_pos()",
-        "detail": "examples.src.main",
-        "documentation": {}
-    },
-    {
-        "label": "BG_COLOR",
-        "kind": 5,
-        "importPath": "examples.src.main",
-        "description": "examples.src.main",
-        "peekOfCode": "BG_COLOR = (28, 170, 156)\nscreen = pygame.display.set_mode((800, 500))\nclock = pygame.time.Clock()\nbutton1 = Button(screen, 0, 0, 200, 100, \"Go\")\ndef main_menu():\n    click = False\n    run = True\n    WIDTH = 800\n    HEIGHT = 500\n    while run: ",
-        "detail": "examples.src.main",
-        "documentation": {}
-    },
-    {
-        "label": "screen",
-        "kind": 5,
-        "importPath": "examples.src.main",
-        "description": "examples.src.main",
-        "peekOfCode": "screen = pygame.display.set_mode((800, 500))\nclock = pygame.time.Clock()\nbutton1 = Button(screen, 0, 0, 200, 100, \"Go\")\ndef main_menu():\n    click = False\n    run = True\n    WIDTH = 800\n    HEIGHT = 500\n    while run: \n        screen = pygame.display.set_mode((WIDTH, HEIGHT))",
-        "detail": "examples.src.main",
-        "documentation": {}
-    },
-    {
-        "label": "clock",
-        "kind": 5,
-        "importPath": "examples.src.main",
-        "description": "examples.src.main",
-        "peekOfCode": "clock = pygame.time.Clock()\nbutton1 = Button(screen, 0, 0, 200, 100, \"Go\")\ndef main_menu():\n    click = False\n    run = True\n    WIDTH = 800\n    HEIGHT = 500\n    while run: \n        screen = pygame.display.set_mode((WIDTH, HEIGHT))\n        pygame.display.set_caption(\"Duality Game\")",
-        "detail": "examples.src.main",
-        "documentation": {}
-    },
-    {
-        "label": "button1",
-        "kind": 5,
-        "importPath": "examples.src.main",
-        "description": "examples.src.main",
-        "peekOfCode": "button1 = Button(screen, 0, 0, 200, 100, \"Go\")\ndef main_menu():\n    click = False\n    run = True\n    WIDTH = 800\n    HEIGHT = 500\n    while run: \n        screen = pygame.display.set_mode((WIDTH, HEIGHT))\n        pygame.display.set_caption(\"Duality Game\")\n        screen.fill(BG_COLOR)",
-        "detail": "examples.src.main",
-        "documentation": {}
-    },
-    {
-        "label": "Button",
-        "kind": 6,
         "importPath": "online.client.src.buttons.button",
         "description": "online.client.src.buttons.button",
         "peekOfCode": "class Button:\n    DARK_GREY = (29,29,29)\n    def __init__(self, screen, x, y, width, height, text=\"\", color=(DARK_GREY), hover=()):\n        self.screen = screen \n        self.clicked = False\n        self.height = height\n        self.width = width\n        self.text = text \n        self.color = color\n        self.hover = (color[0] + 10, color[1] + 10, color[2] + 10)",
@@ -773,7 +870,7 @@
         "kind": 6,
         "importPath": "online.client.src.components.login_form",
         "description": "online.client.src.components.login_form",
-        "peekOfCode": "class LoginForm:\n    def __init__(self, screen, x, y, w, h):\n        self.screen = screen\n        self.user_box = InputBox(screen, x, y, w, h)\n        self.pass_box = InputBox(screen, x, y + h + padding, w, h)\n        self.button = Button(screen, x, y + h * 2 + padding + 10, w, h, \"Login\")\n        self.status = {}\n    def handle_event(self, event):\n        self.user_box.handle_event(event)\n        self.pass_box.handle_event(event)",
+        "peekOfCode": "class LoginForm:\n    def __init__(self, screen, x, y, w, h):\n        self.screen = screen\n        self.user_box = InputBox(screen, x, y, w, h)\n        self.pass_box = InputBox(screen, x, y + h + padding, w, h)\n        self.button = Button(screen, x, y + h * 2 + padding + 10, w, h, \"Login\")\n        self.logout_button = Button(screen, x, y, w, h, \"Logout\")\n        self.status = {}\n    def handle_event(self, event):\n        self.user_box.handle_event(event)",
         "detail": "online.client.src.components.login_form",
         "documentation": {}
     },
@@ -787,11 +884,38 @@
         "documentation": {}
     },
     {
+        "label": "RegisterForm",
+        "kind": 6,
+        "importPath": "online.client.src.components.register_form",
+        "description": "online.client.src.components.register_form",
+        "peekOfCode": "class RegisterForm:\n    def __init__(self, screen, x, y, w, h):\n        self.screen = screen\n        self.user_box = InputBox(screen, x, y, w, h)\n        self.pass_box = InputBox(screen, x, y + h + padding, w, h)\n        self.button = Button(screen, x, y + h * 2 + padding + 10, w, h, \"Register\")\n        # self.logout_button = Button(screen, x, y, w, h, \"Logout\")\n        self.status = {}\n    def handle_event(self, event):\n        self.user_box.handle_event(event)",
+        "detail": "online.client.src.components.register_form",
+        "documentation": {}
+    },
+    {
+        "label": "padding",
+        "kind": 5,
+        "importPath": "online.client.src.components.register_form",
+        "description": "online.client.src.components.register_form",
+        "peekOfCode": "padding = 10\n# Register Form component holds three elements, \n# 2 Input Boxes\n# 1 Button\nclass RegisterForm:\n    def __init__(self, screen, x, y, w, h):\n        self.screen = screen\n        self.user_box = InputBox(screen, x, y, w, h)\n        self.pass_box = InputBox(screen, x, y + h + padding, w, h)\n        self.button = Button(screen, x, y + h * 2 + padding + 10, w, h, \"Register\")",
+        "detail": "online.client.src.components.register_form",
+        "documentation": {}
+    },
+    {
         "label": "TicTacToe",
         "kind": 6,
         "importPath": "online.client.src.game.tictactoe",
         "description": "online.client.src.game.tictactoe",
-        "peekOfCode": "class TicTacToe:\n    LINE_COLOR = (23, 145, 135)\n    def __init__(self, screen):\n        self.turn = 0\n        self.screen = screen\n        self.rows = 3\n        self.cols = 3\n        self.board = []\n        self.createBoard()\n    def createBoard(self):",
+        "peekOfCode": "class TicTacToe:\n    LINE_COLOR = (23, 145, 135)\n    def __init__(self, screen, player_name, id=None):\n        self.id = id or get_random_string(5)\n        self.username = player_name\n        self.sio = socketio.Client()\n        self.setup()\n        self.screen = screen\n        self.rows = 3\n        self.cols = 3",
+        "detail": "online.client.src.game.tictactoe",
+        "documentation": {}
+    },
+    {
+        "label": "get_random_string",
+        "kind": 2,
+        "importPath": "online.client.src.game.tictactoe",
+        "description": "online.client.src.game.tictactoe",
+        "peekOfCode": "def get_random_string(length):\n    # choose from all lowercase letter\n    letters = string.ascii_lowercase\n    result_str = ''.join(random.choice(letters) for i in range(length))\n    return result_str\nclass TicTacToe:\n    LINE_COLOR = (23, 145, 135)\n    def __init__(self, screen, player_name, id=None):\n        self.id = id or get_random_string(5)\n        self.username = player_name",
         "detail": "online.client.src.game.tictactoe",
         "documentation": {}
     },
@@ -863,7 +987,7 @@
         "kind": 6,
         "importPath": "online.client.src.screens.game_screen",
         "description": "online.client.src.screens.game_screen",
-        "peekOfCode": "class Game: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.game = TicTacToe(self.screen)\n        self.click = False\n        self.running = False\n        self.clock = pygame.time.Clock()\n    def draw(self):",
+        "peekOfCode": "class Game: \n    def __init__(self, name, id):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.game = TicTacToe(self.screen, name, id)\n        self.click = False\n        self.running = False\n        self.clock = pygame.time.Clock()\n    def draw(self):",
         "detail": "online.client.src.screens.game_screen",
         "documentation": {}
     },
@@ -872,7 +996,7 @@
         "kind": 5,
         "importPath": "online.client.src.screens.game_screen",
         "description": "online.client.src.screens.game_screen",
-        "peekOfCode": "BG_COLOR = (28, 170, 156)\nclass Game: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.game = TicTacToe(self.screen)\n        self.click = False\n        self.running = False\n        self.clock = pygame.time.Clock()",
+        "peekOfCode": "BG_COLOR = (28, 170, 156)\nclass Game: \n    def __init__(self, name, id):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.game = TicTacToe(self.screen, name, id)\n        self.click = False\n        self.running = False\n        self.clock = pygame.time.Clock()",
         "detail": "online.client.src.screens.game_screen",
         "documentation": {}
     },
@@ -1003,12 +1127,57 @@
         "documentation": {}
     },
     {
-        "label": "app",
+        "label": "handleMove",
+        "kind": 2,
+        "importPath": "online.server.application",
+        "description": "online.server.application",
+        "peekOfCode": "def handleMove(data):\n    print(\"Got message:\", data)\n    room = data[\"channel\"]\n    emit(\"move\", data, room=room)\n@socketio.on(\"join\")\ndef syncGame(data):\n    room = data[\"channel\"]\n    if room not in rooms:\n        rooms[room] = {\"players\": {}, \"symbols\": [\"X\", \"O\"]}\n    temp_symbol = rooms[room][\"symbols\"].pop()",
+        "detail": "online.server.application",
+        "documentation": {}
+    },
+    {
+        "label": "syncGame",
+        "kind": 2,
+        "importPath": "online.server.application",
+        "description": "online.server.application",
+        "peekOfCode": "def syncGame(data):\n    room = data[\"channel\"]\n    if room not in rooms:\n        rooms[room] = {\"players\": {}, \"symbols\": [\"X\", \"O\"]}\n    temp_symbol = rooms[room][\"symbols\"].pop()\n    rooms[room][\"players\"][data[\"player_name\"]] = temp_symbol\n    rooms[room][\"channel\"] = room\n    join_room(room)\n    # emit(\"sync_game\", game_state, broadcast=True)\n    emit(\"sync_game\", rooms[room], room=room)",
+        "detail": "online.server.application",
+        "documentation": {}
+    },
+    {
+        "label": "application",
         "kind": 5,
-        "importPath": "online.server.app",
-        "description": "online.server.app",
-        "peekOfCode": "app = Flask(__name__)\napp.register_blueprint(auth, url_prefix=\"/auth\")\nif __name__ == \"__main__\":\n    app.run(debug=True)",
-        "detail": "online.server.app",
+        "importPath": "online.server.application",
+        "description": "online.server.application",
+        "peekOfCode": "application = Flask(__name__)\napplication.config[\"SECRET_KEY\"] = \"ASLJKDKALSD!\"\nsocketio = SocketIO(application)\nrooms = {}\napplication.register_blueprint(auth, url_prefix=\"/auth\")\n@socketio.on(\"move\")\ndef handleMove(data):\n    print(\"Got message:\", data)\n    room = data[\"channel\"]\n    emit(\"move\", data, room=room)",
+        "detail": "online.server.application",
+        "documentation": {}
+    },
+    {
+        "label": "application.config[\"SECRET_KEY\"]",
+        "kind": 5,
+        "importPath": "online.server.application",
+        "description": "online.server.application",
+        "peekOfCode": "application.config[\"SECRET_KEY\"] = \"ASLJKDKALSD!\"\nsocketio = SocketIO(application)\nrooms = {}\napplication.register_blueprint(auth, url_prefix=\"/auth\")\n@socketio.on(\"move\")\ndef handleMove(data):\n    print(\"Got message:\", data)\n    room = data[\"channel\"]\n    emit(\"move\", data, room=room)\n@socketio.on(\"join\")",
+        "detail": "online.server.application",
+        "documentation": {}
+    },
+    {
+        "label": "socketio",
+        "kind": 5,
+        "importPath": "online.server.application",
+        "description": "online.server.application",
+        "peekOfCode": "socketio = SocketIO(application)\nrooms = {}\napplication.register_blueprint(auth, url_prefix=\"/auth\")\n@socketio.on(\"move\")\ndef handleMove(data):\n    print(\"Got message:\", data)\n    room = data[\"channel\"]\n    emit(\"move\", data, room=room)\n@socketio.on(\"join\")\ndef syncGame(data):",
+        "detail": "online.server.application",
+        "documentation": {}
+    },
+    {
+        "label": "rooms",
+        "kind": 5,
+        "importPath": "online.server.application",
+        "description": "online.server.application",
+        "peekOfCode": "rooms = {}\napplication.register_blueprint(auth, url_prefix=\"/auth\")\n@socketio.on(\"move\")\ndef handleMove(data):\n    print(\"Got message:\", data)\n    room = data[\"channel\"]\n    emit(\"move\", data, room=room)\n@socketio.on(\"join\")\ndef syncGame(data):\n    room = data[\"channel\"]",
+        "detail": "online.server.application",
         "documentation": {}
     },
     {

@@ -2,9 +2,9 @@ import pygame, sys
 from buttons.button import Button
 
 BG_COLOR = (30, 30, 30)
-BLACK_COLOR = (0,0,0)
-class Blank: 
+BLACK_COLOR = (0, 0, 0)
 
+class Blank: 
     def __init__(self):
         self.width = 600
         self.height = 600
@@ -13,7 +13,7 @@ class Blank:
 
         self.click = False
         self.running = True
-        
+        # self, screen, x, y, width, height, text="", color=(DARK_GREY)
         self.button = Button(self.screen, self.width//2 - 100, self.height//2 - 25, 200, 50, "ESC to go back", BLACK_COLOR)
         
         self.clock = pygame.time.Clock()
@@ -22,7 +22,6 @@ class Blank:
     def draw(self):
         self.screen.fill(BG_COLOR)
         # screen.fill always in beggining of draw func
-
         self.button.draw()
 
         # display.update() always in end of draw func

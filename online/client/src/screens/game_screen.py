@@ -5,12 +5,13 @@ BG_COLOR = (28, 170, 156)
 
 class Game: 
 
-    def __init__(self):
+    def __init__(self, name, id):
         self.width = 600
         self.height = 600
         self.setup_screen()
 
-        self.game = TicTacToe(self.screen)
+        
+        self.game = TicTacToe(self.screen, name, id)
 
         self.click = False
         self.running = False
@@ -21,6 +22,7 @@ class Game:
         self.screen.fill(BG_COLOR)
         self.game.draw(self.click)
         self.game.drawLines(self.width, self.height)
+
         pygame.display.update()
 
     def setup_screen(self):
@@ -29,6 +31,7 @@ class Game:
 
     def run(self):
         self.running = True
+
         while self.running: 
             self.draw()
 
@@ -45,8 +48,13 @@ class Game:
 
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
+                self.game.close_socket()
                 self.running = False
 
         if event.type == pygame.QUIT:
+            # disconnect()
+            self.game.close_socket()
             pygame.quit()
             sys.exit()
+
+    

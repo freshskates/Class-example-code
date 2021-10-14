@@ -5,17 +5,17 @@ from network.users.users import UserModel
 
 padding = 10
 
-# Login Form component holds three elements, 
+# Register Form component holds three elements, 
 # 2 Input Boxes
 # 1 Button
 
-class LoginForm:
+class RegisterForm:
     def __init__(self, screen, x, y, w, h):
         self.screen = screen
         self.user_box = InputBox(screen, x, y, w, h)
         self.pass_box = InputBox(screen, x, y + h + padding, w, h)
-        self.button = Button(screen, x, y + h * 2 + padding + 10, w, h, "Login")
-        self.logout_button = Button(screen, x, y, w, h, "Logout")
+        self.button = Button(screen, x, y + h * 2 + padding + 10, w, h, "Register")
+        # self.logout_button = Button(screen, x, y, w, h, "Logout")
 
         self.status = {}
         
@@ -28,10 +28,6 @@ class LoginForm:
             if not self.status:
                 if self.button.collides(pos):
                     self.status = self.submit()
-            else:
-                if self.logout_button.collides(pos):
-                    self.status = {}
-                    print("CLICKEDKKDSK")
 
         return self.status
 
@@ -41,13 +37,11 @@ class LoginForm:
             self.button.draw()
             self.user_box.draw()
             self.pass_box.draw()
-        else:
-            self.logout_button.draw()
 
     def submit(self):
         username = self.user_box.getText()
         password = self.pass_box.getText()
-        response = UserModel.authenticate(username, password)
+        response = UserModel.create_user(username, password)
 
         self.user_box.setText("")
         self.pass_box.setText("")
