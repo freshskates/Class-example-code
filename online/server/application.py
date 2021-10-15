@@ -12,7 +12,7 @@ application.register_blueprint(auth, url_prefix="/auth")
 
 
 @application.route("/", methods=["GET"])
-def join_room():
+def home_page():
     return jsonify({"success": "HELLO CLASS"})
 
 @socketio.on("move")
