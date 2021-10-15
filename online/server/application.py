@@ -43,4 +43,4 @@ if __name__ == "__main__":
     # production
     # socketio.run(application, host='0.0.0.0', debug=True)
     
-    socketio.run(application, port=8000, debug=True)
+    socketio.run(application, debug=True)
