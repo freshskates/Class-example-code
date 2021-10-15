@@ -123,7 +123,7 @@ class TicTacToe:
     def setup(self):
         self.call_backs()
         # server ip
-        self.sio.connect('http://18.116.158.31:5000')
+        self.sio.connect('http://127.0.0.1:5000')
         # when running local host switch to this
         # self.sio.connect('http://127.0.0.1:5000')
         self.sio.emit('join', {"player_name": self.username, "channel": self.id})

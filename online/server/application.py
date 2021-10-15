@@ -30,15 +30,17 @@ def syncGame(data):
     temp_symbol = rooms[room]["symbols"].pop()
     rooms[room]["players"][data["player_name"]] = temp_symbol
     rooms[room]["channel"] = room
+
     join_room(room)
 
     # emit("sync_game", game_state, broadcast=True)
     emit("sync_game", rooms[room], room=room)
 
 if __name__ == "__main__":
+    
     # host='0.0.0.0'
     
     # production
     # socketio.run(application, host='0.0.0.0', debug=True)
     
-    socketio.run(application, debug=True)
+    socketio.run(application, port=8000, debug=True)
