@@ -10,7 +10,6 @@ class Game:
         self.height = 600
         self.setup_screen()
 
-        
         self.game = TicTacToe(self.screen, name, id)
 
         self.click = False

@@ -1,0 +1,313 @@
+[
+    {
+        "label": "pygame",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pygame",
+        "description": "pygame",
+        "detail": "pygame",
+        "documentation": {}
+    },
+    {
+        "label": "Button",
+        "importPath": "buttons.button",
+        "description": "buttons.button",
+        "isExtraImport": true,
+        "detail": "buttons.button",
+        "documentation": {}
+    },
+    {
+        "label": "Button",
+        "importPath": "buttons.button",
+        "description": "buttons.button",
+        "isExtraImport": true,
+        "detail": "buttons.button",
+        "documentation": {}
+    },
+    {
+        "label": "Button",
+        "importPath": "buttons.button",
+        "description": "buttons.button",
+        "isExtraImport": true,
+        "detail": "buttons.button",
+        "documentation": {}
+    },
+    {
+        "label": "ImageButton",
+        "importPath": "buttons.image_button",
+        "description": "buttons.image_button",
+        "isExtraImport": true,
+        "detail": "buttons.image_button",
+        "documentation": {}
+    },
+    {
+        "label": "ImageButton",
+        "importPath": "buttons.image_button",
+        "description": "buttons.image_button",
+        "isExtraImport": true,
+        "detail": "buttons.image_button",
+        "documentation": {}
+    },
+    {
+        "label": "ImageButton",
+        "importPath": "buttons.image_button",
+        "description": "buttons.image_button",
+        "isExtraImport": true,
+        "detail": "buttons.image_button",
+        "documentation": {}
+    },
+    {
+        "label": "InputBox",
+        "importPath": "buttons.input_box",
+        "description": "buttons.input_box",
+        "isExtraImport": true,
+        "detail": "buttons.input_box",
+        "documentation": {}
+    },
+    {
+        "label": "UserModel",
+        "importPath": "network.users.users",
+        "description": "network.users.users",
+        "isExtraImport": true,
+        "detail": "network.users.users",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "pygame,",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pygame.",
+        "description": "pygame.",
+        "detail": "pygame.",
+        "documentation": {}
+    },
+    {
+        "label": "CardComponent",
+        "importPath": "components.card",
+        "description": "components.card",
+        "isExtraImport": true,
+        "detail": "components.card",
+        "documentation": {}
+    },
+    {
+        "label": "Blank",
+        "importPath": "screens.blank_screen",
+        "description": "screens.blank_screen",
+        "isExtraImport": true,
+        "detail": "screens.blank_screen",
+        "documentation": {}
+    },
+    {
+        "label": "LoginForm",
+        "importPath": "components.login_form",
+        "description": "components.login_form",
+        "isExtraImport": true,
+        "detail": "components.login_form",
+        "documentation": {}
+    },
+    {
+        "label": "Text",
+        "importPath": "buttons.text",
+        "description": "buttons.text",
+        "isExtraImport": true,
+        "detail": "buttons.text",
+        "documentation": {}
+    },
+    {
+        "label": "MainScreen",
+        "importPath": "screens.main_screen",
+        "description": "screens.main_screen",
+        "isExtraImport": true,
+        "detail": "screens.main_screen",
+        "documentation": {}
+    },
+    {
+        "label": "Button",
+        "kind": 6,
+        "importPath": "src.buttons.button",
+        "description": "src.buttons.button",
+        "peekOfCode": "class Button:\n    DARK_GREY = (29,29,29)\n    def __init__(self, screen, x, y, width, height, text=\"\", color=(DARK_GREY), hover=()):\n        self.screen = screen \n        self.clicked = False\n        self.height = height\n        self.width = width\n        self.text = text \n        self.color = color\n        self.hover = (color[0] + 10, color[1] + 10, color[2] + 10)",
+        "detail": "src.buttons.button",
+        "documentation": {}
+    },
+    {
+        "label": "ImageButton",
+        "kind": 6,
+        "importPath": "src.buttons.image_button",
+        "description": "src.buttons.image_button",
+        "peekOfCode": "class ImageButton(Button):\n    def __init__(self, screen, x, y, image_path, scale):\n        image = pygame.image.load(image_path).convert_alpha()\n        width = image.get_width()\n        height = image.get_height()\n        super().__init__(screen, x, y, width, height) \n        self.image = pygame.transform.scale(image, (int(width * scale), int(height * scale)))\n        self.rect = self.image.get_rect()\n        self.rect.topleft = (x, y)\n    def draw(self):",
+        "detail": "src.buttons.image_button",
+        "documentation": {}
+    },
+    {
+        "label": "InputBox",
+        "kind": 6,
+        "importPath": "src.buttons.input_box",
+        "description": "src.buttons.input_box",
+        "peekOfCode": "class InputBox:\n    def __init__(self, screen, x, y, w, h, text=''):\n        self.screen = screen\n        self.rect = pygame.Rect(x, y, w, h)\n        self.color = INACTIVE_BG\n        self.text = text\n        self.txt_surface = FONT.render(text, True, self.color)\n        self.active = False\n    def handle_event(self, event):\n        if event.type == pygame.MOUSEBUTTONDOWN:",
+        "detail": "src.buttons.input_box",
+        "documentation": {}
+    },
+    {
+        "label": "ACTIVE_BG",
+        "kind": 5,
+        "importPath": "src.buttons.input_box",
+        "description": "src.buttons.input_box",
+        "peekOfCode": "ACTIVE_BG = (255, 255, 255)\nINACTIVE_BG = (20, 20, 20)\nFONT = pygame.font.SysFont(\"leelawadee\", 20)\nclass InputBox:\n    def __init__(self, screen, x, y, w, h, text=''):\n        self.screen = screen\n        self.rect = pygame.Rect(x, y, w, h)\n        self.color = INACTIVE_BG\n        self.text = text\n        self.txt_surface = FONT.render(text, True, self.color)",
+        "detail": "src.buttons.input_box",
+        "documentation": {}
+    },
+    {
+        "label": "INACTIVE_BG",
+        "kind": 5,
+        "importPath": "src.buttons.input_box",
+        "description": "src.buttons.input_box",
+        "peekOfCode": "INACTIVE_BG = (20, 20, 20)\nFONT = pygame.font.SysFont(\"leelawadee\", 20)\nclass InputBox:\n    def __init__(self, screen, x, y, w, h, text=''):\n        self.screen = screen\n        self.rect = pygame.Rect(x, y, w, h)\n        self.color = INACTIVE_BG\n        self.text = text\n        self.txt_surface = FONT.render(text, True, self.color)\n        self.active = False",
+        "detail": "src.buttons.input_box",
+        "documentation": {}
+    },
+    {
+        "label": "FONT",
+        "kind": 5,
+        "importPath": "src.buttons.input_box",
+        "description": "src.buttons.input_box",
+        "peekOfCode": "FONT = pygame.font.SysFont(\"leelawadee\", 20)\nclass InputBox:\n    def __init__(self, screen, x, y, w, h, text=''):\n        self.screen = screen\n        self.rect = pygame.Rect(x, y, w, h)\n        self.color = INACTIVE_BG\n        self.text = text\n        self.txt_surface = FONT.render(text, True, self.color)\n        self.active = False\n    def handle_event(self, event):",
+        "detail": "src.buttons.input_box",
+        "documentation": {}
+    },
+    {
+        "label": "Text",
+        "kind": 6,
+        "importPath": "src.buttons.text",
+        "description": "src.buttons.text",
+        "peekOfCode": "class Text:\n    def __init__(self, screen, x, y, text=\"\", font_size=20):\n        self.font = pygame.font.SysFont('leelawadee', font_size)\n        self.screen = screen\n        self.text = text\n        self.pos = (x, y)\n    def setText(self, text):\n        self.text = text\n    def draw(self):\n        textsurface = self.font.render(self.text, True, (255, 255, 255))",
+        "detail": "src.buttons.text",
+        "documentation": {}
+    },
+    {
+        "label": "CardComponent",
+        "kind": 6,
+        "importPath": "src.components.card",
+        "description": "src.components.card",
+        "peekOfCode": "class CardComponent:\n    def __init__(self, screen, x, y, suit, value):\n            self.flipped = False\n            self.value = value\n            self.suit = suit\n            card_image = f\"assets/{value}_{suit}.png\"\n            self.card = ImageButton(screen, x, y, card_image, 0.5)            \n            self.back = ImageButton(screen, x, y, \"assets/back_red.png\", 0.5)\n    def draw(self):\n        if self.flipped == True:",
+        "detail": "src.components.card",
+        "documentation": {}
+    },
+    {
+        "label": "LoginForm",
+        "kind": 6,
+        "importPath": "src.components.login_form",
+        "description": "src.components.login_form",
+        "peekOfCode": "class LoginForm:\n    def __init__(self, screen, x, y, w, h):\n        self.screen = screen\n        self.user_box = InputBox(screen, x, y, w, h)\n        self.pass_box = InputBox(screen, x, y + h + padding, w, h)\n        self.button = Button(screen, x, y + h * 2 + padding + 10, w, h, \"Login\")\n        self.status = {}\n    def handle_event(self, event):\n        self.user_box.handle_event(event)\n        self.pass_box.handle_event(event)",
+        "detail": "src.components.login_form",
+        "documentation": {}
+    },
+    {
+        "label": "padding",
+        "kind": 5,
+        "importPath": "src.components.login_form",
+        "description": "src.components.login_form",
+        "peekOfCode": "padding = 10\n# Login Form component holds three elements, \n# 2 Input Boxes\n# 1 Button\nclass LoginForm:\n    def __init__(self, screen, x, y, w, h):\n        self.screen = screen\n        self.user_box = InputBox(screen, x, y, w, h)\n        self.pass_box = InputBox(screen, x, y + h + padding, w, h)\n        self.button = Button(screen, x, y + h * 2 + padding + 10, w, h, \"Login\")",
+        "detail": "src.components.login_form",
+        "documentation": {}
+    },
+    {
+        "label": "RoomModel",
+        "kind": 6,
+        "importPath": "src.network.rooms.rooms",
+        "description": "src.network.rooms.rooms",
+        "peekOfCode": "class RoomModel:\n    @staticmethod\n    def create_room(username):\n        options = {\"user\": username}\n        response = requests.post(f\"{url}/auth/create_room\", data=options)\n        return response.json()\n    @staticmethod\n    def join_room(id, username):\n        options = {\"id\": id, \"user\": username}\n        response = requests.post(f\"{url}/auth/join_room\", data=options)",
+        "detail": "src.network.rooms.rooms",
+        "documentation": {}
+    },
+    {
+        "label": "url",
+        "kind": 5,
+        "importPath": "src.network.rooms.rooms",
+        "description": "src.network.rooms.rooms",
+        "peekOfCode": "url = \"http://127.0.0.1:5000\"\nclass RoomModel:\n    @staticmethod\n    def create_room(username):\n        options = {\"user\": username}\n        response = requests.post(f\"{url}/auth/create_room\", data=options)\n        return response.json()\n    @staticmethod\n    def join_room(id, username):\n        options = {\"id\": id, \"user\": username}",
+        "detail": "src.network.rooms.rooms",
+        "documentation": {}
+    },
+    {
+        "label": "UserModel",
+        "kind": 6,
+        "importPath": "src.network.users.users",
+        "description": "src.network.users.users",
+        "peekOfCode": "class UserModel:\n    @staticmethod\n    def create_user(username, password):\n        options = {\"user\": username, \"password\": password}\n        response = requests.post(f\"{url}/auth/register\", data=options)\n        return response.json()\n    @staticmethod\n    def authenticate(username, password):\n        options = {\"user\": username, \"password\": password}\n        response = requests.post(f\"{url}/auth/login\", data=options)",
+        "detail": "src.network.users.users",
+        "documentation": {}
+    },
+    {
+        "label": "url",
+        "kind": 5,
+        "importPath": "src.network.users.users",
+        "description": "src.network.users.users",
+        "peekOfCode": "url = \"http://127.0.0.1:5000\"\nclass UserModel:\n    @staticmethod\n    def create_user(username, password):\n        options = {\"user\": username, \"password\": password}\n        response = requests.post(f\"{url}/auth/register\", data=options)\n        return response.json()\n    @staticmethod\n    def authenticate(username, password):\n        options = {\"user\": username, \"password\": password}",
+        "detail": "src.network.users.users",
+        "documentation": {}
+    },
+    {
+        "label": "Blank",
+        "kind": 6,
+        "importPath": "src.screens.blank_screen",
+        "description": "src.screens.blank_screen",
+        "peekOfCode": "class Blank: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.click = False\n        self.running = True\n        # self, screen, x, y, width, height, text=\"\", color=(DARK_GREY)\n        self.flip_button = Button(self.screen, self.width//2 - 100, self.height//2 - 25, 200, 50, \"flip card\", BLACK_COLOR)\n        self.card1 = CardComponent(self.screen, 200, 50, \"heart\", 2)",
+        "detail": "src.screens.blank_screen",
+        "documentation": {}
+    },
+    {
+        "label": "BG_COLOR",
+        "kind": 5,
+        "importPath": "src.screens.blank_screen",
+        "description": "src.screens.blank_screen",
+        "peekOfCode": "BG_COLOR = (30, 30, 30)\nBLACK_COLOR = (0, 0, 0)\nclass Blank: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.click = False\n        self.running = True\n        # self, screen, x, y, width, height, text=\"\", color=(DARK_GREY)",
+        "detail": "src.screens.blank_screen",
+        "documentation": {}
+    },
+    {
+        "label": "BLACK_COLOR",
+        "kind": 5,
+        "importPath": "src.screens.blank_screen",
+        "description": "src.screens.blank_screen",
+        "peekOfCode": "BLACK_COLOR = (0, 0, 0)\nclass Blank: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.click = False\n        self.running = True\n        # self, screen, x, y, width, height, text=\"\", color=(DARK_GREY)\n        self.flip_button = Button(self.screen, self.width//2 - 100, self.height//2 - 25, 200, 50, \"flip card\", BLACK_COLOR)",
+        "detail": "src.screens.blank_screen",
+        "documentation": {}
+    },
+    {
+        "label": "MainScreen",
+        "kind": 6,
+        "importPath": "src.screens.main_screen",
+        "description": "src.screens.main_screen",
+        "peekOfCode": "class MainScreen: \n    def __init__(self):\n        self.width = 800\n        self.height = 500\n        self.setup_screen()\n        # objects init\n        start_button = ImageButton(self.screen, 100, 200, \"assets/start_btn.png\", 0.7)\n        exit_button = ImageButton(self.screen, 450, 200, \"assets/exit_btn.png\", 0.7)\n        exit_button = ImageButton(self.screen, 450, 200, \"assets/exit_btn.png\", 0.7)\n        user_text = Text(self.screen, 15, 15, \"Not Logged in\")",
+        "detail": "src.screens.main_screen",
+        "documentation": {}
+    },
+    {
+        "label": "BG_COLOR",
+        "kind": 5,
+        "importPath": "src.screens.main_screen",
+        "description": "src.screens.main_screen",
+        "peekOfCode": "BG_COLOR = (28, 170, 156)\nclass MainScreen: \n    def __init__(self):\n        self.width = 800\n        self.height = 500\n        self.setup_screen()\n        # objects init\n        start_button = ImageButton(self.screen, 100, 200, \"assets/start_btn.png\", 0.7)\n        exit_button = ImageButton(self.screen, 450, 200, \"assets/exit_btn.png\", 0.7)\n        exit_button = ImageButton(self.screen, 450, 200, \"assets/exit_btn.png\", 0.7)",
+        "detail": "src.screens.main_screen",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "src.main",
+        "description": "src.main",
+        "peekOfCode": "def main():\n    main_screen = MainScreen()\n    main_screen.run()   \nif __name__ == \"__main__\":\n    main()",
+        "detail": "src.main",
+        "documentation": {}
+    }
+]
