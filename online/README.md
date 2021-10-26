@@ -1,6 +1,8 @@
 # How to run client and server
 
 ```python
+# Basically install packages run both client and server separately
+
 packages to install
 
 flask
