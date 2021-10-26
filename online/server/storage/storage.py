@@ -60,18 +60,21 @@ class Storage:
         if self.user_exists(user):
             return {"error": "User already exists"}
         self.users[user] = User(user, password, 300)
-        
-        JsonData.save(self.users, self.file)
+        self.save()
         
         return self.users[user].get_info()
 
     def delete_user(self, user):
-        return self.users.pop(user, {"error": "User not found"})
-
+        deleted_user = self.users.pop(user, {"error": "User not found"})
+        self.save()
+        return deleted_user
+    
     def update_balance(self, user, balance):
         if not self.user_exists(user):
             return {"error": "Cannot update balance: User doesnt exist"}
+        
         self.users[user].set_balance(balance)
+        self.save()
 
     def create_room(self, user):
         if not self.user_exists(user) or self.user_in_room(user):
@@ -88,3 +91,5 @@ class Storage:
 
         return self.rooms[id].get_info()
 
+    def save(self):
+        JsonData.save(self.users, self.file)
