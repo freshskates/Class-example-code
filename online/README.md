@@ -2,8 +2,7 @@
 
 ```python
 # Basically install packages run both client and server separately
-
-packages to install
+# note: packages to install
 
 flask
 flask-socketio
