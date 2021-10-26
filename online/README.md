@@ -40,11 +40,11 @@ pip install requests pygame flask flask-socketio python-socketio
 # from root of dir(as in from inside Class-example-code folder)
 # make two terminals
 
-# terminal 1
+# terminal 1: for client terminal
 cd online/client/src
 python main.py
 
-# terminal 2
+# terminal 2: for server terminal
 cd online/server
 python application.py
 ```
