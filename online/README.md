@@ -1,10 +1,8 @@
 # How to run client and server
 
-! Basically install packages then run both client and server separately @@
-
-```python
+```diff
+! Basically install packages then run both client and server separately
 # note: packages to install
-
 flask
 flask-socketio
 
