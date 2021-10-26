@@ -33,7 +33,7 @@ python-socketio
 
 ```python
 # run this in your terminal with your preferred python enviroment
-pip install requests pygame flask flask-socketio  python-socketio
+pip install requests pygame flask flask-socketio python-socketio
 
 # If already have requirements installed follow steps below
 
