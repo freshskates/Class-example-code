@@ -17,7 +17,7 @@ python-socketio
 
 2. Expand the `online` folder
 
-3. expand `client` > `src` > `main.py` (then `right click and select "run main"`), if it doesnt work yet ITS OKAY, follow next steps
+3. Expand `client` > `src` > `main.py` (then `right click and select "run main"`), if it doesnt work yet ITS OKAY, follow next steps
 
 4. `File` > `Settings` > `Project: Class-example-code` > `Python Interpreter` (Select your python interpreter)
 
