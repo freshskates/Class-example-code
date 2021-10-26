@@ -1,6 +1,6 @@
 # How to run client and server
 
-! Basically install packages then run both client and server separately
+! Basically install packages then run both client and server separately @@
 
 ```python
 # note: packages to install
