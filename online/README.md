@@ -1,4 +1,4 @@
-# how to run client and server
+# How to run client and server
 
 ```python
 packages to install
@@ -11,7 +11,7 @@ requests
 python-socketio
 ```
 
-## how to run on pycharm
+## How to run on pycharm
 
 1. Open `Class-example-code` folder inside pycharm
 
@@ -29,9 +29,22 @@ python-socketio
 
 8. Should work now, if not then ask mentor for help or try googling error message
 
-## if not on pycharm
+## How to setup through terminal
 
 ```python
-run this in your terminal with your preferred python enviroment
+# run this in your terminal with your preferred python enviroment
 pip install requests pygame flask flask-socketio  python-socketio
+
+# If already have requirements installed follow steps below
+
+# from root of dir(as in from inside Class-example-code folder)
+# make two terminals
+
+# terminal 1
+cd online/client/src
+python main.py
+
+# terminal 2
+cd online/server
+python application.py
 ```
