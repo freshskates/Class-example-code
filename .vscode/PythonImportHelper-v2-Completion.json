@@ -1860,7 +1860,7 @@
         "kind": 5,
         "importPath": "online.server.application",
         "description": "online.server.application",
-        "peekOfCode": "application = Flask(__name__)\napplication.config[\"SECRET_KEY\"] = \"ASLJKDKALSD!\"\nsocketio = SocketIO(application)\n# rooms = {}\napplication.register_blueprint(auth, url_prefix=\"/auth\")\n@application.route(\"/\", methods=[\"GET\"])\ndef home_page():\n    return jsonify({\"success\": \"HELLO CLASS\"})\n@socketio.on(\"move\")\ndef handleMove(data):",
+        "peekOfCode": "application = Flask(__name__)\napplication.config[\"SECRET_KEY\"] = \"ASLJKDKALSD!\"\nsocketio = SocketIO(application)\napplication.register_blueprint(auth, url_prefix=\"/auth\")\n@application.route(\"/\", methods=[\"GET\"])\ndef home_page():\n    return jsonify({\"success\": \"HELLO CLASS\"})\n@socketio.on(\"move\")\ndef handleMove(data):\n    print(\"Got message:\", data)",
         "detail": "online.server.application",
         "documentation": {}
     },
@@ -1869,7 +1869,7 @@
         "kind": 5,
         "importPath": "online.server.application",
         "description": "online.server.application",
-        "peekOfCode": "application.config[\"SECRET_KEY\"] = \"ASLJKDKALSD!\"\nsocketio = SocketIO(application)\n# rooms = {}\napplication.register_blueprint(auth, url_prefix=\"/auth\")\n@application.route(\"/\", methods=[\"GET\"])\ndef home_page():\n    return jsonify({\"success\": \"HELLO CLASS\"})\n@socketio.on(\"move\")\ndef handleMove(data):\n    print(\"Got message:\", data)",
+        "peekOfCode": "application.config[\"SECRET_KEY\"] = \"ASLJKDKALSD!\"\nsocketio = SocketIO(application)\napplication.register_blueprint(auth, url_prefix=\"/auth\")\n@application.route(\"/\", methods=[\"GET\"])\ndef home_page():\n    return jsonify({\"success\": \"HELLO CLASS\"})\n@socketio.on(\"move\")\ndef handleMove(data):\n    print(\"Got message:\", data)\n    room_id = data[\"channel\"]",
         "detail": "online.server.application",
         "documentation": {}
     },
@@ -1878,7 +1878,7 @@
         "kind": 5,
         "importPath": "online.server.application",
         "description": "online.server.application",
-        "peekOfCode": "socketio = SocketIO(application)\n# rooms = {}\napplication.register_blueprint(auth, url_prefix=\"/auth\")\n@application.route(\"/\", methods=[\"GET\"])\ndef home_page():\n    return jsonify({\"success\": \"HELLO CLASS\"})\n@socketio.on(\"move\")\ndef handleMove(data):\n    print(\"Got message:\", data)\n    room_id = data[\"channel\"]",
+        "peekOfCode": "socketio = SocketIO(application)\napplication.register_blueprint(auth, url_prefix=\"/auth\")\n@application.route(\"/\", methods=[\"GET\"])\ndef home_page():\n    return jsonify({\"success\": \"HELLO CLASS\"})\n@socketio.on(\"move\")\ndef handleMove(data):\n    print(\"Got message:\", data)\n    room_id = data[\"channel\"]\n    emit(\"move\", data, room=room_id)",
         "detail": "online.server.application",
         "documentation": {}
     },

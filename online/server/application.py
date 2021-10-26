@@ -8,7 +8,6 @@ application.config["SECRET_KEY"] = "ASLJKDKALSD!"
 
 socketio = SocketIO(application)
 
-# rooms = {}
 application.register_blueprint(auth, url_prefix="/auth")
 
 @application.route("/", methods=["GET"])
@@ -34,7 +33,6 @@ def syncGame(data):
     is_new_room = not storage_db.room_exists(room_id)
 
     # if room id is new then create a room for it else add player to already existing room
-    
     if is_new_room:
         storage_db.create_room(player_name, room_id)
     else:
@@ -48,12 +46,10 @@ def syncGame(data):
         
     room = storage_db.get_room(room_id)
     
-    # print(room.get_info())
     join_room(room_id)
-    room_info = room.get_info()
     
     # emit("sync_game", game_state, broadcast=True)
-    emit("sync_game", room_info, room=room_id)
+    emit("sync_game", room.get_info(), room=room_id)
 
 if __name__ == "__main__":
     
