@@ -1,7 +1,8 @@
 # How to run client and server
 
+<span style="color:lightblue">Basically install packages then run both client and server separately</span>.
+
 ```python
-# Basically install packages run both client and server separately
 # note: packages to install
 
 flask
