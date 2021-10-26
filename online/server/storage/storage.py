@@ -1,15 +1,18 @@
 from werkzeug.security import check_password_hash
 from storage.user import User
+from utility.json_data import JsonData
 from storage.room import Room
 import string
 import random
 
 class Storage:
-    def __init__(self, game):
+    def __init__(self, game, json_file="storage.json"):
+        self.file = json_file
         self.game = game
         self.rooms = {}
-        self.users = {}
-
+        self.users = JsonData.load_from_json(json_file)
+        print("---------------------------")
+        print(self.users)
     # utility 
     def create_random_id(self, n):
         limit = 10000
@@ -57,6 +60,9 @@ class Storage:
         if self.user_exists(user):
             return {"error": "User already exists"}
         self.users[user] = User(user, password, 300)
+        
+        JsonData.save(self.users, self.file)
+        
         return self.users[user].get_info()
 
     def delete_user(self, user):

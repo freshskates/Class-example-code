@@ -1,6 +1,7 @@
 import pygame, sys
 from buttons.button import Button
-from components.card import CardComponent
+# from components.card import CardComponent
+from components.hand import HandComponent
 
 from buttons.image_button import ImageButton
 
@@ -19,20 +20,24 @@ class Blank:
         
         # self, screen, x, y, width, height, text="", color=(DARK_GREY)
         self.flip_button = Button(self.screen, self.width//2 - 100, self.height//2 - 25, 200, 50, "flip card", BLACK_COLOR)
-        self.card1 = CardComponent(self.screen, 200, 50, "heart", 2)
-        self.card2 = CardComponent(self.screen, 300, 50, "heart", 4)
+        self.add_card = Button(self.screen, self.width//2 - 300, self.height//2 - 25, 200, 50, "add card", BLACK_COLOR)
+
+        self.hand1 = HandComponent(self.screen, 50, 50)
+        
+        self.hand1.addCard("Heart", 2)
         
         self.clock = pygame.time.Clock()
 
-
     def draw(self):
-        self.screen.fill(BG_COLOR)
-        # screen.fill always in beggining of draw func
-        self.flip_button.draw()
-        self.card1.draw()
-        self.card2.draw()
 
-            
+        self.screen.fill(BG_COLOR)
+
+        # screen.fill always in beggining of draw func
+
+        self.flip_button.draw()
+        self.add_card.draw()
+        self.hand1.draw()
+
         # display.update() always in end of draw func
         pygame.display.update()
 
@@ -45,11 +50,15 @@ class Blank:
             pos = pygame.mouse.get_pos()
             print(pos)
             self.draw()
+            
             if self.flip_button.collides(pos):
                 if self.click:
                     print("BUTTON CLICKED")
-                    self.card2.flip()
+                    self.hand1.flipAll()
 
+
+            if self.add_card.collides(pos) and self.click:
+                self.hand1.addCard("Heart", 4)                
 
             self.click = False
             for event in pygame.event.get():

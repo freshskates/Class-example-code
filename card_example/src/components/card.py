@@ -9,7 +9,7 @@ class CardComponent:
             
             card_image = f"assets/{value}_{suit}.png"
             
-            self.card = ImageButton(screen, x, y, card_image, 0.5)            
+            self.card = ImageButton(screen, x, y, card_image, 0.5)   
             self.back = ImageButton(screen, x, y, "assets/back_red.png", 0.5)
             
     def draw(self):
@@ -23,4 +23,4 @@ class CardComponent:
     
     def getFlipped(self):
         return self.flipped
-        
+    

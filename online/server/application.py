@@ -10,7 +10,6 @@ socketio = SocketIO(application)
 rooms = {}
 application.register_blueprint(auth, url_prefix="/auth")
 
-
 @application.route("/", methods=["GET"])
 def home_page():
     return jsonify({"success": "HELLO CLASS"})
@@ -23,12 +22,18 @@ def handleMove(data):
 
 @socketio.on("join")
 def syncGame(data):
+    # data{"channel", "player_name"}
     room = data["channel"]
+
     if room not in rooms:
+        # default room structure
         rooms[room] = {"players": {}, "symbols": ["X", "O"]}
 
     temp_symbol = rooms[room]["symbols"].pop()
-    rooms[room]["players"][data["player_name"]] = temp_symbol
+    
+    player_name = data["player_name"]
+    
+    rooms[room]["players"][player_name] = temp_symbol
     rooms[room]["channel"] = room
 
     join_room(room)

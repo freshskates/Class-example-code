@@ -137,6 +137,54 @@
         "documentation": {}
     },
     {
+        "label": "Button",
+        "importPath": "buttons.button",
+        "description": "buttons.button",
+        "isExtraImport": true,
+        "detail": "buttons.button",
+        "documentation": {}
+    },
+    {
+        "label": "Button",
+        "importPath": "buttons.button",
+        "description": "buttons.button",
+        "isExtraImport": true,
+        "detail": "buttons.button",
+        "documentation": {}
+    },
+    {
+        "label": "Button",
+        "importPath": "buttons.button",
+        "description": "buttons.button",
+        "isExtraImport": true,
+        "detail": "buttons.button",
+        "documentation": {}
+    },
+    {
+        "label": "ImageButton",
+        "importPath": "buttons.image_button",
+        "description": "buttons.image_button",
+        "isExtraImport": true,
+        "detail": "buttons.image_button",
+        "documentation": {}
+    },
+    {
+        "label": "ImageButton",
+        "importPath": "buttons.image_button",
+        "description": "buttons.image_button",
+        "isExtraImport": true,
+        "detail": "buttons.image_button",
+        "documentation": {}
+    },
+    {
+        "label": "ImageButton",
+        "importPath": "buttons.image_button",
+        "description": "buttons.image_button",
+        "isExtraImport": true,
+        "detail": "buttons.image_button",
+        "documentation": {}
+    },
+    {
         "label": "ImageButton",
         "importPath": "buttons.image_button",
         "description": "buttons.image_button",
@@ -238,6 +286,22 @@
         "description": "buttons.input_box",
         "isExtraImport": true,
         "detail": "buttons.input_box",
+        "documentation": {}
+    },
+    {
+        "label": "InputBox",
+        "importPath": "buttons.input_box",
+        "description": "buttons.input_box",
+        "isExtraImport": true,
+        "detail": "buttons.input_box",
+        "documentation": {}
+    },
+    {
+        "label": "UserModel",
+        "importPath": "network.users.users",
+        "description": "network.users.users",
+        "isExtraImport": true,
+        "detail": "network.users.users",
         "documentation": {}
     },
     {
@@ -307,6 +371,22 @@
         "documentation": {}
     },
     {
+        "label": "CardComponent",
+        "importPath": "components.card",
+        "description": "components.card",
+        "isExtraImport": true,
+        "detail": "components.card",
+        "documentation": {}
+    },
+    {
+        "label": "Blank",
+        "importPath": "screens.blank_screen",
+        "description": "screens.blank_screen",
+        "isExtraImport": true,
+        "detail": "screens.blank_screen",
+        "documentation": {}
+    },
+    {
         "label": "Blank",
         "importPath": "screens.blank_screen",
         "description": "screens.blank_screen",
@@ -347,6 +427,22 @@
         "documentation": {}
     },
     {
+        "label": "LoginForm",
+        "importPath": "components.login_form",
+        "description": "components.login_form",
+        "isExtraImport": true,
+        "detail": "components.login_form",
+        "documentation": {}
+    },
+    {
+        "label": "Text",
+        "importPath": "buttons.text",
+        "description": "buttons.text",
+        "isExtraImport": true,
+        "detail": "buttons.text",
+        "documentation": {}
+    },
+    {
         "label": "Text",
         "importPath": "buttons.text",
         "description": "buttons.text",
@@ -400,6 +496,22 @@
         "description": "screens.main_screen",
         "isExtraImport": true,
         "detail": "screens.main_screen",
+        "documentation": {}
+    },
+    {
+        "label": "MainScreen",
+        "importPath": "screens.main_screen",
+        "description": "screens.main_screen",
+        "isExtraImport": true,
+        "detail": "screens.main_screen",
+        "documentation": {}
+    },
+    {
+        "label": "HandComponent",
+        "importPath": "components.hand",
+        "description": "components.hand",
+        "isExtraImport": true,
+        "detail": "components.hand",
         "documentation": {}
     },
     {
@@ -550,11 +662,45 @@
         "documentation": {}
     },
     {
+        "label": "User",
+        "importPath": "storage.user",
+        "description": "storage.user",
+        "isExtraImport": true,
+        "detail": "storage.user",
+        "documentation": {}
+    },
+    {
+        "label": "JsonData",
+        "importPath": "utility.json_data",
+        "description": "utility.json_data",
+        "isExtraImport": true,
+        "detail": "utility.json_data",
+        "documentation": {}
+    },
+    {
         "label": "Room",
         "importPath": "storage.room",
         "description": "storage.room",
         "isExtraImport": true,
         "detail": "storage.room",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
         "documentation": {}
     },
     {
@@ -673,7 +819,7 @@
         "kind": 6,
         "importPath": "blank.src.components.card",
         "description": "blank.src.components.card",
-        "peekOfCode": "class CardComponent:\n    def __init__(self, screen, x, y, suit, value):\n            self.flipped = False\n            self.value = value\n            self.suit = suit\n            card_image = f\"assets/{value}_{suit}.png\"\n            self.card = ImageButton(screen, x, y, card_image, 0.5)            \n            self.back = ImageButton(screen, x, y, \"assets/back_red.png\", 0.5)\n    def draw(self):\n        if self.flipped == True:",
+        "peekOfCode": "class CardComponent:\n    def __init__(self, screen, x, y, suit, value):\n        self.flipped = False\n        self.value = value\n        self.suit = suit\n        card_image = f\"assets/{value}_{suit}.png\"\n        self.card = ImageButton(screen, x, y, card_image, 0.5)            \n        self.back_card = ImageButton(screen, x, y, \"assets/back_red.png\", 0.5)\n        self.hold = False\n    def draw(self):",
         "detail": "blank.src.components.card",
         "documentation": {}
     },
@@ -736,7 +882,7 @@
         "kind": 6,
         "importPath": "blank.src.screens.blank_screen",
         "description": "blank.src.screens.blank_screen",
-        "peekOfCode": "class Blank: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.click = False\n        self.running = True\n        # self, screen, x, y, width, height, text=\"\", color=(DARK_GREY)\n        self.flip_button = Button(self.screen, self.width//2 - 100, self.height//2 - 25, 200, 50, \"flip card\", BLACK_COLOR)\n        self.card1 = CardComponent(self.screen, 200, 50, \"heart\", 2)",
+        "peekOfCode": "class Blank: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.click = False\n        self.hold = False\n        self.running = True\n        # self, screen, x, y, width, height, text=\"\", color=(DARK_GREY)\n        self.flip_button = Button(self.screen, self.width//2 - 100, self.height//2 - 25, 200, 50, \"flip card\", BLACK_COLOR)",
         "detail": "blank.src.screens.blank_screen",
         "documentation": {}
     },
@@ -745,7 +891,7 @@
         "kind": 5,
         "importPath": "blank.src.screens.blank_screen",
         "description": "blank.src.screens.blank_screen",
-        "peekOfCode": "BG_COLOR = (30, 30, 30)\nBLACK_COLOR = (0, 0, 0)\nclass Blank: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.click = False\n        self.running = True\n        # self, screen, x, y, width, height, text=\"\", color=(DARK_GREY)",
+        "peekOfCode": "BG_COLOR = (30, 30, 30)\nBLACK_COLOR = (0, 0, 0)\nclass Blank: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.click = False\n        self.hold = False\n        self.running = True",
         "detail": "blank.src.screens.blank_screen",
         "documentation": {}
     },
@@ -754,7 +900,7 @@
         "kind": 5,
         "importPath": "blank.src.screens.blank_screen",
         "description": "blank.src.screens.blank_screen",
-        "peekOfCode": "BLACK_COLOR = (0, 0, 0)\nclass Blank: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.click = False\n        self.running = True\n        # self, screen, x, y, width, height, text=\"\", color=(DARK_GREY)\n        self.flip_button = Button(self.screen, self.width//2 - 100, self.height//2 - 25, 200, 50, \"flip card\", BLACK_COLOR)",
+        "peekOfCode": "BLACK_COLOR = (0, 0, 0)\nclass Blank: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.click = False\n        self.hold = False\n        self.running = True\n        # self, screen, x, y, width, height, text=\"\", color=(DARK_GREY)",
         "detail": "blank.src.screens.blank_screen",
         "documentation": {}
     },
@@ -853,7 +999,7 @@
         "kind": 6,
         "importPath": "blank copy.src.components.card",
         "description": "blank copy.src.components.card",
-        "peekOfCode": "class CardComponent:\n    def __init__(self, screen, x, y, suit, value):\n            self.flipped = False\n            self.value = value\n            self.suit = suit\n            card_image = f\"assets/{value}_{suit}.png\"\n            self.card = ImageButton(screen, x, y, card_image, 0.5)            \n            self.back = ImageButton(screen, x, y, \"assets/back_red.png\", 0.5)\n    def draw(self):\n        if self.flipped == True:",
+        "peekOfCode": "class CardComponent:\n    def __init__(self, screen, x, y, suit, value):\n        self.flipped = False\n        self.value = value\n        self.suit = suit\n        card_image = f\"assets/{value}_{suit}.png\"\n        self.card = ImageButton(screen, x, y, card_image, 0.5)            \n        self.back_card = ImageButton(screen, x, y, \"assets/back_red.png\", 0.5)\n        self.hold = False\n    def draw(self):",
         "detail": "blank copy.src.components.card",
         "documentation": {}
     },
@@ -916,7 +1062,7 @@
         "kind": 6,
         "importPath": "blank copy.src.screens.blank_screen",
         "description": "blank copy.src.screens.blank_screen",
-        "peekOfCode": "class Blank: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.click = False\n        self.running = True\n        # self, screen, x, y, width, height, text=\"\", color=(DARK_GREY)\n        self.flip_button = Button(self.screen, self.width//2 - 100, self.height//2 - 25, 200, 50, \"flip card\", BLACK_COLOR)\n        self.card1 = CardComponent(self.screen, 200, 50, \"heart\", 2)",
+        "peekOfCode": "class Blank: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.click = False\n        self.hold = False\n        self.running = True\n        # self, screen, x, y, width, height, text=\"\", color=(DARK_GREY)\n        self.flip_button = Button(self.screen, self.width//2 - 100, self.height//2 - 25, 200, 50, \"flip card\", BLACK_COLOR)",
         "detail": "blank copy.src.screens.blank_screen",
         "documentation": {}
     },
@@ -925,7 +1071,7 @@
         "kind": 5,
         "importPath": "blank copy.src.screens.blank_screen",
         "description": "blank copy.src.screens.blank_screen",
-        "peekOfCode": "BG_COLOR = (30, 30, 30)\nBLACK_COLOR = (0, 0, 0)\nclass Blank: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.click = False\n        self.running = True\n        # self, screen, x, y, width, height, text=\"\", color=(DARK_GREY)",
+        "peekOfCode": "BG_COLOR = (30, 30, 30)\nBLACK_COLOR = (0, 0, 0)\nclass Blank: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.click = False\n        self.hold = False\n        self.running = True",
         "detail": "blank copy.src.screens.blank_screen",
         "documentation": {}
     },
@@ -934,7 +1080,7 @@
         "kind": 5,
         "importPath": "blank copy.src.screens.blank_screen",
         "description": "blank copy.src.screens.blank_screen",
-        "peekOfCode": "BLACK_COLOR = (0, 0, 0)\nclass Blank: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.click = False\n        self.running = True\n        # self, screen, x, y, width, height, text=\"\", color=(DARK_GREY)\n        self.flip_button = Button(self.screen, self.width//2 - 100, self.height//2 - 25, 200, 50, \"flip card\", BLACK_COLOR)",
+        "peekOfCode": "BLACK_COLOR = (0, 0, 0)\nclass Blank: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.click = False\n        self.hold = False\n        self.running = True\n        # self, screen, x, y, width, height, text=\"\", color=(DARK_GREY)",
         "detail": "blank copy.src.screens.blank_screen",
         "documentation": {}
     },
@@ -963,6 +1109,195 @@
         "description": "blank copy.src.main",
         "peekOfCode": "def main():\n    main_screen = MainScreen()\n    main_screen.run()   \nif __name__ == \"__main__\":\n    main()",
         "detail": "blank copy.src.main",
+        "documentation": {}
+    },
+    {
+        "label": "Button",
+        "kind": 6,
+        "importPath": "card_example.src.buttons.button",
+        "description": "card_example.src.buttons.button",
+        "peekOfCode": "class Button:\n    DARK_GREY = (29,29,29)\n    def __init__(self, screen, x, y, width, height, text=\"\", color=(DARK_GREY), hover=()):\n        self.screen = screen \n        self.clicked = False\n        self.height = height\n        self.width = width\n        self.text = text \n        self.color = color\n        self.hover = (color[0] + 10, color[1] + 10, color[2] + 10)",
+        "detail": "card_example.src.buttons.button",
+        "documentation": {}
+    },
+    {
+        "label": "ImageButton",
+        "kind": 6,
+        "importPath": "card_example.src.buttons.image_button",
+        "description": "card_example.src.buttons.image_button",
+        "peekOfCode": "class ImageButton(Button):\n    def __init__(self, screen, x, y, image_path, scale):\n        image = pygame.image.load(image_path).convert_alpha()\n        width = image.get_width()\n        height = image.get_height()\n        super().__init__(screen, x, y, width, height) \n        self.image = pygame.transform.scale(image, (int(width * scale), int(height * scale)))\n        self.rect = self.image.get_rect()\n        self.rect.topleft = (x, y)\n    def draw(self):",
+        "detail": "card_example.src.buttons.image_button",
+        "documentation": {}
+    },
+    {
+        "label": "InputBox",
+        "kind": 6,
+        "importPath": "card_example.src.buttons.input_box",
+        "description": "card_example.src.buttons.input_box",
+        "peekOfCode": "class InputBox:\n    def __init__(self, screen, x, y, w, h, text=''):\n        self.screen = screen\n        self.rect = pygame.Rect(x, y, w, h)\n        self.color = INACTIVE_BG\n        self.text = text\n        self.txt_surface = FONT.render(text, True, self.color)\n        self.active = False\n    def handle_event(self, event):\n        if event.type == pygame.MOUSEBUTTONDOWN:",
+        "detail": "card_example.src.buttons.input_box",
+        "documentation": {}
+    },
+    {
+        "label": "ACTIVE_BG",
+        "kind": 5,
+        "importPath": "card_example.src.buttons.input_box",
+        "description": "card_example.src.buttons.input_box",
+        "peekOfCode": "ACTIVE_BG = (255, 255, 255)\nINACTIVE_BG = (20, 20, 20)\nFONT = pygame.font.SysFont(\"leelawadee\", 20)\nclass InputBox:\n    def __init__(self, screen, x, y, w, h, text=''):\n        self.screen = screen\n        self.rect = pygame.Rect(x, y, w, h)\n        self.color = INACTIVE_BG\n        self.text = text\n        self.txt_surface = FONT.render(text, True, self.color)",
+        "detail": "card_example.src.buttons.input_box",
+        "documentation": {}
+    },
+    {
+        "label": "INACTIVE_BG",
+        "kind": 5,
+        "importPath": "card_example.src.buttons.input_box",
+        "description": "card_example.src.buttons.input_box",
+        "peekOfCode": "INACTIVE_BG = (20, 20, 20)\nFONT = pygame.font.SysFont(\"leelawadee\", 20)\nclass InputBox:\n    def __init__(self, screen, x, y, w, h, text=''):\n        self.screen = screen\n        self.rect = pygame.Rect(x, y, w, h)\n        self.color = INACTIVE_BG\n        self.text = text\n        self.txt_surface = FONT.render(text, True, self.color)\n        self.active = False",
+        "detail": "card_example.src.buttons.input_box",
+        "documentation": {}
+    },
+    {
+        "label": "FONT",
+        "kind": 5,
+        "importPath": "card_example.src.buttons.input_box",
+        "description": "card_example.src.buttons.input_box",
+        "peekOfCode": "FONT = pygame.font.SysFont(\"leelawadee\", 20)\nclass InputBox:\n    def __init__(self, screen, x, y, w, h, text=''):\n        self.screen = screen\n        self.rect = pygame.Rect(x, y, w, h)\n        self.color = INACTIVE_BG\n        self.text = text\n        self.txt_surface = FONT.render(text, True, self.color)\n        self.active = False\n    def handle_event(self, event):",
+        "detail": "card_example.src.buttons.input_box",
+        "documentation": {}
+    },
+    {
+        "label": "Text",
+        "kind": 6,
+        "importPath": "card_example.src.buttons.text",
+        "description": "card_example.src.buttons.text",
+        "peekOfCode": "class Text:\n    def __init__(self, screen, x, y, text=\"\", font_size=20):\n        self.font = pygame.font.SysFont('leelawadee', font_size)\n        self.screen = screen\n        self.text = text\n        self.pos = (x, y)\n    def setText(self, text):\n        self.text = text\n    def draw(self):\n        textsurface = self.font.render(self.text, True, (255, 255, 255))",
+        "detail": "card_example.src.buttons.text",
+        "documentation": {}
+    },
+    {
+        "label": "CardComponent",
+        "kind": 6,
+        "importPath": "card_example.src.components.card",
+        "description": "card_example.src.components.card",
+        "peekOfCode": "class CardComponent:\n    def __init__(self, screen, x, y, suit, value):\n            self.flipped = False\n            self.value = value\n            self.suit = suit\n            card_image = f\"assets/{value}_{suit}.png\"\n            self.card = ImageButton(screen, x, y, card_image, 0.5)   \n            self.back = ImageButton(screen, x, y, \"assets/back_red.png\", 0.5)\n    def draw(self):\n        if self.flipped == True:",
+        "detail": "card_example.src.components.card",
+        "documentation": {}
+    },
+    {
+        "label": "HandComponent",
+        "kind": 6,
+        "importPath": "card_example.src.components.hand",
+        "description": "card_example.src.components.hand",
+        "peekOfCode": "class HandComponent:\n    def __init__(self, screen, x, y):\n        self.screen = screen\n        self.x = x\n        self.y = y\n        self.cards = []\n    def addCard(self, suit, value):\n        current_x = (len(self.cards) * 50) + self.x \n        new_card = CardComponent(self.screen, current_x, self.y, suit, value)\n        self.cards.append(new_card)",
+        "detail": "card_example.src.components.hand",
+        "documentation": {}
+    },
+    {
+        "label": "LoginForm",
+        "kind": 6,
+        "importPath": "card_example.src.components.login_form",
+        "description": "card_example.src.components.login_form",
+        "peekOfCode": "class LoginForm:\n    def __init__(self, screen, x, y, w, h):\n        self.screen = screen\n        self.user_box = InputBox(screen, x, y, w, h)\n        self.pass_box = InputBox(screen, x, y + h + padding, w, h)\n        self.button = Button(screen, x, y + h * 2 + padding + 10, w, h, \"Login\")\n        self.status = {}\n    def handle_event(self, event):\n        self.user_box.handle_event(event)\n        self.pass_box.handle_event(event)",
+        "detail": "card_example.src.components.login_form",
+        "documentation": {}
+    },
+    {
+        "label": "padding",
+        "kind": 5,
+        "importPath": "card_example.src.components.login_form",
+        "description": "card_example.src.components.login_form",
+        "peekOfCode": "padding = 10\n# Login Form component holds three elements, \n# 2 Input Boxes\n# 1 Button\nclass LoginForm:\n    def __init__(self, screen, x, y, w, h):\n        self.screen = screen\n        self.user_box = InputBox(screen, x, y, w, h)\n        self.pass_box = InputBox(screen, x, y + h + padding, w, h)\n        self.button = Button(screen, x, y + h * 2 + padding + 10, w, h, \"Login\")",
+        "detail": "card_example.src.components.login_form",
+        "documentation": {}
+    },
+    {
+        "label": "RoomModel",
+        "kind": 6,
+        "importPath": "card_example.src.network.rooms.rooms",
+        "description": "card_example.src.network.rooms.rooms",
+        "peekOfCode": "class RoomModel:\n    @staticmethod\n    def create_room(username):\n        options = {\"user\": username}\n        response = requests.post(f\"{url}/auth/create_room\", data=options)\n        return response.json()\n    @staticmethod\n    def join_room(id, username):\n        options = {\"id\": id, \"user\": username}\n        response = requests.post(f\"{url}/auth/join_room\", data=options)",
+        "detail": "card_example.src.network.rooms.rooms",
+        "documentation": {}
+    },
+    {
+        "label": "url",
+        "kind": 5,
+        "importPath": "card_example.src.network.rooms.rooms",
+        "description": "card_example.src.network.rooms.rooms",
+        "peekOfCode": "url = \"http://127.0.0.1:5000\"\nclass RoomModel:\n    @staticmethod\n    def create_room(username):\n        options = {\"user\": username}\n        response = requests.post(f\"{url}/auth/create_room\", data=options)\n        return response.json()\n    @staticmethod\n    def join_room(id, username):\n        options = {\"id\": id, \"user\": username}",
+        "detail": "card_example.src.network.rooms.rooms",
+        "documentation": {}
+    },
+    {
+        "label": "UserModel",
+        "kind": 6,
+        "importPath": "card_example.src.network.users.users",
+        "description": "card_example.src.network.users.users",
+        "peekOfCode": "class UserModel:\n    @staticmethod\n    def create_user(username, password):\n        options = {\"user\": username, \"password\": password}\n        response = requests.post(f\"{url}/auth/register\", data=options)\n        return response.json()\n    @staticmethod\n    def authenticate(username, password):\n        options = {\"user\": username, \"password\": password}\n        response = requests.post(f\"{url}/auth/login\", data=options)",
+        "detail": "card_example.src.network.users.users",
+        "documentation": {}
+    },
+    {
+        "label": "url",
+        "kind": 5,
+        "importPath": "card_example.src.network.users.users",
+        "description": "card_example.src.network.users.users",
+        "peekOfCode": "url = \"http://127.0.0.1:5000\"\nclass UserModel:\n    @staticmethod\n    def create_user(username, password):\n        options = {\"user\": username, \"password\": password}\n        response = requests.post(f\"{url}/auth/register\", data=options)\n        return response.json()\n    @staticmethod\n    def authenticate(username, password):\n        options = {\"user\": username, \"password\": password}",
+        "detail": "card_example.src.network.users.users",
+        "documentation": {}
+    },
+    {
+        "label": "Blank",
+        "kind": 6,
+        "importPath": "card_example.src.screens.blank_screen",
+        "description": "card_example.src.screens.blank_screen",
+        "peekOfCode": "class Blank: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.click = False\n        self.running = True\n        # self, screen, x, y, width, height, text=\"\", color=(DARK_GREY)\n        self.flip_button = Button(self.screen, self.width//2 - 100, self.height//2 - 25, 200, 50, \"flip card\", BLACK_COLOR)\n        self.add_card = Button(self.screen, self.width//2 - 300, self.height//2 - 25, 200, 50, \"add card\", BLACK_COLOR)",
+        "detail": "card_example.src.screens.blank_screen",
+        "documentation": {}
+    },
+    {
+        "label": "BG_COLOR",
+        "kind": 5,
+        "importPath": "card_example.src.screens.blank_screen",
+        "description": "card_example.src.screens.blank_screen",
+        "peekOfCode": "BG_COLOR = (30, 30, 30)\nBLACK_COLOR = (0, 0, 0)\nclass Blank: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.click = False\n        self.running = True\n        # self, screen, x, y, width, height, text=\"\", color=(DARK_GREY)",
+        "detail": "card_example.src.screens.blank_screen",
+        "documentation": {}
+    },
+    {
+        "label": "BLACK_COLOR",
+        "kind": 5,
+        "importPath": "card_example.src.screens.blank_screen",
+        "description": "card_example.src.screens.blank_screen",
+        "peekOfCode": "BLACK_COLOR = (0, 0, 0)\nclass Blank: \n    def __init__(self):\n        self.width = 600\n        self.height = 600\n        self.setup_screen()\n        self.click = False\n        self.running = True\n        # self, screen, x, y, width, height, text=\"\", color=(DARK_GREY)\n        self.flip_button = Button(self.screen, self.width//2 - 100, self.height//2 - 25, 200, 50, \"flip card\", BLACK_COLOR)",
+        "detail": "card_example.src.screens.blank_screen",
+        "documentation": {}
+    },
+    {
+        "label": "MainScreen",
+        "kind": 6,
+        "importPath": "card_example.src.screens.main_screen",
+        "description": "card_example.src.screens.main_screen",
+        "peekOfCode": "class MainScreen: \n    def __init__(self):\n        self.width = 800\n        self.height = 500\n        self.setup_screen()\n        # objects init\n        start_button = ImageButton(self.screen, 100, 200, \"assets/start_btn.png\", 0.7)\n        exit_button = ImageButton(self.screen, 450, 200, \"assets/exit_btn.png\", 0.7)\n        exit_button = ImageButton(self.screen, 450, 200, \"assets/exit_btn.png\", 0.7)\n        user_text = Text(self.screen, 15, 15, \"Not Logged in\")",
+        "detail": "card_example.src.screens.main_screen",
+        "documentation": {}
+    },
+    {
+        "label": "BG_COLOR",
+        "kind": 5,
+        "importPath": "card_example.src.screens.main_screen",
+        "description": "card_example.src.screens.main_screen",
+        "peekOfCode": "BG_COLOR = (28, 170, 156)\nclass MainScreen: \n    def __init__(self):\n        self.width = 800\n        self.height = 500\n        self.setup_screen()\n        # objects init\n        start_button = ImageButton(self.screen, 100, 200, \"assets/start_btn.png\", 0.7)\n        exit_button = ImageButton(self.screen, 450, 200, \"assets/exit_btn.png\", 0.7)\n        exit_button = ImageButton(self.screen, 450, 200, \"assets/exit_btn.png\", 0.7)",
+        "detail": "card_example.src.screens.main_screen",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "card_example.src.main",
+        "description": "card_example.src.main",
+        "peekOfCode": "def main():\n    main_screen = MainScreen()\n    main_screen.run()   \nif __name__ == \"__main__\":\n    main()",
+        "detail": "card_example.src.main",
         "documentation": {}
     },
     {
@@ -1231,7 +1566,7 @@
         "kind": 6,
         "importPath": "online.client.src.game.tictactoe",
         "description": "online.client.src.game.tictactoe",
-        "peekOfCode": "class TicTacToe:\n    LINE_COLOR = (23, 145, 135)\n    def __init__(self, screen, player_name, id=None):\n        self.id = id or get_random_string(5)\n        self.username = player_name\n        self.sio = socketio.Client()\n        self.setup()\n        self.screen = screen\n        self.rows = 3\n        self.cols = 3",
+        "peekOfCode": "class TicTacToe:\n    LINE_COLOR = (23, 145, 135)\n    def __init__(self, screen, player_name, id=None):\n        # 12323\n        self.id = id or get_random_string(5)\n        self.username = player_name\n        self.sio = socketio.Client()\n        self.setup()\n        self.screen = screen\n        self.rows = 3",
         "detail": "online.client.src.game.tictactoe",
         "documentation": {}
     },
@@ -1240,7 +1575,7 @@
         "kind": 2,
         "importPath": "online.client.src.game.tictactoe",
         "description": "online.client.src.game.tictactoe",
-        "peekOfCode": "def get_random_string(length):\n    # choose from all lowercase letter\n    letters = string.ascii_lowercase\n    result_str = ''.join(random.choice(letters) for i in range(length))\n    return result_str\nclass TicTacToe:\n    LINE_COLOR = (23, 145, 135)\n    def __init__(self, screen, player_name, id=None):\n        self.id = id or get_random_string(5)\n        self.username = player_name",
+        "peekOfCode": "def get_random_string(length):\n    # choose from all lowercase letter\n    letters = string.ascii_lowercase\n    result_str = ''.join(random.choice(letters) for i in range(length))\n    return result_str\nclass TicTacToe:\n    LINE_COLOR = (23, 145, 135)\n    def __init__(self, screen, player_name, id=None):\n        # 12323\n        self.id = id or get_random_string(5)",
         "detail": "online.client.src.game.tictactoe",
         "documentation": {}
     },
@@ -1438,7 +1773,7 @@
         "kind": 6,
         "importPath": "online.server.storage.storage",
         "description": "online.server.storage.storage",
-        "peekOfCode": "class Storage:\n    def __init__(self, game):\n        self.game = game\n        self.rooms = {}\n        self.users = {}\n    # utility \n    def create_random_id(self, n):\n        limit = 10000\n        while limit:\n            id = ''.join(random.choices(string.ascii_uppercase + string.digits, k=n))",
+        "peekOfCode": "class Storage:\n    def __init__(self, game, json_file=\"storage.json\"):\n        self.file = json_file\n        self.game = game\n        self.rooms = {}\n        self.users = JsonData.load_from_json(json_file)\n        print(\"---------------------------\")\n        print(self.users)\n    # utility \n    def create_random_id(self, n):",
         "detail": "online.server.storage.storage",
         "documentation": {}
     },
@@ -1452,11 +1787,20 @@
         "documentation": {}
     },
     {
+        "label": "JsonData",
+        "kind": 6,
+        "importPath": "online.server.utility.json_data",
+        "description": "online.server.utility.json_data",
+        "peekOfCode": "class JsonData:\n    @staticmethod\n    def object_to_user(data):\n        # if object cannot be converted into a User Class then exit early\n        if \"name\" not in data and \"password\" not in data:\n            return data\n        # return User Class object\n        return User(data[\"name\"], data[\"password\"], data[\"balance\"])\n    @staticmethod\n    def load_from_json(json_file):",
+        "detail": "online.server.utility.json_data",
+        "documentation": {}
+    },
+    {
         "label": "home_page",
         "kind": 2,
         "importPath": "online.server.application",
         "description": "online.server.application",
-        "peekOfCode": "def home_page():\n    return jsonify({\"success\": \"HELLO CLASS\"})\n@socketio.on(\"move\")\ndef handleMove(data):\n    print(\"Got message:\", data)\n    room = data[\"channel\"]\n    emit(\"move\", data, room=room)\n@socketio.on(\"join\")\ndef syncGame(data):\n    room = data[\"channel\"]",
+        "peekOfCode": "def home_page():\n    return jsonify({\"success\": \"HELLO CLASS\"})\n@socketio.on(\"move\")\ndef handleMove(data):\n    print(\"Got message:\", data)\n    room = data[\"channel\"]\n    emit(\"move\", data, room=room)\n@socketio.on(\"join\")\ndef syncGame(data):\n    # data{\"channel\", \"player_name\"}",
         "detail": "online.server.application",
         "documentation": {}
     },
@@ -1465,7 +1809,7 @@
         "kind": 2,
         "importPath": "online.server.application",
         "description": "online.server.application",
-        "peekOfCode": "def handleMove(data):\n    print(\"Got message:\", data)\n    room = data[\"channel\"]\n    emit(\"move\", data, room=room)\n@socketio.on(\"join\")\ndef syncGame(data):\n    room = data[\"channel\"]\n    if room not in rooms:\n        rooms[room] = {\"players\": {}, \"symbols\": [\"X\", \"O\"]}\n    temp_symbol = rooms[room][\"symbols\"].pop()",
+        "peekOfCode": "def handleMove(data):\n    print(\"Got message:\", data)\n    room = data[\"channel\"]\n    emit(\"move\", data, room=room)\n@socketio.on(\"join\")\ndef syncGame(data):\n    # data{\"channel\", \"player_name\"}\n    room = data[\"channel\"]\n    if room not in rooms:\n        # default room structure",
         "detail": "online.server.application",
         "documentation": {}
     },
@@ -1474,7 +1818,7 @@
         "kind": 2,
         "importPath": "online.server.application",
         "description": "online.server.application",
-        "peekOfCode": "def syncGame(data):\n    room = data[\"channel\"]\n    if room not in rooms:\n        rooms[room] = {\"players\": {}, \"symbols\": [\"X\", \"O\"]}\n    temp_symbol = rooms[room][\"symbols\"].pop()\n    rooms[room][\"players\"][data[\"player_name\"]] = temp_symbol\n    rooms[room][\"channel\"] = room\n    join_room(room)\n    # emit(\"sync_game\", game_state, broadcast=True)\n    emit(\"sync_game\", rooms[room], room=room)",
+        "peekOfCode": "def syncGame(data):\n    # data{\"channel\", \"player_name\"}\n    room = data[\"channel\"]\n    if room not in rooms:\n        # default room structure\n        rooms[room] = {\"players\": {}, \"symbols\": [\"X\", \"O\"]}\n    temp_symbol = rooms[room][\"symbols\"].pop()\n    player_name = data[\"player_name\"]\n    rooms[room][\"players\"][player_name] = temp_symbol\n    rooms[room][\"channel\"] = room",
         "detail": "online.server.application",
         "documentation": {}
     },

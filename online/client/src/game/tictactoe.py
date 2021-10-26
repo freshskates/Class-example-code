@@ -13,10 +13,12 @@ def get_random_string(length):
     letters = string.ascii_lowercase
     result_str = ''.join(random.choice(letters) for i in range(length))
     return result_str
+
 class TicTacToe:
     LINE_COLOR = (23, 145, 135)
 
     def __init__(self, screen, player_name, id=None):
+        # 12323
         self.id = id or get_random_string(5)
     
         self.username = player_name
@@ -65,7 +67,7 @@ class TicTacToe:
     
     def send_data(self):
         temp_board = []
-
+        
         for i in range(self.rows):
             temp_board.append([])
             for j in range(self.cols):
@@ -84,7 +86,7 @@ class TicTacToe:
         self.sio.emit('join', {"player_name": player_name, "channel": self.id})
 
 
-    def call_backs(self):
+    def setup_callbacks(self):
         @self.sio.on("connect")
         def connect():
             print('connection established')
@@ -121,11 +123,13 @@ class TicTacToe:
 
 
     def setup(self):
-        self.call_backs()
+        self.setup_callbacks()
         # server ip
         self.sio.connect('http://127.0.0.1:5000')
         # when running local host switch to this
         # self.sio.connect('http://127.0.0.1:5000')
+        
+        # emit is the action sending to server
         self.sio.emit('join', {"player_name": self.username, "channel": self.id})
 
     def close_socket(self):
