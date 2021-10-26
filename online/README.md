@@ -29,7 +29,7 @@ python-socketio
 
 8. Should work now, if not then ask mentor for help or try googling error message
 
-## How to setup through terminal
+## How to setup through terminal(Not needed if followed pycharm setup)
 
 ```python
 # run this in your terminal with your preferred python enviroment
