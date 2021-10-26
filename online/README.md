@@ -28,3 +28,10 @@ python-socketio
 7. Now lets expand `server` > `application.py` (then `right click and select "run application"`)
 
 8. Should work now, if not then ask mentor for help or try googling error message
+
+## if not on pycharm
+
+```python
+run this in your terminal with your preferred python enviroment
+pip install requests pygame flask flask-socketio  python-socketio
+```
