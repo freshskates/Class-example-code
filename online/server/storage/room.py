@@ -1,8 +1,9 @@
 class Room:
-    def __init__(self, id, owner):
-        self.owner = owner
-        self.id = id
-        self.players = {owner: owner}
+    def __init__(self, owner_id, game_id):
+        self.owner = owner_id
+        self.id = game_id
+        self.symbols = ["O"]
+        self.players = {owner_id: "X"}
         
     def get_id(self):
         return self.id
@@ -16,8 +17,15 @@ class Room:
     def add_player(self, player: str):
         if self.in_room(player):
             return False
-        self.players[player] = player
+        
+        if len(self.symbols) == 0:
+            return False
+        
+        self.players[player] = self.symbols.pop()
+        
+        return True    
 
+        
     def remove_player(self, player: str):
         return self.players.pop(player, False)
 
@@ -25,4 +33,4 @@ class Room:
         return self.owner
 
     def get_info(self):
-        return {"id": self.id, "owner": self.owner, "players": self.players }
+        return {"channel": self.id, "players": self.players, "symbols": self.symbols }

@@ -1,13 +1,14 @@
 from flask import Flask, jsonify
 from routes.auth import auth
 from flask_socketio import SocketIO, send, emit, join_room, leave_room
-
+from db.database import storage_db
+from utility.tools import Tools
 application = Flask(__name__)
 application.config["SECRET_KEY"] = "ASLJKDKALSD!"
 
 socketio = SocketIO(application)
 
-rooms = {}
+# rooms = {}
 application.register_blueprint(auth, url_prefix="/auth")
 
 @application.route("/", methods=["GET"])
@@ -17,29 +18,42 @@ def home_page():
 @socketio.on("move")
 def handleMove(data):
     print("Got message:", data)
-    room = data["channel"]
-    emit("move", data, room=room)
+    room_id = data["channel"]
+    emit("move", data, room=room_id)
 
 @socketio.on("join")
 def syncGame(data):
-    # data{"channel", "player_name"}
-    room = data["channel"]
-
-    if room not in rooms:
-        # default room structure
-        rooms[room] = {"players": {}, "symbols": ["X", "O"]}
-
-    temp_symbol = rooms[room]["symbols"].pop()
+    # data being passed in
+    # data{"channel": channel_id, "player_name": player trying to join}
     
+    # extracting channel id and player name
+    room_id = data["channel"]
     player_name = data["player_name"]
     
-    rooms[room]["players"][player_name] = temp_symbol
-    rooms[room]["channel"] = room
+    # boolean to check if player is trying to join a new room
+    is_new_room = not storage_db.room_exists(room_id)
 
-    join_room(room)
-
+    # if room id is new then create a room for it else add player to already existing room
+    
+    if is_new_room:
+        storage_db.create_room(player_name, room_id)
+    else:
+        joined_successfully = storage_db.join_room(player_name, room_id)
+        print("joined: ", joined_successfully)
+        
+        # if did not join successfully then create a new room 
+        if not joined_successfully:
+            room_id = Tools.get_random_id(5)
+            storage_db.create_room(player_name, room_id)
+        
+    room = storage_db.get_room(room_id)
+    
+    # print(room.get_info())
+    join_room(room_id)
+    room_info = room.get_info()
+    
     # emit("sync_game", game_state, broadcast=True)
-    emit("sync_game", rooms[room], room=room)
+    emit("sync_game", room_info, room=room_id)
 
 if __name__ == "__main__":
     

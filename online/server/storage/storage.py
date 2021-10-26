@@ -11,18 +11,6 @@ class Storage:
         self.game = game
         self.rooms = {}
         self.users = JsonData.load_from_json(json_file)
-        print("---------------------------")
-        print(self.users)
-    # utility 
-    def create_random_id(self, n):
-        limit = 10000
-        while limit:
-            id = ''.join(random.choices(string.ascii_uppercase + string.digits, k=n))
-            if id not in self.rooms:
-                return id
-            limit = limit - 1
-
-        return False
             
     def user_exists(self, user):
             return user in self.users   
@@ -76,20 +64,28 @@ class Storage:
         self.users[user].set_balance(balance)
         self.save()
 
-    def create_room(self, user):
+    def create_room(self, user, id):
         if not self.user_exists(user) or self.user_in_room(user):
+            print("error creating a room")
             return {"error": f"Could not create a room for {user}"}
         
-        id = self.create_random_id(6)
-        self.rooms[id] = Room(id, user)
+        self.rooms[id] = Room(user, id)
         return self.rooms[id].get_info()
 
-    def join_room(self, id, user):
-        if id not in self.rooms or self.user_in_room(user):
-            return {"error": "Error joining room"}
-        self.rooms[id].add_player(user)
+    def room_exists(self, room_id):
+        return room_id in self.rooms
 
-        return self.rooms[id].get_info()
+    def join_room(self, user, id):
+        if not self.room_exists(id) or self.user_in_room(user):
+            return False
+ 
+        joined_successfully = self.rooms[id].add_player(user)
+        
+        # joined_successfully can either be True or False
+        return joined_successfully
+
+    def get_room(self, room_id):
+        return self.rooms[room_id]
 
     def save(self):
         JsonData.save(self.users, self.file)

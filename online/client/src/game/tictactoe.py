@@ -81,11 +81,6 @@ class TicTacToe:
             for j in range(self.cols):
                 self.board[i][j].setValue(raw_data[i][j])
 
-    def add_player(self, player_name):
-        # self.players.append(Player(player_name, self.symbols.pop()))
-        self.sio.emit('join', {"player_name": player_name, "channel": self.id})
-
-
     def setup_callbacks(self):
         @self.sio.on("connect")
         def connect():
@@ -113,12 +108,22 @@ class TicTacToe:
         @self.sio.on("sync_game")
         def update_players(data):
             print("player joined", data)
-            # if len(self.players) < 2:
-            # self.players = data["players"]
-            # self.symbols = data["signs"]
-            self.symbol = data["players"][self.username]
-            self.players = data["players"].keys()
-            self.id = data["channel"]
+            
+            players_dict = data["players"]
+            
+            # will return symbol of player
+            self.symbol = players_dict[self.username]
+            
+            # will return all players in list format
+            self.players = players_dict.keys()
+            
+            # if for some reason player did not join room successfully then 
+            # server handled it by making the player a new room
+            if self.id != data["channel"]:
+                self.id = data["channel"]
+                self.id_text = Text(self.screen, 525, 0, self.id, 20)
+            
+            # if your symbol is X when the game starts then you will go first
             self.turn = (self.symbol == "X") 
 
 

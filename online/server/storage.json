@@ -1,17 +1,1 @@
-{
-  "test": {
-    "name": "test",
-    "password": "pbkdf2:sha256:260000$KZmHNAEKRRtD1Jvu$f1a6a5fd38588ecd904f52b1a5c6b9bf2aad2600e88c16d6b1d88c0e8d3dfe49",
-    "balance": 300
-  },
-  "test2": {
-    "name": "test2",
-    "password": "pbkdf2:sha256:260000$OanXwMQ3gsky1fM2$21b0b8f7c8928c4cf0b2d17a5c6ba9777727fbb2825e56d5ed078ec460a0d542",
-    "balance": 300
-  },
-  "trt": {
-    "name": "trt",
-    "password": "pbkdf2:sha256:260000$7jyQHmMZjZxJOUA0$3db5039c88edb0e45875f0d5c180b531837d5f52c9bd366421228c85acb9f183",
-    "balance": 300
-  }
-}
+{"test": {"name": "test", "password": "pbkdf2:sha256:260000$9hF7h877wxhfW9IW$62ddab8d769adea606330d342d61d0e926721014538125f356d0f5da1b003e31", "balance": 300}, "test2": {"name": "test2", "password": "pbkdf2:sha256:260000$zPdCvqhKs5Irg63W$c5a90faf93a3c2e9eff35a8a1f83a9389a2cbaebc7b5545becd87085e97b5274", "balance": 300}, "rb": {"name": "rb", "password": "pbkdf2:sha256:260000$AmvcAc6ByzT3Pb0a$a81e19dbc566cedc4fb9c0022e6066ad708ac8c83d1e52b5c0fb93862c399765", "balance": 300}, "rg": {"name": "rg", "password": "pbkdf2:sha256:260000$kLwOAVitkQvmPctV$11b0622c29412fa89add468bd295a17d5837f375c174d2f874b62f7d1f0ca28a", "balance": 300}, "rt": {"name": "rt", "password": "pbkdf2:sha256:260000$aE3S9NmO9nALlJce$8bc61fc3746ebb1c61f37668fdebb0ca59609854db7da0f9889a0a0eda9c7e41", "balance": 300}, "re": {"name": "re", "password": "pbkdf2:sha256:260000$t6nMmhev6JBmmQqZ$d29dc0241073774bd099fbf619eb1685a3940714aa165833ba67f1c545e27606", "balance": 300}}

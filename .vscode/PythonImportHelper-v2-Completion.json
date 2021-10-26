@@ -590,6 +590,14 @@
         "documentation": {}
     },
     {
+        "label": "Storage",
+        "importPath": "storage.storage",
+        "description": "storage.storage",
+        "isExtraImport": true,
+        "detail": "storage.storage",
+        "documentation": {}
+    },
+    {
         "label": "Blueprint",
         "importPath": "flask",
         "description": "flask",
@@ -630,14 +638,6 @@
         "documentation": {}
     },
     {
-        "label": "Storage",
-        "importPath": "storage.storage",
-        "description": "storage.storage",
-        "isExtraImport": true,
-        "detail": "storage.storage",
-        "documentation": {}
-    },
-    {
         "label": "generate_password_hash",
         "importPath": "werkzeug.security",
         "description": "werkzeug.security",
@@ -651,6 +651,22 @@
         "description": "werkzeug.security",
         "isExtraImport": true,
         "detail": "werkzeug.security",
+        "documentation": {}
+    },
+    {
+        "label": "storage_db",
+        "importPath": "db.database",
+        "description": "db.database",
+        "isExtraImport": true,
+        "detail": "db.database",
+        "documentation": {}
+    },
+    {
+        "label": "storage_db",
+        "importPath": "db.database",
+        "description": "db.database",
+        "isExtraImport": true,
+        "detail": "db.database",
         "documentation": {}
     },
     {
@@ -749,6 +765,14 @@
         "description": "flask_socketio",
         "isExtraImport": true,
         "detail": "flask_socketio",
+        "documentation": {}
+    },
+    {
+        "label": "Tools",
+        "importPath": "utility.tools",
+        "description": "utility.tools",
+        "isExtraImport": true,
+        "detail": "utility.tools",
         "documentation": {}
     },
     {
@@ -1688,11 +1712,20 @@
         "documentation": {}
     },
     {
+        "label": "storage_db",
+        "kind": 5,
+        "importPath": "online.server.db.database",
+        "description": "online.server.db.database",
+        "peekOfCode": "storage_db = Storage(\"Tic Tac Toe\", \"storage.json\")",
+        "detail": "online.server.db.database",
+        "documentation": {}
+    },
+    {
         "label": "get_users",
         "kind": 2,
         "importPath": "online.server.routes.auth",
         "description": "online.server.routes.auth",
-        "peekOfCode": "def get_users():\n    return jsonify(storage.get_users())\n@auth.route(\"/rooms\")\ndef get_rooms():\n    return jsonify(storage.get_rooms())\n@auth.route(\"/register\", methods=[\"POST\"])\ndef create_user():\n    user = request.form['user']\n    password = request.form['password']\n    password = generate_password_hash(password)",
+        "peekOfCode": "def get_users():\n    return jsonify(storage_db.get_users())\n@auth.route(\"/rooms\")\ndef get_rooms():\n    return jsonify(storage_db.get_rooms())\n@auth.route(\"/register\", methods=[\"POST\"])\ndef create_user():\n    user = request.form['user']\n    password = request.form['password']\n    password = generate_password_hash(password)",
         "detail": "online.server.routes.auth",
         "documentation": {}
     },
@@ -1701,7 +1734,7 @@
         "kind": 2,
         "importPath": "online.server.routes.auth",
         "description": "online.server.routes.auth",
-        "peekOfCode": "def get_rooms():\n    return jsonify(storage.get_rooms())\n@auth.route(\"/register\", methods=[\"POST\"])\ndef create_user():\n    user = request.form['user']\n    password = request.form['password']\n    password = generate_password_hash(password)\n    return jsonify(storage.create_user(user, password))\n@auth.route(\"/login\", methods=[\"POST\"])\ndef login():",
+        "peekOfCode": "def get_rooms():\n    return jsonify(storage_db.get_rooms())\n@auth.route(\"/register\", methods=[\"POST\"])\ndef create_user():\n    user = request.form['user']\n    password = request.form['password']\n    password = generate_password_hash(password)\n    return jsonify(storage_db.create_user(user, password))\n@auth.route(\"/login\", methods=[\"POST\"])\ndef login():",
         "detail": "online.server.routes.auth",
         "documentation": {}
     },
@@ -1710,7 +1743,7 @@
         "kind": 2,
         "importPath": "online.server.routes.auth",
         "description": "online.server.routes.auth",
-        "peekOfCode": "def create_user():\n    user = request.form['user']\n    password = request.form['password']\n    password = generate_password_hash(password)\n    return jsonify(storage.create_user(user, password))\n@auth.route(\"/login\", methods=[\"POST\"])\ndef login():\n    user = request.form['user']\n    password = request.form['password']\n    return jsonify(storage.authenticate(user, password))",
+        "peekOfCode": "def create_user():\n    user = request.form['user']\n    password = request.form['password']\n    password = generate_password_hash(password)\n    return jsonify(storage_db.create_user(user, password))\n@auth.route(\"/login\", methods=[\"POST\"])\ndef login():\n    user = request.form['user']\n    password = request.form['password']\n    return jsonify(storage_db.authenticate(user, password))",
         "detail": "online.server.routes.auth",
         "documentation": {}
     },
@@ -1719,7 +1752,7 @@
         "kind": 2,
         "importPath": "online.server.routes.auth",
         "description": "online.server.routes.auth",
-        "peekOfCode": "def login():\n    user = request.form['user']\n    password = request.form['password']\n    return jsonify(storage.authenticate(user, password))\n@auth.route(\"/create_room\", methods=[\"POST\"])\ndef create_room():\n    user = request.form['user']\n    return jsonify(storage.create_room(user))\n@auth.route(\"/join_room\", methods=[\"POST\"])\ndef join_room():",
+        "peekOfCode": "def login():\n    user = request.form['user']\n    password = request.form['password']\n    return jsonify(storage_db.authenticate(user, password))\n@auth.route(\"/create_room\", methods=[\"POST\"])\ndef create_room():\n    user = request.form['user']\n    return jsonify(storage_db.create_room(user))\n@auth.route(\"/join_room\", methods=[\"POST\"])\ndef join_room():",
         "detail": "online.server.routes.auth",
         "documentation": {}
     },
@@ -1728,7 +1761,7 @@
         "kind": 2,
         "importPath": "online.server.routes.auth",
         "description": "online.server.routes.auth",
-        "peekOfCode": "def create_room():\n    user = request.form['user']\n    return jsonify(storage.create_room(user))\n@auth.route(\"/join_room\", methods=[\"POST\"])\ndef join_room():\n    room_id = request.form['id']\n    user = request.form['user']\n    return jsonify(storage.join_room(room_id, user))",
+        "peekOfCode": "def create_room():\n    user = request.form['user']\n    return jsonify(storage_db.create_room(user))\n@auth.route(\"/join_room\", methods=[\"POST\"])\ndef join_room():\n    room_id = request.form['id']\n    user = request.form['user']\n    return jsonify(storage_db.join_room(room_id, user))",
         "detail": "online.server.routes.auth",
         "documentation": {}
     },
@@ -1737,7 +1770,7 @@
         "kind": 2,
         "importPath": "online.server.routes.auth",
         "description": "online.server.routes.auth",
-        "peekOfCode": "def join_room():\n    room_id = request.form['id']\n    user = request.form['user']\n    return jsonify(storage.join_room(room_id, user))",
+        "peekOfCode": "def join_room():\n    room_id = request.form['id']\n    user = request.form['user']\n    return jsonify(storage_db.join_room(room_id, user))",
         "detail": "online.server.routes.auth",
         "documentation": {}
     },
@@ -1746,16 +1779,7 @@
         "kind": 5,
         "importPath": "online.server.routes.auth",
         "description": "online.server.routes.auth",
-        "peekOfCode": "auth = Blueprint(\"auth\", __name__)\nstorage = Storage(\"tic tac toe\")\n@auth.route(\"/users\")\ndef get_users():\n    return jsonify(storage.get_users())\n@auth.route(\"/rooms\")\ndef get_rooms():\n    return jsonify(storage.get_rooms())\n@auth.route(\"/register\", methods=[\"POST\"])\ndef create_user():",
-        "detail": "online.server.routes.auth",
-        "documentation": {}
-    },
-    {
-        "label": "storage",
-        "kind": 5,
-        "importPath": "online.server.routes.auth",
-        "description": "online.server.routes.auth",
-        "peekOfCode": "storage = Storage(\"tic tac toe\")\n@auth.route(\"/users\")\ndef get_users():\n    return jsonify(storage.get_users())\n@auth.route(\"/rooms\")\ndef get_rooms():\n    return jsonify(storage.get_rooms())\n@auth.route(\"/register\", methods=[\"POST\"])\ndef create_user():\n    user = request.form['user']",
+        "peekOfCode": "auth = Blueprint(\"auth\", __name__)\n@auth.route(\"/users\")\ndef get_users():\n    return jsonify(storage_db.get_users())\n@auth.route(\"/rooms\")\ndef get_rooms():\n    return jsonify(storage_db.get_rooms())\n@auth.route(\"/register\", methods=[\"POST\"])\ndef create_user():\n    user = request.form['user']",
         "detail": "online.server.routes.auth",
         "documentation": {}
     },
@@ -1764,7 +1788,7 @@
         "kind": 6,
         "importPath": "online.server.storage.room",
         "description": "online.server.storage.room",
-        "peekOfCode": "class Room:\n    def __init__(self, id, owner):\n        self.owner = owner\n        self.id = id\n        self.players = {owner: owner}\n    def get_id(self):\n        return self.id\n    def get_players(self):\n        return self.players        \n    def in_room(self, player: str):",
+        "peekOfCode": "class Room:\n    def __init__(self, owner_id, game_id):\n        self.owner = owner_id\n        self.id = game_id\n        self.symbols = [\"O\"]\n        self.players = {owner_id: \"X\"}\n    def get_id(self):\n        return self.id\n    def get_players(self):\n        return self.players        ",
         "detail": "online.server.storage.room",
         "documentation": {}
     },
@@ -1773,7 +1797,7 @@
         "kind": 6,
         "importPath": "online.server.storage.storage",
         "description": "online.server.storage.storage",
-        "peekOfCode": "class Storage:\n    def __init__(self, game, json_file=\"storage.json\"):\n        self.file = json_file\n        self.game = game\n        self.rooms = {}\n        self.users = JsonData.load_from_json(json_file)\n        print(\"---------------------------\")\n        print(self.users)\n    # utility \n    def create_random_id(self, n):",
+        "peekOfCode": "class Storage:\n    def __init__(self, game, json_file=\"storage.json\"):\n        self.file = json_file\n        self.game = game\n        self.rooms = {}\n        self.users = JsonData.load_from_json(json_file)\n    def user_exists(self, user):\n            return user in self.users   \n    def authenticate(self, user, password):\n        if not self.user_exists(user):",
         "detail": "online.server.storage.storage",
         "documentation": {}
     },
@@ -1796,11 +1820,20 @@
         "documentation": {}
     },
     {
+        "label": "Tools",
+        "kind": 6,
+        "importPath": "online.server.utility.tools",
+        "description": "online.server.utility.tools",
+        "peekOfCode": "class Tools:\n    @staticmethod\n    def get_random_id(length):\n        # choose from all lowercase letter\n        letters = string.ascii_lowercase\n        result_str = ''.join(random.choice(letters) for i in range(length))\n        return result_str",
+        "detail": "online.server.utility.tools",
+        "documentation": {}
+    },
+    {
         "label": "home_page",
         "kind": 2,
         "importPath": "online.server.application",
         "description": "online.server.application",
-        "peekOfCode": "def home_page():\n    return jsonify({\"success\": \"HELLO CLASS\"})\n@socketio.on(\"move\")\ndef handleMove(data):\n    print(\"Got message:\", data)\n    room = data[\"channel\"]\n    emit(\"move\", data, room=room)\n@socketio.on(\"join\")\ndef syncGame(data):\n    # data{\"channel\", \"player_name\"}",
+        "peekOfCode": "def home_page():\n    return jsonify({\"success\": \"HELLO CLASS\"})\n@socketio.on(\"move\")\ndef handleMove(data):\n    print(\"Got message:\", data)\n    room_id = data[\"channel\"]\n    emit(\"move\", data, room=room_id)\n@socketio.on(\"join\")\ndef syncGame(data):\n    # data being passed in",
         "detail": "online.server.application",
         "documentation": {}
     },
@@ -1809,7 +1842,7 @@
         "kind": 2,
         "importPath": "online.server.application",
         "description": "online.server.application",
-        "peekOfCode": "def handleMove(data):\n    print(\"Got message:\", data)\n    room = data[\"channel\"]\n    emit(\"move\", data, room=room)\n@socketio.on(\"join\")\ndef syncGame(data):\n    # data{\"channel\", \"player_name\"}\n    room = data[\"channel\"]\n    if room not in rooms:\n        # default room structure",
+        "peekOfCode": "def handleMove(data):\n    print(\"Got message:\", data)\n    room_id = data[\"channel\"]\n    emit(\"move\", data, room=room_id)\n@socketio.on(\"join\")\ndef syncGame(data):\n    # data being passed in\n    # data{\"channel\": channel_id, \"player_name\": player trying to join}\n    # extracting channel id and player name\n    room_id = data[\"channel\"]",
         "detail": "online.server.application",
         "documentation": {}
     },
@@ -1818,7 +1851,7 @@
         "kind": 2,
         "importPath": "online.server.application",
         "description": "online.server.application",
-        "peekOfCode": "def syncGame(data):\n    # data{\"channel\", \"player_name\"}\n    room = data[\"channel\"]\n    if room not in rooms:\n        # default room structure\n        rooms[room] = {\"players\": {}, \"symbols\": [\"X\", \"O\"]}\n    temp_symbol = rooms[room][\"symbols\"].pop()\n    player_name = data[\"player_name\"]\n    rooms[room][\"players\"][player_name] = temp_symbol\n    rooms[room][\"channel\"] = room",
+        "peekOfCode": "def syncGame(data):\n    # data being passed in\n    # data{\"channel\": channel_id, \"player_name\": player trying to join}\n    # extracting channel id and player name\n    room_id = data[\"channel\"]\n    player_name = data[\"player_name\"]\n    # boolean to check if player is trying to join a new room\n    is_new_room = not storage_db.room_exists(room_id)\n    # if room id is new then create a room for it else add player to already existing room\n    if is_new_room:",
         "detail": "online.server.application",
         "documentation": {}
     },
@@ -1827,7 +1860,7 @@
         "kind": 5,
         "importPath": "online.server.application",
         "description": "online.server.application",
-        "peekOfCode": "application = Flask(__name__)\napplication.config[\"SECRET_KEY\"] = \"ASLJKDKALSD!\"\nsocketio = SocketIO(application)\nrooms = {}\napplication.register_blueprint(auth, url_prefix=\"/auth\")\n@application.route(\"/\", methods=[\"GET\"])\ndef home_page():\n    return jsonify({\"success\": \"HELLO CLASS\"})\n@socketio.on(\"move\")\ndef handleMove(data):",
+        "peekOfCode": "application = Flask(__name__)\napplication.config[\"SECRET_KEY\"] = \"ASLJKDKALSD!\"\nsocketio = SocketIO(application)\n# rooms = {}\napplication.register_blueprint(auth, url_prefix=\"/auth\")\n@application.route(\"/\", methods=[\"GET\"])\ndef home_page():\n    return jsonify({\"success\": \"HELLO CLASS\"})\n@socketio.on(\"move\")\ndef handleMove(data):",
         "detail": "online.server.application",
         "documentation": {}
     },
@@ -1836,7 +1869,7 @@
         "kind": 5,
         "importPath": "online.server.application",
         "description": "online.server.application",
-        "peekOfCode": "application.config[\"SECRET_KEY\"] = \"ASLJKDKALSD!\"\nsocketio = SocketIO(application)\nrooms = {}\napplication.register_blueprint(auth, url_prefix=\"/auth\")\n@application.route(\"/\", methods=[\"GET\"])\ndef home_page():\n    return jsonify({\"success\": \"HELLO CLASS\"})\n@socketio.on(\"move\")\ndef handleMove(data):\n    print(\"Got message:\", data)",
+        "peekOfCode": "application.config[\"SECRET_KEY\"] = \"ASLJKDKALSD!\"\nsocketio = SocketIO(application)\n# rooms = {}\napplication.register_blueprint(auth, url_prefix=\"/auth\")\n@application.route(\"/\", methods=[\"GET\"])\ndef home_page():\n    return jsonify({\"success\": \"HELLO CLASS\"})\n@socketio.on(\"move\")\ndef handleMove(data):\n    print(\"Got message:\", data)",
         "detail": "online.server.application",
         "documentation": {}
     },
@@ -1845,16 +1878,7 @@
         "kind": 5,
         "importPath": "online.server.application",
         "description": "online.server.application",
-        "peekOfCode": "socketio = SocketIO(application)\nrooms = {}\napplication.register_blueprint(auth, url_prefix=\"/auth\")\n@application.route(\"/\", methods=[\"GET\"])\ndef home_page():\n    return jsonify({\"success\": \"HELLO CLASS\"})\n@socketio.on(\"move\")\ndef handleMove(data):\n    print(\"Got message:\", data)\n    room = data[\"channel\"]",
-        "detail": "online.server.application",
-        "documentation": {}
-    },
-    {
-        "label": "rooms",
-        "kind": 5,
-        "importPath": "online.server.application",
-        "description": "online.server.application",
-        "peekOfCode": "rooms = {}\napplication.register_blueprint(auth, url_prefix=\"/auth\")\n@application.route(\"/\", methods=[\"GET\"])\ndef home_page():\n    return jsonify({\"success\": \"HELLO CLASS\"})\n@socketio.on(\"move\")\ndef handleMove(data):\n    print(\"Got message:\", data)\n    room = data[\"channel\"]\n    emit(\"move\", data, room=room)",
+        "peekOfCode": "socketio = SocketIO(application)\n# rooms = {}\napplication.register_blueprint(auth, url_prefix=\"/auth\")\n@application.route(\"/\", methods=[\"GET\"])\ndef home_page():\n    return jsonify({\"success\": \"HELLO CLASS\"})\n@socketio.on(\"move\")\ndef handleMove(data):\n    print(\"Got message:\", data)\n    room_id = data[\"channel\"]",
         "detail": "online.server.application",
         "documentation": {}
     },
