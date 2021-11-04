@@ -20,15 +20,14 @@ class Room:
         
         if len(self.symbols) == 0:
             return False
-        
-        self.players[player] = self.symbols.pop()
-        
-        return True    
 
+        self.players[player] = self.symbols.pop()
+        return True    
         
     def remove_player(self, player: str):
-        return self.players.pop(player, False)
-
+        del self.players[player]
+        return True
+    
     def get_owner(self):
         return self.owner
 

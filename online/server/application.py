@@ -20,6 +20,13 @@ def handleMove(data):
     room_id = data["channel"]
     emit("move", data, room=room_id)
 
+@socketio.on("leave_room")
+def leaveRoom(data):
+    room_id = data["channel"]
+    user_id = data["player_name"]
+    leave_room(room_id)
+    storage_db.leave_room(user_id, room_id)
+    
 @socketio.on("join")
 def syncGame(data):
     # data being passed in
@@ -37,7 +44,6 @@ def syncGame(data):
         storage_db.create_room(player_name, room_id)
     else:
         joined_successfully = storage_db.join_room(player_name, room_id)
-        print("joined: ", joined_successfully)
         
         # if did not join successfully then create a new room 
         if not joined_successfully:
@@ -53,9 +59,7 @@ def syncGame(data):
 
 if __name__ == "__main__":
     
-    # host='0.0.0.0'
-    
-    # production
-    # socketio.run(application, host='0.0.0.0', debug=True)
-    
-    socketio.run(application, debug=True)
+    # if production make sure to have host=0.0.0.0
+    socketio.run(application, host='0.0.0.0')
+    # if running locally make sure to not have that
+    # socketio.run(application, debug=True)

@@ -1,5 +1,8 @@
 import requests
-url = "http://127.0.0.1:5000"
+
+from server_config import SERVER_IP
+
+url = SERVER_IP
 class UserModel:
 
     @staticmethod

@@ -15,7 +15,7 @@ class JsonData:
     @staticmethod
     def load_from_json(json_file):
         data = {}
-
+        
         # check if json file exists
         file_exists = os.path.exists(json_file)
         

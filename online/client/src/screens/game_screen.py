@@ -4,17 +4,15 @@ from game.tictactoe import TicTacToe
 BG_COLOR = (28, 170, 156)
 
 class Game: 
-
     def __init__(self, name, id):
         self.width = 600
         self.height = 600
         self.setup_screen()
-
+        
         self.game = TicTacToe(self.screen, name, id)
 
         self.click = False
         self.running = False
-        
         self.clock = pygame.time.Clock()
 
     def draw(self):

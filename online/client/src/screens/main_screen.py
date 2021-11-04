@@ -81,6 +81,7 @@ class MainScreen:
                     # if no room id entered, start new game
                     if len(custom_game_id) == 0:
                         custom_game_id = None
+                    
                     Game(player_name, custom_game_id).run()
 
                     # self.setup_screen is to reset screen dimensions and window settings 

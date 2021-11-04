@@ -1,6 +1,7 @@
 import requests
+from server_config import SERVER_IP
 
-url = "http://127.0.0.1:5000"
+url = SERVER_IP
 
 class RoomModel:
     @staticmethod

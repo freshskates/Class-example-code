@@ -65,7 +65,7 @@ class Storage:
         self.save()
 
     def create_room(self, user, id):
-        if not self.user_exists(user) or self.user_in_room(user):
+        if not self.user_exists(user):
             print("error creating a room")
             return {"error": f"Could not create a room for {user}"}
         
@@ -76,9 +76,9 @@ class Storage:
         return room_id in self.rooms
 
     def join_room(self, user, id):
-        if not self.room_exists(id) or self.user_in_room(user):
+        if not self.room_exists(id):
             return False
- 
+        
         joined_successfully = self.rooms[id].add_player(user)
         
         # joined_successfully can either be True or False
@@ -86,6 +86,10 @@ class Storage:
 
     def get_room(self, room_id):
         return self.rooms[room_id]
-
+        
+    def leave_room(self, user_id, room_id):
+        return self.rooms[room_id].remove_player(user_id)
+        
+    
     def save(self):
         JsonData.save(self.users, self.file)
